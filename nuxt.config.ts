@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     optimization: {
       splitChunks: {
         layout: true,
-      },
-    },
-  },
+      }
+    }
+  }
 });
