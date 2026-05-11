@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Agentic AI Solutions",
+    "img": "/light/assets/imgs/serv-icons/3.png",
+    "desc": "Production-grade AI agents trained on your business — sales, support, operations, and knowledge work. Deployed in weeks, not quarters.",
+    "link": "/solutions/agentic-ai"
+  },
+  {
+    "title": "AI-Native Web & App",
+    "img": "/light/assets/imgs/serv-icons/4.png",
+    "desc": "Websites and apps engineered to convert — with AI baked in from day one. SEO, GEO, CRM integration, and agent handoff built in.",
+    "link": "/solutions/web-app"
+  },
+  {
+    "title": "Digital Growth Services",
+    "img": "/light/assets/imgs/serv-icons/5.png",
+    "desc": "Content, short-form video, paid creative, and SEO assets that bring qualified attention into the systems your agents convert.",
+    "link": "/solutions/digital-growth"
+  }
+]

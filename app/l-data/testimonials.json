@@ -1,0 +1,14 @@
+[
+  {
+    "img": "/light/assets/imgs/testim/t1.jpg",
+    "name": "Enterprise Client",
+    "subName": "Head of Operations, US Enterprise",
+    "desc": "They built what our internal team couldn't ship in 18 months — in 8 weeks. The agent is live, it's running 24/7, and it's already closed pipeline."
+  },
+  {
+    "img": "/light/assets/imgs/testim/t2.jpg",
+    "name": "Singapore Hospitality Group",
+    "subName": "General Manager, Singapore",
+    "desc": "MAXY built our concierge AI across multiple properties. Guest satisfaction scores improved in the first month. These are operators, not consultants."
+  }
+]
