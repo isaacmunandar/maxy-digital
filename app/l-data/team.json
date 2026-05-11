@@ -1,0 +1,17 @@
+[
+  {
+    "img": "/light/assets/imgs/team/1.jpg",
+    "name": "Isaac Munandar",
+    "subName": "CEO & Co-Founder"
+  },
+  {
+    "img": "/light/assets/imgs/team/2.jpg",
+    "name": "Andy Munandar",
+    "subName": "CFO & Co-Founder"
+  },
+  {
+    "img": "/light/assets/imgs/team/3.jpg",
+    "name": "Sydney Bogss",
+    "subName": "Head of AI & Technology"
+  }
+]
