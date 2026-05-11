@@ -65,7 +65,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["swipper/css/bundle"],
+  css: ["swiper/css/bundle"],
 
   webpack: {
     extractCSS: true,
