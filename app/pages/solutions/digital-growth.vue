@@ -30,7 +30,7 @@ import Header from '@/components/light/services-details/Header';
 import Services from '@/components/light/services-details/Services';
 import Process from '@/components/light/services-details/Process';
 import Services2 from '@/components/light/services-details/Services2';
-import FAQS from '@/components/light/services-details/FAQS';
+import FAQS from '@/components/light/services-details/FAQs';
 import { onMounted } from 'vue';
 
 onMounted(() => {
