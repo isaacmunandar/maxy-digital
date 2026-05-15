@@ -4,62 +4,71 @@
     "tag": "Agentic AI",
     "title": "Hospitality Concierge AI",
     "filter": "agentic-ai",
-    "link": "/case-studies/hospitality-concierge-ai"
+    "link": "/solutions/agentic-ai",
+    "desc": "Handles guest queries, dining bookings, and service requests 24/7 — across multiple properties at once. Front desk workload cut by over 60%."
   },
   {
     "img": "/light/assets/imgs/works/1/2.jpg",
     "tag": "Agentic AI",
     "title": "Sales Follow-Up Agent",
     "filter": "agentic-ai",
-    "link": "/case-studies/sales-agent-us"
+    "link": "/solutions/agentic-ai",
+    "desc": "Qualifies inbound leads, writes personalized follow-ups, and books meetings end-to-end. No human input needed between first touch and confirmed call."
   },
   {
     "img": "/light/assets/imgs/works/1/3.jpg",
     "tag": "Agentic AI",
     "title": "Employee Insight AI",
     "filter": "agentic-ai",
-    "link": "/case-studies/employee-insight-ai"
+    "link": "/solutions/agentic-ai",
+    "desc": "Surfaces real-time signals on engagement, retention risk, and team health — before they become HR problems. Built for operators who move fast."
   },
   {
     "img": "/light/assets/imgs/works/2/1.jpg",
     "tag": "Web & App",
     "title": "SPOSEA Digital Infrastructure",
     "filter": "web-app",
-    "link": "/case-studies/sposea-digital-infrastructure"
+    "link": "/solutions/web-app",
+    "desc": "SAP-native pricing platform spanning 3 product lines, serving enterprise clients globally. Full digital infrastructure delivered for a B2B SaaS market leader."
   },
   {
     "img": "/light/assets/imgs/works/2/2.jpg",
     "tag": "Web & App",
     "title": "TBN Alliance Platform",
     "filter": "web-app",
-    "link": "/case-studies/tbn-alliance-platform"
+    "link": "/solutions/web-app",
+    "desc": "Member portal and network hub for a multi-country business alliance — role-based access, content tools, and community features in one cohesive system."
   },
   {
     "img": "/light/assets/imgs/works/2/3.jpg",
     "tag": "Digital Growth",
     "title": "Asia Pacific Salvage Brand",
     "filter": "digital-growth",
-    "link": "/case-studies/asia-pacific-salvage"
+    "link": "/solutions/digital-growth",
+    "desc": "Complete brand identity and digital market entry for an industry leader making its first move online. From zero presence to market-visible in 90 days."
   },
   {
     "img": "/light/assets/imgs/works/3/1.jpg",
     "tag": "Digital Growth",
     "title": "Black Green Origin Content Engine",
     "filter": "digital-growth",
-    "link": "/case-studies/black-green-origin"
+    "link": "/solutions/digital-growth",
+    "desc": "End-to-end content production system powering a sustainable brand across social, SEO, and community. Built to scale output without growing the team."
   },
   {
     "img": "/light/assets/imgs/works/3/2.jpg",
     "tag": "Agentic AI",
     "title": "HR Assessment AI",
     "filter": "agentic-ai",
-    "link": "/case-studies/hr-assessment-ai"
+    "link": "/solutions/agentic-ai",
+    "desc": "Screens candidates against your exact criteria and delivers structured hire decisions in minutes. Designed for high-volume recruitment without the overhead."
   },
   {
     "img": "/light/assets/imgs/works/3/3.jpg",
     "tag": "Web & App",
     "title": "Safe Care Taiwan Platform",
     "filter": "web-app",
-    "link": "/case-studies/safe-care-taiwan"
+    "link": "/solutions/web-app",
+    "desc": "Healthcare coordination system connecting patients, caregivers, and providers across Taiwan's home care market. Built for compliance and built to scale."
   }
 ]
