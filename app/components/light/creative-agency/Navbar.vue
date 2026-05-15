@@ -30,27 +30,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/case-studies">
-              <span class="rolling-text">Case Studies</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/singapore-grant">
-              <span class="rolling-text">SG Grant</span>
-            </a>
-          </li>
-          <li @mousemove="handleDropdownMouseMove" @mouseleave="handleDropdownMouseLeave" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/about" role="button" aria-haspopup="true"
-              aria-expanded="false">
-              <span class="rolling-text">Company</span>
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/about">About MAXY</a>
-              <a class="dropdown-item" href="/insights">Insights</a>
-              <a class="dropdown-item" href="/faq">FAQ</a>
-            </div>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="/contact">
               <span class="rolling-text">Contact</span>
             </a>
@@ -111,35 +90,6 @@
                   <a href="/roadmap" class="link">
                     <span class="fill-text" data-text="Roadmap">Roadmap</span>
                   </a>
-                </div>
-              </li>
-              <li @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-                <div class="o-hidden">
-                  <a href="/case-studies" class="link">
-                    <span class="fill-text" data-text="Case Studies">Case Studies</span>
-                  </a>
-                </div>
-              </li>
-              <li @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-                <div class="o-hidden">
-                  <a href="/singapore-grant" class="link">
-                    <span class="fill-text" data-text="SG Grant">SG Grant</span>
-                  </a>
-                </div>
-              </li>
-              <li @click="toggleSubMenu" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
-                <div class="o-hidden">
-                  <div class="link cursor-pointer dmenu">
-                    <span class="fill-text" data-text="Company">Company</span>
-                    <i></i>
-                  </div>
-                </div>
-                <div class="sub-menu">
-                  <ul>
-                    <li><a href="/about" class="sub-link">About MAXY</a></li>
-                    <li><a href="/insights" class="sub-link">Insights</a></li>
-                    <li><a href="/faq" class="sub-link">FAQ</a></li>
-                  </ul>
                 </div>
               </li>
               <li @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
