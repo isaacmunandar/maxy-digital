@@ -1,5 +1,5 @@
 <template>
-  <LoadingScreen />
+  <!-- <LoadingScreen /> -->
   <Cursor />
   <ProgressScroll />
   <Lines />
@@ -11,9 +11,9 @@
         <Intro />
         <Marquee />
         <Intro2 />
-        <Testimonials />
+        <!-- <Testimonials />
         <Team />
-        <Blog />
+        <Blog /> -->
       </main>
       <Footer />
     </div>
@@ -25,14 +25,14 @@ import Header from '@/components/light/about/Header';
 import Lines from '@/components/light/common/Lines';
 import ProgressScroll from '@/components/light/common/ProgressScroll';
 import Cursor from '@/components/light/common/cusor';
-import LoadingScreen from '@/components/light/common/loader';
+// import LoadingScreen from '@/components/light/common/loader';
 import Navbar from '@/components/light/creative-agency/Navbar';
 import Intro from '@/components/light/about/Intro';
 import Marquee from '@/components/light/about/Marquee';
 import Intro2 from '@/components/light/about/Intro2';
-import Testimonials from '@/components/light/about/Testimonials';
-import Team from '@/components/light/about/Team';
-import Blog from '@/components/light/about/Blog';
+// import Testimonials from '@/components/light/about/Testimonials';
+// import Team from '@/components/light/about/Team';
+// import Blog from '@/components/light/about/Blog';
 import { onMounted } from 'vue';
 
 onMounted(() => {
