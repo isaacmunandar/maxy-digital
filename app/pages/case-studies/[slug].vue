@@ -1,5 +1,5 @@
 <template>
-  <LoadingScreen />
+  <!-- <LoadingScreen /> -->
   <Cursor />
   <ProgressScroll />
   <Lines />
@@ -21,7 +21,7 @@ import Footer from '@/components/light/blog-details/Footer';
 import Lines from '@/components/light/common/Lines';
 import ProgressScroll from '@/components/light/common/ProgressScroll';
 import Cursor from '@/components/light/common/cusor';
-import LoadingScreen from '@/components/light/common/loader';
+// import LoadingScreen from '@/components/light/common/loader';
 import Navbar from '@/components/light/creative-agency/Navbar';
 import Challenge from '@/components/light/project2/Challenge';
 import Header from '@/components/light/project2/Header';
