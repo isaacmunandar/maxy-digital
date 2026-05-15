@@ -1,5 +1,5 @@
 <template>
-  <section class="testimonials-crev section-padding pb-0 bg-img" data-background="/light/assets/imgs/background/2.jpg"
+  <section class="testimonials-crev section-padding pb-0 bg-img" style="background-image: url('/light/assets/imgs/background/2.jpg')"
     data-overlay-dark="5">
     <div class="container">
       <div class="row justify-content-end">
@@ -76,7 +76,6 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination } from 'swiper/modules';
 import data from '@/l-data/testimonials.json';
-import loadBackgroudImages from '~/common/loadBackgroudImage';
 const swiperOptions = {
   modules: [Navigation],
   navigation: {
@@ -87,7 +86,4 @@ const swiperOptions = {
   loop: true,
 };
 
-onMounted(() => {
-  loadBackgroudImages();
-});
 </script>
