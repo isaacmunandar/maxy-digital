@@ -50,7 +50,7 @@ import Services from "@/components/light/services/Services";
 import Marquee from "@/components/light/services/Marquee";
 import Price from "@/components/light/services/Price";
 import Process from "@/components/light/services/Process";
-import portfolioData from "@/l-data/portfolios/workstand.json";
+import portfolioData from "@/l-data/portofolios/workstand.json";
 import { computed } from "vue";
 
 const categoryOrder = ["Agentic AI", "Web & App", "Digital Growth"];
