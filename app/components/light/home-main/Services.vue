@@ -5,11 +5,11 @@
         <div class="col-lg-4 offset-lg-1 valign">
           <div class="img md-mb80">
             <div class="rotate-butn-vid">
-              <a href="/about" class="vid d-flex align-items-center">
+              <a href="/contact" class="vid d-flex align-items-center">
                 <div class="icon">
                   <i class="fas fa-arrow-right main-color"></i>
                 </div>
-                <span class="sub-title ml-15">About MAXY</span>
+                <span class="sub-title ml-15">Work With Us</span>
               </a>
             </div>
             <img src="/light/assets/imgs/intro/04.jpg" alt="MAXY Digital team" class="radius-30" />
