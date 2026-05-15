@@ -1,5 +1,5 @@
 <template>
-  <LoadingScreen />
+  <!-- <LoadingScreen /> -->
   <Cursor />
   <ProgressScroll />
   <Lines />
@@ -12,10 +12,10 @@
         <Services2 />
         <Services />
         <Marquee />
-        <Portfolio />
+        <!-- <Portfolio />
         <Testimonials />
         <Team />
-        <Blog />
+        <Blog /> -->
         <Clients />
       </main>
       <Footer />
@@ -26,19 +26,19 @@
 import Lines from '@/components/light/common/Lines';
 import ProgressScroll from '@/components/light/common/ProgressScroll';
 import Cursor from '@/components/light/common/cusor';
-import LoadingScreen from '@/components/light/common/loader';
-import Blog from '@/components/light/home-main/Blog';
+// import LoadingScreen from '@/components/light/common/loader';
+// import Blog from '@/components/light/home-main/Blog';
 import Clients from '@/components/light/home-main/Clients';
 import Footer from '@/components/light/home-main/Footer';
 import Header from '@/components/light/home-main/Header';
 import Intro from '@/components/light/home-main/Intro';
 import Marquee from '@/components/light/home-main/Marquee';
 import Navbar from '@/components/light/creative-agency/Navbar';
-import Portfolio from '@/components/light/home-main/Portfolio';
+// import Portfolio from '@/components/light/home-main/Portfolio';
 import Services from '@/components/light/home-main/Services';
 import Services2 from '@/components/light/home-main/Services2';
-import Team from '@/components/light/home-main/Team';
-import Testimonials from '@/components/light/home-main/Testimonials';
+// import Team from '@/components/light/home-main/Team';
+// import Testimonials from '@/components/light/home-main/Testimonials';
 import { onMounted } from 'vue';
 
 onMounted(() => {
