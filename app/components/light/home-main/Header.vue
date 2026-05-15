@@ -1,5 +1,5 @@
 <template>
-  <header class="header main-header bg-img" data-background="/light/assets/imgs/header/bg1.jpg" data-overlay-dark="8">
+  <header class="header main-header bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg')" data-overlay-dark="8">
     <div class="container pt-100">
       <div class="row justify-content-end">
         <div class="col-lg-6">
@@ -29,11 +29,3 @@
     </div>
   </header>
 </template>
-
-<script setup>
-import loadBackgroudImages from '@/common/loadBackgroudImage';
-
-onMounted(() => {
-  loadBackgroudImages();
-});
-</script>
