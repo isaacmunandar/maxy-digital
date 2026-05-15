@@ -44,14 +44,14 @@
 
                 <div class="item wow fadeInUp" data-wow-delay=".5s">
                   <div @click="openAccordion" class="title">
-                    <h6>Do we qualify for the Singapore PSG grant?</h6>
+                    <h6>What happens after deployment?</h6>
                     <span class="ico ti-plus"></span>
                   </div>
                   <div class="accordion-info">
                     <p>
-                      If you're a Singapore-registered SME, likely yes. MAXY Digital is an
-                      IMDA pre-approved vendor. PSG/EDG grants can co-fund up to 50% of
-                      your AI project cost. We handle the paperwork.
+                      We don't disappear after launch. Our retainer model keeps us
+                      accountable to your outcomes — ongoing optimization, monitoring,
+                      and iteration until the system is genuinely earning.
                     </p>
                   </div>
                 </div>
