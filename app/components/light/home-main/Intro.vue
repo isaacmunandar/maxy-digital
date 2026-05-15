@@ -73,7 +73,7 @@
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>Singapore AI Grant</span>
+                    <span>Revenue First AI</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>Singapore AI Grant</span>
+                    <span>Revenue First AI</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
