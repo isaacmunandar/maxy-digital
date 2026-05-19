@@ -11,7 +11,7 @@
           <h6 class="sub-title main-color mb-25">Selected Work</h6>
           <div class="bord pt-25 bord-thin-top">
             <h2 class="fw-600">
-              Real systems. Real revenue.
+              Real agentic AI systems. Real revenue.
               <span class="fw-200">Real operators.</span>
             </h2>
           </div>
