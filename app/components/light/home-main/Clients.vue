@@ -4,8 +4,8 @@
       <div class="sec-bottom mb-100">
         <div class="sub-bg d-flex align-items-center">
           <h6 class="fz-14 fw-400">
-            Trusted by operators in <span class="fw-600">Singapore, the United States, Indonesia, Hong Kong, Taiwan, and
-              the Netherlands.</span>
+            Agentic AI deployed for operators in
+            <span class="fw-600">Singapore, the United States, Indonesia, Hong Kong, Taiwan, and the Netherlands.</span>
           </h6>
         </div>
       </div>

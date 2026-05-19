@@ -40,7 +40,7 @@
             <div class="call-action">
               <h2 class="d-slideup wow fz-60 fw-600">
                 <span class="sideup-text">
-                  <span class="up-text">Ship AI before your competitors</span>
+                  <span class="up-text">Ship agentic AI before your competitors</span>
                 </span>
                 <span class="sideup-text">
                   <span class="up-text underline">

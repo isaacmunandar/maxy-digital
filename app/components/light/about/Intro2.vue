@@ -9,11 +9,11 @@
                 <div class="mb-40">
                   <h2 class="fz-100 numb-font">1.</h2>
                 </div>
-                <h4>We Deploy, Not Advise.</h4>
+                <h4>Phase 01: First Agentic AI Deployment.</h4>
                 <div class="text mt-30">
                   <p>
-                    We won't hand you a deck and leave. We stay until the
-                    system earns — and our retainer model keeps it that way.
+                    Your first agentic AI system goes live in 4-8 weeks. Singapore
+                    SME clients often co-fund Phase 01 through PSG or EDG grants.
                   </p>
                 </div>
               </div>
@@ -35,11 +35,12 @@
                 <div class="mb-40">
                   <h2 class="fz-100 numb-font">2.</h2>
                 </div>
-                <h4>We Pick the Earning Use Case First.</h4>
+                <h4>Phase 02: Compound Workflows.</h4>
                 <div class="text mt-30">
                   <p>
-                    Before writing a line of code, we find where AI earns in
-                    your business. ROI is the brief, not the afterthought.
+                    We expand into adjacent workflows across sales, support, and
+                    operations. For Singapore-based clients, this phase often
+                    includes GEO optimization to appear in AI search results.
                   </p>
                 </div>
               </div>
@@ -54,11 +55,12 @@
                   <div class="mb-40">
                     <h2 class="fz-100 numb-font">3.</h2>
                   </div>
-                  <h4>We Earn With You.</h4>
+                  <h4>Phase 03: Transformation Infrastructure.</h4>
                   <div class="text mt-30">
                     <p>
-                      Retainer-based engagements mean our incentive is your
-                      result — not a signed contract and a handoff.
+                      Multi-agent systems, shared knowledge layers, and governance
+                      that scale across departments. AI runs a material share of
+                      operations, not a single workflow.
                     </p>
                   </div>
                 </div>

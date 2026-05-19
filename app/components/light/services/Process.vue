@@ -5,7 +5,7 @@
         <h6 class="sub-title main-color mb-25">How We Work</h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
           <h2 class="fw-600">
-            From pilot to <span class="fw-200">production.</span>
+            From pilot to <span class="fw-200">production in Singapore.</span>
           </h2>
           <div class="ml-auto">
             <a href="/roadmap" class="go-more">
@@ -22,7 +22,7 @@
           </div>
           <h5 class="mb-15">Diagnose</h5>
           <p>
-            Map your workflows. Identify the one workflow where AI earns first. Name the outcome it's accountable to.
+            Map your workflows. Identify the one workflow where agentic AI earns first. Name the outcome it's accountable to.
           </p>
           <div class="o-hidden">
             <a href="/roadmap" class="rmore to-in mt-30">
@@ -52,8 +52,7 @@
           </div>
           <h5 class="mb-15">Build & Train</h5>
           <p>
-            Custom architecture, fine-tuned on your data, integrated with your stack — CRM, helpdesk, comms, internal
-            tools.
+            Custom architecture, trained on your data, integrated with your stack — CRM, helpdesk, comms, internal tools.
           </p>
           <div class="o-hidden">
             <a href="/roadmap" class="rmore to-in mt-30">

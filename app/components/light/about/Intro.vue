@@ -12,15 +12,15 @@
     <div class="container section-padding">
       <div class="row">
         <div class="col-lg-5">
-          <h6 class="sub-title main-color">About MAXY Digital</h6>
+          <h6 class="sub-title main-color">AI Transformation Roadmap</h6>
         </div>
         <div class="col-lg-7">
           <div class="text">
             <h4>
-              We don't theorize about AI. We deploy it. Founded in 2022 and
-              headquartered in Singapore, MAXY Digital builds production-grade
-              AI systems for operators in hospitality, B2B SaaS, and enterprise
-              services — across six markets and counting.
+              The 12-month AI transformation roadmap for Singapore SMEs - from
+              "we should look at AI" to "AI runs half our operations." Phase 01
+              gets your first agentic AI deployment live, then we compound into
+              multi-workflow automation across sales, support, and operations.
             </h4>
           </div>
         </div>

@@ -3,11 +3,11 @@
     data-overlay-dark="9">
     <div class="container pt-100 pb-100">
       <div class="text-center">
-        <h1 class="fz-100 text-u">About MAXY.</h1>
+        <h1 class="fz-100 text-u">AI Transformation Roadmap.</h1>
         <div class="mt-15">
           <a href="/">Home</a>
           <span class="padding-rl-20">|</span>
-          <span class="main-color">About MAXY</span>
+          <span class="main-color">Roadmap</span>
         </div>
       </div>
     </div>

@@ -2,19 +2,19 @@
   {
     "title": "Agentic AI Solutions",
     "img": "/light/assets/imgs/serv-icons/3.png",
-    "desc": "Production-grade AI agents trained on your business — sales, support, operations, and knowledge work. Deployed in weeks, not quarters.",
+    "desc": "Production-grade agentic AI agents trained on your business for sales, support, operations, and knowledge work. Deployed in 4-8 weeks for Singapore SMEs.",
     "link": "/solutions/agentic-ai"
   },
   {
     "title": "AI-Native Web & App",
     "img": "/light/assets/imgs/serv-icons/4.png",
-    "desc": "Websites and apps engineered to convert — with AI baked in from day one. Fast to ship, built to scale, and ready to plug into the tools your team already uses.",
+    "desc": "AI-native websites and apps engineered to convert, with automation and data hooks built in from day one.",
     "link": "/solutions/web-app"
   },
   {
     "title": "Digital Growth Services",
     "img": "/light/assets/imgs/serv-icons/5.png",
-    "desc": "Content, short-form video, paid creative, and SEO assets that bring qualified attention into the systems your agents convert.",
+    "desc": "Content, performance creative, and SEO systems that bring qualified demand into the workflows your agents convert.",
     "link": "/solutions/digital-growth"
   }
 ]
