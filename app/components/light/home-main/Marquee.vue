@@ -5,25 +5,25 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Deployed Across 6 Markets</span>
+              <span>Agentic AI deployed for operators in Singapore</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Built for Operators. Owned by You.</span>
+              <span>PSG/EDG grant-aligned builds for Singapore SMEs</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>AI Systems Deployed in SG · US · ID</span>
+              <span>Live deployments in SG, US, and ID</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Deploy in 6 Weeks. Not 6 Months.</span>
+              <span>Deploy in 4-8 weeks, not 6 months</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
@@ -31,25 +31,25 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Deployed Across 6 Markets</span>
+              <span>Agentic AI deployed for operators in Singapore</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Built for Operators. Owned by You.</span>
+              <span>PSG/EDG grant-aligned builds for Singapore SMEs</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>AI Systems Deployed in SG · US · ID</span>
+              <span>Live deployments in SG, US, and ID</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Deploy in 6 Weeks. Not 6 Months.</span>
+              <span>Deploy in 4-8 weeks, not 6 months</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
