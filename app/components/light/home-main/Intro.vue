@@ -19,12 +19,12 @@
                 <span class="up-text">
                   Find out
                   <span class="underline">
-                    <a href="/roadmap" class="main-color"> where AI earns first </a>
+                    <a href="/solutions" class="main-color"> where AI earns first </a>
                   </span>
                   in your business.
                 </span>
               </span>
-            </h4>b  
+            </h4>
             <div class="exp mt-80 md-mb15">
               <h2 class="fz-70 numb-font">
                 6
