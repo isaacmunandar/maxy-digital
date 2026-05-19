@@ -6,7 +6,7 @@
           <div class="full-width mb-30">
             <h1 class="mb-10">MAXY Digital Case Study</h1>
             <p>
-              A live AI system deployed for a MAXY Digital client — scoped,
+              A live agentic AI system deployed for a MAXY Digital client - scoped,
               built, and launched in under 8 weeks with measurable commercial impact.
             </p>
           </div>
