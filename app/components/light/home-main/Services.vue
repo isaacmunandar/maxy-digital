@@ -18,10 +18,12 @@
         <div class="col-lg-6 valign">
           <div class="content full-width">
             <div class="sec-head mb-50">
-              <h6 class="sub-title mb-15 main-color">Why MAXY</h6>
+              <h6 class="sub-title mb-15 main-color">
+                Singapore's agentic AI agency - operational since 2022
+              </h6>
               <h2 class="d-slideup wow">
                 <span class="sideup-text">
-                  <span class="up-text">Built by operators who've shipped AI</span>
+                  <span class="up-text">Built by operators who've shipped agentic AI</span>
                 </span>
                 <span class="sideup-text">
                   <span class="up-text">in three markets.</span>
@@ -32,10 +34,11 @@
               <div class="col-lg-11">
                 <div class="text">
                   <p>
-                    MAXY Digital is the AI and digital agency arm of MAXY Group,
-                    recognized as a HolonIQ Top 50 Southeast Asia EdTech company in 2025.
-                    We don't theorize about AI. We deploy it — and we've been deploying
-                    it since 2022, before most of our competitors had a name for it.
+                    MAXY Digital is Singapore's agentic AI agency and the digital arm of
+                    MAXY AI Holdings, recognized as a HolonIQ Top 50 Southeast Asia EdTech
+                    company in 2025. We don't theorize about agentic AI. We deploy it in
+                    Singapore and across markets — and we've been deploying since 2022,
+                    before most competitors had a name for it.
                   </p>
                 </div>
                 <div class="row mt-50 pt-50 bord-thin-top">
@@ -45,7 +48,7 @@
                         <span class="numb-count">50</span>+
                       </h2>
                       <span class="sub-title opacity-7 ml-30">
-                        Enterprises<br />Served
+                        Enterprises<br />Served across SG, SEA, and US
                       </span>
                     </div>
                   </div>
@@ -55,7 +58,7 @@
                         <span class="numb-count">6</span>
                       </h2>
                       <span class="sub-title opacity-7 ml-30">
-                        Markets<br />Shipped In
+                        Markets with<br />live agentic AI deployments
                       </span>
                     </div>
                   </div>
