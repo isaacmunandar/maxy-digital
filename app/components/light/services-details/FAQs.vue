@@ -10,49 +10,23 @@
         <div class="col-lg-6 valign">
           <div class="full-width">
             <div class="sec-head mb-50">
-              <h6 class="sub-title main-color mb-15">FAQS</h6>
-              <h3>Frequently asked questions</h3>
+              <h6 class="sub-title main-color mb-15">{{ faqContent.subTitle }}</h6>
+              <h3>{{ faqContent.heading }}</h3>
             </div>
             <div class="list-serv">
               <div class="accordion bord">
-                <div class="item active mb-15 wow fadeInUp" data-wow-delay=".1s">
+                <div
+                  v-for="(item, index) in faqContent.items"
+                  :key="item.q"
+                  class="item mb-15 wow fadeInUp"
+                  :class="{ active: index === 0 }"
+                >
                   <div @click="openAccordion" class="title">
-                    <h6>What kind of AI do you actually build?</h6>
+                    <h6>{{ item.q }}</h6>
                     <span class="ico ti-plus"></span>
                   </div>
                   <div class="accordion-info">
-                    <p>
-                      Agentic AI systems that act on your behalf — not just chatbots.
-                      Think automated lead qualification, customer support agents, internal
-                      knowledge systems, and revenue-generating workflows.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="item mb-15 wow fadeInUp" data-wow-delay=".3s">
-                  <div @click="openAccordion" class="title">
-                    <h6>How quickly can we get started?</h6>
-                    <span class="ico ti-plus"></span>
-                  </div>
-                  <div class="accordion-info">
-                    <p>
-                      Most clients see their first AI system live within 4–8 weeks of our
-                      strategy call. We scope tight, ship fast, and expand from there.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="item wow fadeInUp" data-wow-delay=".5s">
-                  <div @click="openAccordion" class="title">
-                    <h6>What happens after deployment?</h6>
-                    <span class="ico ti-plus"></span>
-                  </div>
-                  <div class="accordion-info">
-                    <p>
-                      We don't disappear after launch. Our retainer model keeps us
-                      accountable to your outcomes — ongoing optimization, monitoring,
-                      and iteration until the system is genuinely earning.
-                    </p>
+                    <p>{{ item.a }}</p>
                   </div>
                 </div>
               </div>
@@ -65,6 +39,86 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+
+const route = useRoute();
+
+const pageKey = computed(() => {
+  if (route.path.includes('/solutions/agentic-ai')) return 'agentic-ai';
+  if (route.path.includes('/solutions/web-app')) return 'web-app';
+  if (route.path.includes('/solutions/digital-growth')) return 'digital-growth';
+  return 'agentic-ai';
+});
+
+const faqContent = computed(() => {
+  const map = {
+    'agentic-ai': {
+      subTitle: 'FAQs',
+      heading: 'Frequently asked about agentic AI solutions in Singapore',
+      items: [
+        {
+          q: "What makes MAXY Digital Singapore's agentic AI agency?",
+          a: 'We have had agentic AI systems running in production since 2022 - before most Singapore agencies were using the term. We ship agentic AI agents for hospitality in Singapore, sales in the US, and operations in Indonesia. We are PSG/EDG-aligned and HolonIQ Top 50 SEA EdTech 2025 recognized.',
+        },
+        {
+          q: 'Can my Singapore SME get government funding for an agentic AI project?',
+          a: 'Yes. Most Singapore agentic AI deployments qualify under PSG or EDG, covering up to 50% of project costs. We scope and document your engagement to align with IMDA and Enterprise Singapore requirements.',
+        },
+        {
+          q: 'What industries in Singapore have you deployed agentic AI for?',
+          a: 'Hospitality, professional services, enterprise software, healthcare, education, and financial services. Our Singapore deployments span SMEs at SGD 5M-100M revenue range.',
+        },
+        {
+          q: 'How is an agentic AI solution different from a chatbot?',
+          a: 'A chatbot responds. An AI agent acts. Agentic AI takes autonomous multi-step actions - qualifying a lead, updating a CRM, drafting a follow-up, and booking a meeting without human initiation at each step.',
+        },
+        {
+          q: 'What data does my AI agent need to work?',
+          a: 'It depends on the agent. A sales agent needs CRM data, email history, and product knowledge. A support agent needs FAQ, ticket history, and documentation. A knowledge agent needs internal wikis and SOPs. We run a data readiness audit in Week 1.',
+        },
+      ],
+    },
+    'web-app': {
+      subTitle: 'FAQs',
+      heading: 'Frequently asked about AI-native web and app development',
+      items: [
+        {
+          q: 'Do you build AI into the site or app from day one?',
+          a: 'Yes. We design AI touchpoints during discovery so automation, personalization, and data capture are built in from the start.',
+        },
+        {
+          q: 'Can you integrate with our CRM and analytics stack?',
+          a: 'We integrate with existing CRM, analytics, and automation tools so the site or app plugs into your revenue workflows.',
+        },
+        {
+          q: 'How long does a web or app build take?',
+          a: 'Most builds ship in 4-8 weeks depending on scope, integrations, and content readiness.',
+        },
+      ],
+    },
+    'digital-growth': {
+      subTitle: 'FAQs',
+      heading: 'Frequently asked about digital growth services',
+      items: [
+        {
+          q: 'What channels do you run?',
+          a: 'SEO, paid performance creative, short-form video, landing pages, and demand capture content - selected based on where your ICP already buys.',
+        },
+        {
+          q: 'How do you measure success?',
+          a: 'We measure qualified pipeline and revenue impact, not vanity metrics. Reporting ties every channel to a defined outcome.',
+        },
+        {
+          q: 'Can you work with our in-house team?',
+          a: 'Yes. We can lead execution or partner with your internal marketing and sales teams to compound results.',
+        },
+      ],
+    },
+  };
+
+  return map[pageKey.value];
+});
+
 function openAccordion(event) {
   document.querySelectorAll('.accordion-info').forEach((element) => {
     element.classList.remove('active');
