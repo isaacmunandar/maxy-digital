@@ -12,14 +12,14 @@
               </span>
               <span class="sideup-text">
                 <span class="up-text">
-                  They're already shipping AI.
+                  They're already shipping agentic AI.
                 </span>
               </span>
               <span class="sideup-text">
                 <span class="up-text">
                   Find out
                   <span class="underline">
-                    <a href="/solutions" class="main-color"> where AI earns first </a>
+                    <a href="/roadmap" class="main-color"> where agentic AI earns first </a>
                   </span>
                   in your business.
                 </span>
@@ -29,7 +29,7 @@
               <h2 class="fz-70 numb-font">
                 6
                 <span class="sub-title main-font opacity-7 ml-15">
-                  Markets Shipped In
+                  Markets with live agentic AI deployments
                 </span>
               </h2>
             </div>
@@ -38,16 +38,15 @@
         <div class="col-lg-5">
           <div class="text">
             <p>
-              Most SMEs still treat AI as a productivity hack — a ChatGPT seat,
+              Most Singapore SMEs still treat AI as a productivity hack — a ChatGPT seat,
               a faster way to write emails. The companies pulling ahead are doing
-              something different. They're embedding AI into the workflows that move
-              revenue: lead qualification, customer support, sales operations, content
-              production, internal knowledge.
+              something different: deploying agentic AI systems into the workflows that move
+              revenue. Lead qualification. Customer support. Sales operations. Internal knowledge.
             </p>
             <p class="mt-20">
               By the time it shows up in their P&amp;L, it's too late to copy. The
-              question isn't whether to deploy AI. It's where it earns first, and how
-              fast you can ship it.
+              question isn't whether to deploy agentic AI in Singapore. It's where it earns first,
+              and how fast you can ship it.
             </p>
           </div>
           <div class="main-marq o-hidden mt-100">
@@ -73,13 +72,13 @@
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>Revenue First AI</span>
+                    <span>Revenue-First Agentic AI</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>AI Transformation</span>
+                    <span>AI Transformation Roadmap</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
@@ -105,13 +104,13 @@
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>Revenue First AI</span>
+                    <span>Revenue-First Agentic AI</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
                 <div class="item">
                   <h4 class="d-flex align-items-center">
-                    <span>AI Transformation</span>
+                    <span>AI Transformation Roadmap</span>
                     <span class="fz-50 ml-50 stroke icon">*</span>
                   </h4>
                 </div>
