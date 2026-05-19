@@ -18,7 +18,6 @@
           </div>
           <p class="fz-13 opacity-7">
             The AI and digital agency arm of MAXY Group.<br />
-            HolonIQ Top 50 SEA EdTech 2025.
           </p>
         </div>
         <div class="col-lg-4">
