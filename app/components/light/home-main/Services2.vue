@@ -2,11 +2,13 @@
   <section class="services section-padding">
     <div class="container">
       <div class="sec-head mb-80">
-        <h6 class="sub-title main-color mb-25">What We Ship</h6>
+        <h6 class="sub-title main-color mb-25">
+          What we ship in Singapore and across Southeast Asia
+        </h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
           <h2 class="fw-600 d-rotate wow">
             <span class="rotate-text">
-              Three ways we put AI to <span class="fw-200">work.</span>
+              Three ways we put agentic AI to <span class="fw-200">work.</span>
             </span>
           </h2>
           <div class="ml-auto">
