@@ -17,7 +17,7 @@
             <img src="/light/assets/imgs/logo-light.png" alt="MAXY Digital" />
           </div>
           <p class="fz-13 opacity-7">
-            The AI and digital agency arm of MAXY Group.<br />
+            The agentic AI and digital agency arm of MAXY Group.<br />
           </p>
         </div>
         <div class="col-lg-4">
