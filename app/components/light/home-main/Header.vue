@@ -5,9 +5,9 @@
         <div class="col-lg-6">
           <div class="text mb-100">
             <h4>
-              MAXY Digital builds agentic AI, custom software, and growth engines
-              for SMEs scaling across Southeast Asia and the United States. From your
-              first AI agent to a full transformation roadmap — built, shipped, and earning.
+              MAXY Digital builds production-grade agentic AI systems for Singapore SMEs. 
+              Custom AI agents, PSG/EDG-aligned scoping, deployed in 6 weeks. 
+              Book a strategy call.
             </h4>
           </div>
         </div>
@@ -17,8 +17,8 @@
       <div class="container">
         <div class="lg-text">
           <div class="d-flex">
-            <h6>SINGAPORE HQ · HOLONIQ TOP 50 SEA EDTECH 2025</h6>
-            <h6 class="ml-auto">AI AGENCY</h6>
+            <h6>AI AND DIGITAL AGENCY · SINGAPORE HQ</h6>
+            <!-- <h6 class="ml-auto">AI AGENCY</h6> -->
           </div>
           <h1>Maxy Digital</h1>
         </div>
