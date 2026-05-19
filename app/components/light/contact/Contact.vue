@@ -6,14 +6,14 @@
           <div class="sec-head md-mb80">
             <h2 class="text-u ls1 d-rotate wow">
               <span class="rotate-text">
-                Let&apos;s make your <br />
-                trying to
-                <span class="fw-200">ship.</span>
+                Let&apos;s ship your <br />
+                first agentic
+                <span class="fw-200">AI system.</span>
               </span>
             </h2>
             <p class="mt-20 mb-20">
-              30-minute strategy call. We diagnose, you decide. No pitch deck.
-              We respond within one business day.
+              30-minute strategy call. We diagnose where agentic AI earns first,
+              you decide. No pitch deck. We respond within one business day.
             </p>
             <div class="row">
               <div class="col-md-6">
@@ -91,7 +91,7 @@
                   </div>
                   <div class="mt-30">
                     <button type="submit" class="butn butn-full butn-bord radius-30">
-                      <span class="text">Let&apos;s Talk</span>
+                      <span class="text">Book a Strategy Call</span>
                     </button>
                   </div>
                 </div>
