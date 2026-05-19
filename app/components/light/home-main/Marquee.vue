@@ -23,12 +23,6 @@
           </div>
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>HolonIQ Top 50 SEA EdTech 2025</span>
-              <span class="fz-50 ml-50 stroke icon">*</span>
-            </h4>
-          </div>
-          <div class="item">
-            <h4 class="d-flex align-items-center">
               <span>Deploy in 6 Weeks. Not 6 Months.</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
@@ -50,12 +44,6 @@
           <div class="item">
             <h4 class="d-flex align-items-center">
               <span>AI Systems Deployed in SG · US · ID</span>
-              <span class="fz-50 ml-50 stroke icon">*</span>
-            </h4>
-          </div>
-          <div class="item">
-            <h4 class="d-flex align-items-center">
-              <span>HolonIQ Top 50 SEA EdTech 2025</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
