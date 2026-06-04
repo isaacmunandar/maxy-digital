@@ -13,8 +13,8 @@
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <div class="logo icon-img-100 mb-30">
-            <img src="/light/assets/imgs/logo-light.png" alt="MAXY Digital" />
+          <div class="logo mb-30" style="width: 140px;">
+            <img src="/light/assets/imgs/logo-light.svg" alt="MAXY Digital" />
           </div>
           <p class="fz-13 opacity-7">
             The agentic AI and digital agency arm of MAXY Group.<br />
@@ -25,17 +25,17 @@
             <div class="mb-30">
               <h6 class="sub-title mb-15">Singapore HQ</h6>
               <h5 class="opacity-8 fz-15">
-                21b Bukit Pasoh Rd,<br />Singapore 089835
+                21B Bukit Pasoh Road,<br />Singapore 089835
               </h5>
             </div>
             <div class="mb-30">
               <h6 class="sub-title mb-15">Jakarta Office</h6>
               <h5 class="opacity-8 fz-15">
-                Pakuwon Tower 26-J,<br />Jl. Raya Kasablanka 88,<br />Jakarta Selatan 12870
+                Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950
               </h5>
             </div>
-            <a href="mailto:isaac@maxy.academy" class="underline">
-              <span class="fz-16 main-color">isaac@maxy.academy</span>
+            <a href="mailto:hello@maxy.asia" class="underline">
+              <span class="fz-16 main-color">hello@maxy.asia</span>
             </a>
           </div>
         </div>
