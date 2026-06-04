@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg bord blur">
     <div class="container">
-      <a class="logo icon-img-100" href="/">
-        <img src="/light/assets/imgs/logo-light.png" alt="logo" />
+      <a class="logo" href="/" style="width: 140px; display: inline-block;">
+        <img :src="isScrolled ? '/light/assets/imgs/logo-dark.svg' : '/light/assets/imgs/logo-light.svg'" alt="logo" />
       </a>
 
       <div class="topnav">
@@ -14,8 +14,8 @@
   </nav>
 
   <div :class="`hamenu one-scroll ${isOpen && 'open'}`">
-    <div class="logo icon-img-100">
-      <img src="/light/assets/imgs/logo-light.png" alt="" />
+    <div class="logo" style="width: 140px;">
+      <img src="/light/assets/imgs/logo-light.svg" alt="" />
     </div>
     <div @click="closeMenu" class="close-menu cursor-pointer ti-close"></div>
     <div class="container">
@@ -97,7 +97,7 @@
             <div class="item mb-50">
               <h6 class="sub-title mb-15 opacity-7">Singapore HQ</h6>
               <h5>
-                21b Bukit Pasoh Rd<br />
+                21B Bukit Pasoh Road,<br />
                 Singapore 089835
               </h5>
             </div>
@@ -129,10 +129,7 @@
             <div class="item mb-40">
               <h6 class="sub-title mb-15 opacity-7">Contact Us</h6>
               <h5>
-                <a href="mailto:isaac@maxy.academy">isaac@maxy.academy</a>
-              </h5>
-              <h5 class="underline mt-10">
-                <a href="tel:+628113555855">+62 811 3555 855</a>
+                <a href="mailto:hello@maxy.asia">hello@maxy.asia</a>
               </h5>
             </div>
           </div>
@@ -146,12 +143,19 @@
 import { onMounted, onUnmounted } from 'vue';
 import { ref } from 'vue';
 
+const isScrolled = ref(false);
+
 function handleScroll() {
   const bodyScroll = window.scrollY;
   const navbar = document.querySelector('.navbar');
 
-  if (bodyScroll > 300) navbar.classList.add('nav-scroll');
-  else navbar.classList.remove('nav-scroll');
+  if (bodyScroll > 300) {
+    navbar.classList.add('nav-scroll');
+    isScrolled.value = true;
+  } else {
+    navbar.classList.remove('nav-scroll');
+    isScrolled.value = false;
+  }
 }
 
 function handleDropdownMouseMove(event) {
