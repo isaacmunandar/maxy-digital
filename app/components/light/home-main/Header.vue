@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="img">
-        <img src="/light/assets/imgs/header/2.jpg" alt="" />
+        <img src="/light/assets/imgs/header/2.png" alt="" />
       </div>
     </div>
   </header>
