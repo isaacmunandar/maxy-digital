@@ -7,6 +7,13 @@ export default defineNuxtConfig({
     shim: false,
   },
   nitro: {},
+  modules: ['@nuxtjs/seo'],
+  site: {
+    url: 'https://maxy.asia',
+    name: 'MAXY Digital',
+    description: 'MAXY Digital is a premier Agentic AI & Digital Agency offering AI-Native Web, App, and Digital Growth solutions.',
+    defaultLocale: 'en'
+  },
   app: {
     head: {
       title: "MAXY Digital — Agentic AI & Digital Agency",
@@ -14,29 +21,10 @@ export default defineNuxtConfig({
         lang: "en",
       },
       meta: [
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1",
-        },
-        {
-          charset: "utf-8",
-        },
-        {
-          "http-equiv": "X-UA-Compatible",
-          content: "IE=edge",
-        },
-        {
-          name: "keywords",
-          content: "Vue Nuxtjs Template webfolio Multi-Purpose themeforest",
-        },
-        {
-          name: "description",
-          content: "webfolio - Multi-Purpose Vue Nuxtjs Template",
-        },
-        {
-          name: "author",
-          content: "Uicamp",
-        },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { charset: "utf-8" },
+        { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
+        { name: "theme-color", content: "#000000" }
       ],
       link: [
         { rel: "icon", href: "/light/assets/imgs/favicon.svg", type: "image/svg+xml" },
