@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   nitro: {},
   app: {
     head: {
-      title: "infolio",
+      title: "MAXY Digital — Agentic AI & Digital Agency",
       htmlAttrs: {
         lang: "en",
       },
@@ -39,7 +39,8 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: "shortcut icon", href: "/light/assets/imgs/favicon.ico" },
+        { rel: "icon", href: "/light/assets/imgs/favicon.svg", type: "image/svg+xml" },
+        { rel: "shortcut icon", href: "/light/assets/imgs/favicon.svg", type: "image/svg+xml" },
         // Google Fonts
         {
           rel: "stylesheet",
