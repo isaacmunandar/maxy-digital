@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg bord blur">
     <div class="container">
       <a class="logo" href="/" style="width: 140px; display: inline-block;">
-        <img :src="isScrolled ? '/light/assets/imgs/logo-dark.svg' : '/light/assets/imgs/logo-light.svg'" alt="MAXY Digital" />
+        <img :src="isScrolled ? '/light/assets/imgs/logo-maxy-dark.png' : '/light/assets/imgs/logo-maxy-light.png'" alt="MAXY Digital" />
       </a>
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -37,7 +37,10 @@
         </ul>
       </div>
 
-      <div class="topnav">
+      <div class="topnav d-flex align-items-center">
+        <a href="/contact" class="butn butn-sm butn-bord radius-30 d-none d-md-block" style="margin-right: 20px; padding: 10px 20px;">
+          <span>Book a Call</span>
+        </a>
         <div @click="toggleMenu" class="menu-icon cursor-pointer">
           <span class="icon ti-align-right"></span>
         </div>
