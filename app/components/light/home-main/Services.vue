@@ -12,7 +12,7 @@
                 <span class="sub-title ml-15">Work With Us</span>
               </a>
             </div>
-            <img src="/light/assets/imgs/intro/04.jpg" alt="MAXY Digital team" class="radius-30" />
+            <img src="/light/assets/imgs/intro/04.png" alt="MAXY Digital team" class="radius-30" />
           </div>
         </div>
         <div class="col-lg-6 valign">
