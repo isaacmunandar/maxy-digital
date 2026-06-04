@@ -33,14 +33,14 @@
             <div class="col-md-5 rest">
               <div class="cont bord-thin-left">
                 <div class="mb-40">
-                  <h2 class="fz-100 numb-font">2.</h2>
+                  <h2 class="fz-100 numb-font">3.</h2>
                 </div>
-                <h4>Phase 02: Compound Workflows.</h4>
+                <h4>Phase 03: Transformation Infrastructure.</h4>
                 <div class="text mt-30">
                   <p>
-                    We expand into adjacent workflows across sales, support, and
-                    operations. For Singapore-based clients, this phase often
-                    includes GEO optimization to appear in AI search results.
+                    Multi-agent systems, shared knowledge layers, and governance
+                    that scale across departments. AI runs a material share of
+                    operations, not a single workflow.
                   </p>
                 </div>
               </div>
@@ -53,14 +53,14 @@
               <div class="col-md-11">
                 <div class="cont">
                   <div class="mb-40">
-                    <h2 class="fz-100 numb-font">3.</h2>
+                    <h2 class="fz-100 numb-font">2.</h2>
                   </div>
-                  <h4>Phase 03: Transformation Infrastructure.</h4>
+                  <h4>Phase 02: Compound Workflows.</h4>
                   <div class="text mt-30">
                     <p>
-                      Multi-agent systems, shared knowledge layers, and governance
-                      that scale across departments. AI runs a material share of
-                      operations, not a single workflow.
+                      We expand into adjacent workflows across sales, support, and
+                      operations. For Singapore-based clients, this phase often
+                      includes GEO optimization to appear in AI search results.
                     </p>
                   </div>
                 </div>
