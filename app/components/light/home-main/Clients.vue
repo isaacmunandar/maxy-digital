@@ -5,7 +5,7 @@
         <div class="sub-bg d-flex align-items-center">
           <h6 class="fz-14 fw-400">
             Agentic AI deployed for operators in
-            <span class="fw-600">Singapore, the United States, Indonesia, Hong Kong, Taiwan, and the Netherlands.</span>
+            <span class="fw-600">Singapore, the United States, and Indonesia.</span>
           </h6>
         </div>
       </div>
@@ -51,7 +51,7 @@ const swiperOptions = {
       loop: true,
       slidesPerView: 5,
       spaceBetween: 30,
-      centeredSlides: true,
+      centeredSlides: false,
     },
   },
 };
