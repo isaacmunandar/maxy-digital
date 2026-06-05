@@ -45,7 +45,7 @@
                   <div class="col-sm-6">
                     <div class="item d-flex align-items-center sm-mb30">
                       <h2 class="fz-60 line-height-1">
-                        <span class="numb-count">50</span>+
+                        <span class="numb-count">50+</span>
                       </h2>
                       <span class="sub-title opacity-7 ml-30">
                         Enterprises<br />Served across SG, SEA, and US
