@@ -59,10 +59,10 @@ export default defineEventHandler(async (event) => {
 
   try {
     await resend.emails.send({
-      from: 'MAXY Digital Contact <onboarding@resend.dev>',
-      to: 'hello@maxy.asia',
+      from: "MAXY Digital Contact <onboarding@resend.dev>",
+      to: "it.maxy.academy@gmail.com",
       replyTo: email,
-      subject: `[Book a Call] ${subject || 'New Strategy Call Request'} — from ${name}`,
+      subject: `[Book a Call] ${subject || "New Strategy Call Request"} — from ${name}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -98,7 +98,7 @@ export default defineEventHandler(async (event) => {
                         </tr>
                         <tr>
                           <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee; color: #888888; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Subject</td>
-                          <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee; color: #222222; font-size: 16px; font-weight: 500;">${subject || '—'}</td>
+                          <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee; color: #222222; font-size: 16px; font-weight: 500;">${subject || "—"}</td>
                         </tr>
                       </table>
 
@@ -106,7 +106,7 @@ export default defineEventHandler(async (event) => {
                       <div style="background-color: #f9fbfb; border-left: 4px solid #000000; padding: 25px; border-radius: 0 8px 8px 0; margin-bottom: 30px;">
                         <h4 style="margin: 0 0 15px 0; color: #888888; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Message / Needs</h4>
                         <div style="color: #333333; font-size: 16px; line-height: 1.7; font-weight: 400;">
-                          ${message.replace(/\n/g, '<br>')}
+                          ${message.replace(/\n/g, "<br>")}
                         </div>
                       </div>
 
@@ -130,7 +130,7 @@ export default defineEventHandler(async (event) => {
         </body>
         </html>
       `,
-    })
+    });
 
     // If successful, save IP to cache
     if (clientIp !== 'unknown-ip') {
