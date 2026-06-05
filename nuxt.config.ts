@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     shim: false,
   },
   nitro: {},
+  compatibilityDate: '2026-06-04',
   modules: ['@nuxtjs/seo'],
   site: {
     url: 'https://maxy.asia',
