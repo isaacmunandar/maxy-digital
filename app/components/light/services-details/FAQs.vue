@@ -4,7 +4,7 @@
       <div class="row justify-content-between">
         <div class="col-lg-5 valign">
           <div class="faq-img md-mb50">
-            <img src="/light/assets/imgs/intro/03.jpg" alt="" />
+            <img src="/light/assets/imgs/intro/03.png" alt="" />
           </div>
         </div>
         <div class="col-lg-6 valign">

@@ -4,8 +4,8 @@
       <div class="container ontop">
         <div class="row pb-30 bord-thin-bottom">
           <div class="col-lg-5">
-            <div class="logo icon-img-120">
-              <img src="/light/assets/imgs/logo-light.png" alt="" />
+            <div class="logo" style="width: 140px;">
+              <img src="/light/assets/imgs/logo-light.svg" alt="" />
             </div>
           </div>
           <div class="col-lg-7">
@@ -52,13 +52,8 @@
               </h2>
               <div class="info mt-80 d-flex align-items-center">
                 <div>
-                  <a href="mailto:isaac@maxy.academy" class="butn butn-md butn-bord-thin radius-30">
-                    <span class="text">isaac@maxy.academy</span>
-                  </a>
-                </div>
-                <div>
-                  <a href="tel:+628113555855" class="butn butn-md butn-bord-thin radius-30 ml-30">
-                    <span class="text">+62 811 3555 855</span>
+                  <a href="mailto:hello@maxy.asia" class="butn butn-md butn-bord-thin radius-30">
+                    <span class="text">hello@maxy.asia</span>
                   </a>
                 </div>
               </div>

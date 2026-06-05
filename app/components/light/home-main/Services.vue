@@ -12,7 +12,7 @@
                 <span class="sub-title ml-15">Work With Us</span>
               </a>
             </div>
-            <img src="/light/assets/imgs/intro/04.jpg" alt="MAXY Digital team" class="radius-30" />
+            <img src="/light/assets/imgs/intro/04.png" alt="MAXY Digital team" class="radius-30" />
           </div>
         </div>
         <div class="col-lg-6 valign">
@@ -45,7 +45,7 @@
                   <div class="col-sm-6">
                     <div class="item d-flex align-items-center sm-mb30">
                       <h2 class="fz-60 line-height-1">
-                        <span class="numb-count">50</span>+
+                        <span class="numb-count">50+</span>
                       </h2>
                       <span class="sub-title opacity-7 ml-30">
                         Enterprises<br />Served across SG, SEA, and US

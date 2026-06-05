@@ -20,27 +20,27 @@
             </div>
             <div class="col-md-5 rest">
               <div class="img fit-img bord-thin-left">
-                <img src="/light/assets/imgs/intro/02.jpg" alt="" />
+                <img src="/light/assets/imgs/intro/02.png" alt="" />
               </div>
             </div>
           </div>
           <div class="row justify-content-end bord-thin-top rest">
             <div class="col-md-5 rest">
               <div class="img fit-img">
-                <img src="/light/assets/imgs/intro/03.jpg" alt="" />
+                <img src="/light/assets/imgs/intro/03.png" alt="" />
               </div>
             </div>
             <div class="col-md-5 rest">
               <div class="cont bord-thin-left">
                 <div class="mb-40">
-                  <h2 class="fz-100 numb-font">2.</h2>
+                  <h2 class="fz-100 numb-font">3.</h2>
                 </div>
-                <h4>Phase 02: Compound Workflows.</h4>
+                <h4>Phase 03: Transformation Infrastructure.</h4>
                 <div class="text mt-30">
                   <p>
-                    We expand into adjacent workflows across sales, support, and
-                    operations. For Singapore-based clients, this phase often
-                    includes GEO optimization to appear in AI search results.
+                    Multi-agent systems, shared knowledge layers, and governance
+                    that scale across departments. AI runs a material share of
+                    operations, not a single workflow.
                   </p>
                 </div>
               </div>
@@ -53,14 +53,14 @@
               <div class="col-md-11">
                 <div class="cont">
                   <div class="mb-40">
-                    <h2 class="fz-100 numb-font">3.</h2>
+                    <h2 class="fz-100 numb-font">2.</h2>
                   </div>
-                  <h4>Phase 03: Transformation Infrastructure.</h4>
+                  <h4>Phase 02: Compound Workflows.</h4>
                   <div class="text mt-30">
                     <p>
-                      Multi-agent systems, shared knowledge layers, and governance
-                      that scale across departments. AI runs a material share of
-                      operations, not a single workflow.
+                      We expand into adjacent workflows across sales, support, and
+                      operations. For Singapore-based clients, this phase often
+                      includes GEO optimization to appear in AI search results.
                     </p>
                   </div>
                 </div>

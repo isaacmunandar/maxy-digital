@@ -19,18 +19,18 @@
               <div class="col-md-6">
                 <div class="morinfo mt-30">
                   <h6 class="mb-15">Singapore HQ</h6>
-                  <p>21b Bukit Pasoh Rd<br />Singapore 089835</p>
+                  <p>21B Bukit Pasoh Road,<br />Singapore 089835</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="morinfo mt-30">
                   <h6 class="mb-15">Jakarta Office</h6>
-                  <p>Pakuwon Tower 26-J<br />Jl. Raya Kasablanka 88<br />Jakarta Selatan 12870</p>
+                  <p>Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950</p>
                 </div>
               </div>
             </div>
             <div class="phone fz-30 fw-600 mt-30 underline main-color">
-              <a href="mailto:isaac@maxy.academy">isaac@maxy.academy</a>
+              <a href="mailto:hello@maxy.asia">hello@maxy.asia</a>
             </div>
             <ul class="rest social-text d-flex mt-60">
               <li class="mr-30">
@@ -63,35 +63,43 @@
                 Send a <span class="fw-200">message</span>
               </h3>
             </div>
-            <form id="contact-form" method="post" action="contact.php">
-              <div class="messages"></div>
+
+            <!-- Success State -->
+            <div v-if="submitted" class="messages" style="padding: 24px; border: 1px solid #22c55e; border-radius: 8px; background: rgba(34,197,94,0.08); text-align: center;">
+              <p style="color: #22c55e; font-size: 16px; margin: 0;">&#10003; Message sent! We&apos;ll respond within one business day.</p>
+            </div>
+
+            <form v-else id="contact-form" @submit.prevent="handleSubmit">
+              <div v-if="errorMsg" class="messages" style="padding: 16px; border: 1px solid #ef4444; border-radius: 8px; background: rgba(239,68,68,0.08); margin-bottom: 20px;">
+                <p style="color: #ef4444; font-size: 14px; margin: 0;">{{ errorMsg }}</p>
+              </div>
 
               <div class="controls row">
                 <div class="col-lg-6">
                   <div class="form-group mb-30">
-                    <input id="form_name" type="text" name="name" placeholder="Name" required />
+                    <input id="form_name" v-model="form.name" type="text" name="name" placeholder="Name" required :disabled="loading" />
                   </div>
                 </div>
 
                 <div class="col-lg-6">
                   <div class="form-group mb-30">
-                    <input id="form_email" type="email" name="email" placeholder="Email" required />
+                    <input id="form_email" v-model="form.email" type="email" name="email" placeholder="Email" required :disabled="loading" />
                   </div>
                 </div>
 
                 <div class="col-12">
                   <div class="form-group mb-30">
-                    <input id="form_subject" type="text" name="subject" placeholder="Subject" />
+                    <input id="form_subject" v-model="form.subject" type="text" name="subject" placeholder="Subject" :disabled="loading" />
                   </div>
                 </div>
 
                 <div class="col-12">
                   <div class="form-group">
-                    <textarea id="form_message" name="message" placeholder="Message" rows="4" required></textarea>
+                    <textarea id="form_message" v-model="form.message" name="message" placeholder="Message" rows="4" required :disabled="loading"></textarea>
                   </div>
                   <div class="mt-30">
-                    <button type="submit" class="butn butn-full butn-bord radius-30">
-                      <span class="text">Book a Strategy Call</span>
+                    <button type="submit" class="butn butn-full butn-bord radius-30" :disabled="loading" :style="loading ? 'opacity: 0.7; cursor: not-allowed;' : ''">
+                      <span class="text">{{ loading ? 'Sending...' : 'Book a Strategy Call' }}</span>
                     </button>
                   </div>
                 </div>
@@ -103,3 +111,44 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, reactive } from 'vue';
+
+const form = reactive({
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+});
+
+const loading = ref(false);
+const submitted = ref(false);
+const errorMsg = ref('');
+
+async function handleSubmit() {
+  loading.value = true;
+  errorMsg.value = '';
+
+  try {
+    const { error } = await useFetch('/api/contact', {
+      method: 'POST',
+      body: { ...form },
+    });
+
+    if (error.value) {
+      errorMsg.value = error.value?.data?.statusMessage || 'Something went wrong. Please try again.';
+    } else {
+      submitted.value = true;
+      form.name = '';
+      form.email = '';
+      form.subject = '';
+      form.message = '';
+    }
+  } catch (e) {
+    errorMsg.value = 'Something went wrong. Please try again.';
+  } finally {
+    loading.value = false;
+  }
+}
+</script>

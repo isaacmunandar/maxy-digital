@@ -13,8 +13,8 @@
       </div>
       <div class="row">
         <div class="col-lg-3">
-          <div class="logo icon-img-100">
-            <img src="/light/assets/imgs/logo-light.png" alt="" />
+          <div class="logo" style="width: 140px;">
+            <img src="/light/assets/imgs/logo-light.svg" alt="" />
           </div>
         </div>
         <div class="col-lg-4">
@@ -22,13 +22,13 @@
             <div class="mb-40">
               <h6 class="sub-title mb-30">Singapore HQ</h6>
               <h5 class="opacity-8">
-                21b Bukit Pasoh Rd<br />
+                21B Bukit Pasoh Road,<br />
                 Singapore 089835
               </h5>
             </div>
 
-            <a href="mailto:isaac@maxy.academy" class="underline">
-              <span class="fz-22 main-color">isaac@maxy.academy</span>
+            <a href="mailto:hello@maxy.asia" class="underline">
+              <span class="fz-22 main-color">hello@maxy.asia</span>
             </a>
           </div>
         </div>
