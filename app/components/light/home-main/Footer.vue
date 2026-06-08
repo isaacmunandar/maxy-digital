@@ -60,7 +60,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center pt-30 pb-30 mt-80 bord-thin-top">
-        <div>
+        <!-- <div>
           <ul class="rest d-flex align-items-center">
             <li class="hover-this cursor-pointer">
               <a href="#0" class="hover-anim"><i class="fab fa-linkedin-in"></i></a>
@@ -72,7 +72,7 @@
               <a href="#0" class="hover-anim"><i class="fab fa-facebook-f"></i></a>
             </li>
           </ul>
-        </div>
+        </div> -->
         <div class="ml-auto">
           <p class="fz-14">
             © 2026 MAXY Digital. Part of MAXY Group.
