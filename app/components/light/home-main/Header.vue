@@ -5,12 +5,12 @@
         <div class="col-lg-6">
           <div class="text mb-100">
             <p class="sub-title main-color mb-15">
-              Singapore HQ - Agentic AI Solutions - PSG/EDG Grant-Aligned
+              Singapore HQ - Agentic AI Solutions
             </p>
             <h4>
               MAXY Digital builds production-grade agentic AI solutions for Singapore SMEs.
               Custom agentic AI agents, AI-native software, and growth engines deployed in
-              weeks, not quarters.
+              weeks.
             </h4>
             <p class="mt-20">
               From your first AI agent to a full transformation roadmap across Singapore,
