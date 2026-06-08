@@ -20,7 +20,7 @@
         <div class="col-lg-4">
           <div class="column">
             <div class="mb-40">
-              <h6 class="sub-title mb-30">Singapore HQ</h6>
+              <h6 class="sub-title mb-30">Singapore</h6>
               <h5 class="opacity-8">
                 21B Bukit Pasoh Road,<br />
                 Singapore 089835
