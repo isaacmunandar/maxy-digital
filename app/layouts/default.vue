@@ -1,5 +1,4 @@
 <template>
-  <Cursor />
   <ProgressScroll />
   <Lines />
   <Navbar />
@@ -11,7 +10,6 @@
 </template>
 
 <script setup>
-import Cursor from "@/components/light/common/cusor";
 import Lines from "@/components/light/common/Lines";
 import ProgressScroll from "@/components/light/common/ProgressScroll";
 import Navbar from "@/components/light/creative-agency/Navbar";
