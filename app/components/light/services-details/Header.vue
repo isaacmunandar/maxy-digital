@@ -38,7 +38,7 @@ const pageContent = computed(() => {
       subheadline:
         'MAXY Digital builds production-grade agentic AI solutions for Singapore SMEs - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
       microcopy:
-        'PSG and EDG grant-aligned. Live deployments in Singapore, the United States, and Indonesia.',
+        'Live deployments in Singapore, the United States, and Indonesia.',
       breadcrumb: 'Agentic AI',
     },
     'web-app': {
