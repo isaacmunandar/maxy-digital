@@ -27,12 +27,6 @@
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
-          <div class="item">
-            <h4 class="d-flex align-items-center">
-              <span>PSG/EDG grant-aligned delivery</span>
-              <span class="fz-50 ml-50 stroke icon">*</span>
-            </h4>
-          </div>
         </div>
         <div class="box">
           <div class="item">
@@ -56,12 +50,6 @@
           <div class="item">
             <h4 class="d-flex align-items-center">
               <span>Digital growth services that compound demand</span>
-              <span class="fz-50 ml-50 stroke icon">*</span>
-            </h4>
-          </div>
-          <div class="item">
-            <h4 class="d-flex align-items-center">
-              <span>PSG/EDG grant-aligned delivery</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>

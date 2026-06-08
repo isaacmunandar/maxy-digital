@@ -53,8 +53,8 @@ const pageContent = computed(() => {
   const map = {
     'agentic-ai': {
       subTitle: 'How We Build',
-      headline: 'Six weeks from explore to agentic AI in production in Singapore.',
-      note: 'Singapore engagements are scoped to PSG and EDG grant frameworks from day 1.',
+      headline: 'Six weeks from explore to agentic AI in production.',
+      note: 'Live deployments in Singapore, the United States, and Indonesia.',
       steps: [
         {
           title: 'Diagnose',

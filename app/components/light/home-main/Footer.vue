@@ -23,13 +23,13 @@
         <div class="col-lg-4">
           <div class="column">
             <div class="mb-30">
-              <h6 class="sub-title mb-15">Singapore HQ</h6>
+              <h6 class="sub-title mb-15">Singapore</h6>
               <h5 class="opacity-8 fz-15">
                 21B Bukit Pasoh Road,<br />Singapore 089835
               </h5>
             </div>
             <div class="mb-30">
-              <h6 class="sub-title mb-15">Jakarta Office</h6>
+              <h6 class="sub-title mb-15">MAXY AI HUB</h6>
               <h5 class="opacity-8 fz-15">
                 Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950
               </h5>

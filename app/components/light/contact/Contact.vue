@@ -18,13 +18,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="morinfo mt-30">
-                  <h6 class="mb-15">Singapore HQ</h6>
+                  <h6 class="mb-15">Singapore</h6>
                   <p>21B Bukit Pasoh Road,<br />Singapore 089835</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="morinfo mt-30">
-                  <h6 class="mb-15">Jakarta Office</h6>
+                  <h6 class="mb-15">MAXY AI HUB</h6>
                   <p>Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950</p>
                 </div>
               </div>

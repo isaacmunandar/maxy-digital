@@ -52,7 +52,6 @@
                         fill="#14cf93"></path>
                     </svg>
                   </span>
-                  <h6 class="inline fw-400">PSG/EDG grant-aligned delivery (SG SMEs).</h6>
                 </li>
               </ul>
             </div>
@@ -71,7 +70,7 @@
                 <ul class="dot-list rest">
                   <li class="mb-10">Revenue-gap diagnosis</li>
                   <li class="mb-10">One agent deployed in 4-8 weeks</li>
-                  <li class="mb-10">PSG/EDG scoping and documentation</li>
+                  <li class="mb-10">Scoping and documentation</li>
                   <li>30-day production support</li>
                 </ul>
               </div>

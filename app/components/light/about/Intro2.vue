@@ -12,8 +12,8 @@
                 <h4>Phase 01: First Agentic AI Deployment.</h4>
                 <div class="text mt-30">
                   <p>
-                    Your first agentic AI system goes live in 4-8 weeks. Singapore
-                    SME clients often co-fund Phase 01 through PSG or EDG grants.
+                    Your first agentic AI system goes live in 4-8 weeks. We identify a high-impact workflow, build a custom agentic AI agent, and
+                    deploy it in production.
                   </p>
                 </div>
               </div>
