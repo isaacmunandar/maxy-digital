@@ -8,7 +8,7 @@
               <img src="/light/assets/imgs/logo-light.svg" alt="" />
             </div>
           </div>
-          <div class="col-lg-7">
+          <!-- <div class="col-lg-7">
             <div class="social-media d-flex justify-content-end">
               <ul class="rest d-flex align-items-center fz-14">
                 <li class="hover-this cursor-pointer">
@@ -33,7 +33,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="row pt-80">
           <div class="col-lg-7">
