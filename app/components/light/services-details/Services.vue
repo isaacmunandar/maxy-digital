@@ -100,7 +100,6 @@ const sectionContent = computed(() => {
       bulletsRight: [
         'Assessment and diagnostic AI',
         'Digital twin AI systems',
-        'PSG/EDG grant-aligned delivery',
       ],
     },
     'web-app': {
