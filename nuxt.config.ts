@@ -7,13 +7,14 @@ export default defineNuxtConfig({
     shim: false,
   },
   nitro: {},
-  compatibilityDate: '2026-06-04',
-  modules: ['@nuxtjs/seo'],
+  compatibilityDate: "2026-06-04",
+  modules: ["@nuxtjs/seo"],
   site: {
-    url: 'https://maxy.asia',
-    name: 'MAXY Digital',
-    description: 'MAXY Digital is a premier Agentic AI & Digital Agency offering AI-Native Web, App, and Digital Growth solutions.',
-    defaultLocale: 'en'
+    url: "https://maxy.asia",
+    name: "MAXY Digital",
+    description:
+      "MAXY Digital is a premier Agentic AI & Digital Agency offering AI-Native Web, App, and Digital Growth solutions.",
+    defaultLocale: "en",
   },
   app: {
     head: {
@@ -25,11 +26,19 @@ export default defineNuxtConfig({
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { charset: "utf-8" },
         { "http-equiv": "X-UA-Compatible", content: "IE=edge" },
-        { name: "theme-color", content: "#000000" }
+        { name: "theme-color", content: "#000000" },
       ],
       link: [
-        { rel: "icon", href: "/light/assets/imgs/favicon.svg", type: "image/svg+xml" },
-        { rel: "shortcut icon", href: "/light/assets/imgs/favicon.svg", type: "image/svg+xml" },
+        {
+          rel: "icon",
+          href: "/light/assets/imgs/favicon.ico",
+          type: "image/svg+xml",
+        },
+        {
+          rel: "shortcut icon",
+          href: "/light/assets/imgs/favicon.ico",
+          type: "image/svg+xml",
+        },
         // Google Fonts
         {
           rel: "stylesheet",
