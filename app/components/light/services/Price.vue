@@ -52,6 +52,9 @@
                         fill="#14cf93"></path>
                     </svg>
                   </span>
+                  <h6 class="inline fw-400">
+                    Aligned scope and price to your business impact.
+                  </h6>
                 </li>
               </ul>
             </div>
