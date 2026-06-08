@@ -58,11 +58,7 @@ const faqContent = computed(() => {
       items: [
         {
           q: "What makes MAXY Digital Singapore's agentic AI agency?",
-          a: 'We have had agentic AI systems running in production since 2022 - before most Singapore agencies were using the term. We ship agentic AI agents for hospitality in Singapore, sales in the US, and operations in Indonesia. We are PSG/EDG-aligned and HolonIQ Top 50 SEA EdTech 2025 recognized.',
-        },
-        {
-          q: 'Can my Singapore SME get government funding for an agentic AI project?',
-          a: 'Yes. Most Singapore agentic AI deployments qualify under PSG or EDG, covering up to 50% of project costs. We scope and document your engagement to align with IMDA and Enterprise Singapore requirements.',
+          a: 'We have had agentic AI systems running in production since 2022 - before most Singapore agencies were using the term. We ship agentic AI agents for hospitality in Singapore, sales in the US, and operations in Indonesia.',
         },
         {
           q: 'What industries in Singapore have you deployed agentic AI for?',
