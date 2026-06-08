@@ -32,7 +32,7 @@
             <div class="phone fz-30 fw-600 mt-30 underline main-color">
               <a href="mailto:hello@maxy.asia">hello@maxy.asia</a>
             </div>
-            <ul class="rest social-text d-flex mt-60">
+            <!-- <ul class="rest social-text d-flex mt-60">
               <li class="mr-30">
                 <a href="#0" class="hover-this">
                   <span class="hover-anim">LinkedIn</span>
@@ -53,7 +53,7 @@
                   <span class="hover-anim">YouTube</span>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div class="col-lg-6 offset-lg-1 valign">
