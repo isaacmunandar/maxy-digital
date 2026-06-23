@@ -18,7 +18,7 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "MAXY Digital — Agentic AI & Digital Agency",
+      title: "MAXY Digital | Agentic AI & Digital Agency",
       htmlAttrs: {
         lang: "en",
       },
@@ -39,6 +39,19 @@ export default defineNuxtConfig({
           href: "/light/assets/imgs/favicon.ico",
           type: "image/svg+xml",
         },
+        // Preload critical background images to prevent flash on load
+        {
+          rel: "preload",
+          as: "image",
+          href: "/light/assets/imgs/header/bg1.jpg",
+          fetchpriority: "high",
+        },
+        {
+          rel: "preload",
+          as: "image",
+          href: "/light/assets/imgs/header/b5.jpg",
+          fetchpriority: "high",
+        },
         // Google Fonts
         {
           rel: "stylesheet",
@@ -54,13 +67,12 @@ export default defineNuxtConfig({
         { rel: "stylesheet", href: "/light/assets/css/style.css" },
       ],
       script: [
-        { src: "/light/assets/js/plugins.js" },
-        { src: "/light/assets/js/gsap.min.js" },
-        { src: "/light/assets/js/splitting.min.js" },
-        { src: "/light/assets/js/ScrollTrigger.min.js" },
-        { src: "/light/assets/js/ScrollSmoother.min.js" },
-        { src: "/light/assets/js/isotope.pkgd.min.js" },
-        // { src: '/showcase/light/assets/js/anime.min.js' },
+        { src: "/light/assets/js/plugins.js", defer: true },
+        { src: "/light/assets/js/gsap.min.js", defer: true },
+        { src: "/light/assets/js/splitting.min.js", defer: true },
+        { src: "/light/assets/js/ScrollTrigger.min.js", defer: true },
+        { src: "/light/assets/js/ScrollSmoother.min.js", defer: true },
+        { src: "/light/assets/js/isotope.pkgd.min.js", defer: true },
         { src: "/light/assets/js/scripts.js", defer: true },
       ],
     },
