@@ -70,5 +70,13 @@
     "filter": "web-app",
     "link": "/solutions/web-app",
     "desc": "Healthcare coordination system connecting patients, caregivers, and providers across Taiwan's home care market. Built for compliance and built to scale."
+  },
+  {
+    "img": "/light/assets/imgs/works/web-app/rao-family-foundation.png",
+    "tag": "Web & App",
+    "title": "Rao Family Foundation Platform",
+    "filter": "web-app",
+    "link": "/solutions/web-app",
+    "desc": "The Rao Family Foundation is a Singapore-based grant-making foundation established in 2024 by Jimmy Budiarto Rao and Yohana Limarno."
   }
 ]
