@@ -1,5 +1,5 @@
 <template>
-  <footer class="clean-footer crev bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg')" data-overlay-dark="10">
+  <footer class="clean-footer crev bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg'); background-color: #0d0d0d" data-overlay-dark="10">
     <div class="container pb-40 section-padding ontop">
       <div class="cal-action pb-50 mb-80 bord-thin-bottom">
         <h2 class="fz-120 line-height-1 d-rotate wow">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="d-flex align-items-center pt-30 pb-30 mt-80 bord-thin-top">
-        <!-- <div>
+        <div>
           <ul class="rest d-flex align-items-center">
             <li class="hover-this cursor-pointer">
               <a href="#0" class="hover-anim">
@@ -86,7 +86,7 @@
               </a>
             </li>
           </ul>
-        </div> -->
+        </div>
         <div class="ml-auto">
           <p class="fz-14">
             © 2026 MAXY Digital. Part of

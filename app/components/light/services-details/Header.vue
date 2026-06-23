@@ -1,5 +1,5 @@
 <template>
-  <header class="header page-header bg-img section-padding" style="background-image: url('/light/assets/imgs/header/b5.jpg')"
+  <header class="header page-header bg-img section-padding" style="background-image: url('/light/assets/imgs/header/b5.jpg'); background-color: #0d0d0d"
     data-overlay-dark="9">
     <div class="container pt-100">
       <div class="text-center">

@@ -1,5 +1,5 @@
 <template>
-  <section class="page-intro position-re">
+  <section class="page-intro position-re" style="margin-top: -180px; z-index: 2;">
     <div class="container-fluid rest">
       <div class="row justify-content-end">
         <div class="col-sm-9">

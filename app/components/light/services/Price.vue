@@ -67,7 +67,7 @@
                 <div class="icon-img-60 mb-10">
                   <img src="/light/assets/imgs/icon-img/shape1.png" alt="" />
                 </div>
-                <h5 class="fw-600">Agentic AI Pilot Sprint</h5>
+                <h5 class="fw-600">`Agentic AI Pilot Sprint`</h5>
               </div>
               <div class="cont ml-50">
                 <ul class="dot-list rest">
