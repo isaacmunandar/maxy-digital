@@ -1,5 +1,5 @@
 <template>
-  <header class="header main-header bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg')" data-overlay-dark="8">
+  <header class="header main-header bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg'); background-color: #0d0d0d" data-overlay-dark="8">
     <div class="container pt-100">
       <div class="row justify-content-end">
         <div class="col-lg-6">

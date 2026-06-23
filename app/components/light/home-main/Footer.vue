@@ -1,5 +1,5 @@
 <template>
-  <footer class="clean-footer crev bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg')" data-overlay-dark="10">
+  <footer class="clean-footer crev bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg'); background-color: #0d0d0d" data-overlay-dark="10">
     <div class="container pb-40 section-padding ontop">
       <div class="cal-action pb-50 mb-80 bord-thin-bottom">
         <h2 class="fz-120 line-height-1 d-rotate wow">
