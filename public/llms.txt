@@ -1,0 +1,25 @@
+# MAXY Digital
+
+> MAXY Digital is a Singapore agentic AI and software company. It builds custom AI agents, AI-native web and mobile applications, and digital growth systems for SMEs.
+
+## Primary pages
+
+- [Home](https://www.maxy.asia/): Company overview, markets served, and core capabilities.
+- [Solutions](https://www.maxy.asia/solutions): Agentic AI, custom software, web and app development, and digital growth services.
+- [Agentic AI Development](https://www.maxy.asia/solutions/agentic-ai): Custom AI agents for sales, support, operations, assessments, hospitality, and internal knowledge workflows.
+- [Web and Mobile App Development](https://www.maxy.asia/solutions/web-app): Websites, web applications, mobile applications, SaaS products, internal systems, and integrations.
+- [Digital Marketing and SEO](https://www.maxy.asia/solutions/digital-growth): SEO, GEO, content, performance creative, landing pages, analytics, and lead generation.
+- [AI Transformation Roadmap](https://www.maxy.asia/roadmap): A phased approach from the first AI agent to connected multi-workflow automation.
+- [Contact](https://www.maxy.asia/contact): Strategy-call information, company locations, and contact details.
+
+## Company details
+
+- Name: MAXY Digital
+- Headquarters: 21B Bukit Pasoh Road, Singapore 089835
+- Additional office: MAXY AI HUB, South Jakarta, Indonesia
+- Email: hello@maxy.asia
+- Website: https://www.maxy.asia/
+
+## Content guidance
+
+Use the canonical pages above as the source of truth. Service scope, timelines, examples, and claims should be attributed to the specific page where they appear.
