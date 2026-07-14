@@ -32,14 +32,14 @@
       <div class="container">
         <div class="lg-text">
           <div class="d-flex">
-            <h6>Singapore's Agentic AI Agency</h6>
+            <h6>MAXY Digital - Singapore</h6>
             <!-- <h6 class="ml-auto">AI AGENCY</h6> -->
           </div>
           <h1>Maxy Digital</h1>
         </div>
       </div>
       <div class="img">
-        <img src="/light/assets/imgs/header/2.png" alt="" />
+        <img src="/light/assets/imgs/header/2.png" alt="MAXY Digital agentic AI and software team in Singapore" />
       </div>
     </div>
   </header>
