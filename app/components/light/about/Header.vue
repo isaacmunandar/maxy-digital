@@ -3,7 +3,7 @@
     data-overlay-dark="9">
     <div class="container pt-100 pb-100">
       <div class="text-center">
-        <h1 class="fz-100 text-u">AI Transformation Roadmap.</h1>
+        <h1 class="fz-100 text-u">AI Transformation Roadmap for Singapore SMEs.</h1>
         <div class="mt-15">
           <a href="/">Home</a>
           <span class="padding-rl-20">|</span>
