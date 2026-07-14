@@ -24,7 +24,7 @@
             <h5 class="mb-15">{{ item.title }}</h5>
             <p>{{ item.desc }}</p>
             <a :href="item.link" class="rmore mt-30">
-              <span class="sub-title">Read More</span>
+              <span class="sub-title">Explore {{ item.title }}</span>
               <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
             </a>
           </div>
