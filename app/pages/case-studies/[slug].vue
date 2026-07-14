@@ -29,6 +29,11 @@ import Next from '@/components/light/project2/Next';
 import Story from '@/components/light/project2/Story';
 import { onMounted } from 'vue';
 
+useSeoMeta({
+  title: 'Case Study Preview',
+  robots: 'noindex, nofollow',
+});
+
 onMounted(() => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
   ScrollTrigger.normalizeScroll(true);

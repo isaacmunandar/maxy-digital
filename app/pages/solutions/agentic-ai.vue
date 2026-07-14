@@ -17,4 +17,21 @@ import Process from '@/components/light/services-details/Process';
 import Services2 from '@/components/light/services-details/Services2';
 import FAQS from '@/components/light/services-details/FAQs';
 import WorkShowcase from '@/components/light/solutions/WorkShowcase';
+import { pageSeo, solutionFaqs } from '@/l-data/seo';
+
+usePageSeo({
+  ...pageSeo.agenticAi,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Solutions', item: '/solutions' },
+    { name: 'Agentic AI', item: '/solutions/agentic-ai' },
+  ],
+  service: {
+    name: 'Agentic AI Development Services',
+    serviceType: 'Custom agentic AI and AI agent development',
+    description: pageSeo.agenticAi.description,
+    audience: 'Singapore SMEs and growth-stage companies',
+  },
+  faq: solutionFaqs['agentic-ai'].items,
+});
 </script>

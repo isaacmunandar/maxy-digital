@@ -1,24 +1,73 @@
+import { defineOrganization } from "nuxt-schema-org/schema";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  buildDir: process.env.NUXT_BUILD_DIR || ".nuxt",
   devtools: { enabled: true },
   ssr: true,
   srcDir: "app",
   typescript: {
     shim: false,
   },
-  nitro: {},
+  nitro: {
+    prerender: {
+      routes: ["/robots.txt", "/sitemap.xml"],
+    },
+  },
   compatibilityDate: "2026-06-04",
   modules: ["@nuxtjs/seo"],
   site: {
-    url: "https://maxy.asia",
+    url: "https://www.maxy.asia",
     name: "MAXY Digital",
     description:
-      "MAXY Digital is a premier Agentic AI & Digital Agency offering AI-Native Web, App, and Digital Growth solutions.",
+      "MAXY Digital is a Singapore agentic AI and software company building custom AI agents, web and mobile apps, and digital growth systems for SMEs.",
     defaultLocale: "en",
+  },
+  schemaOrg: {
+    identity: defineOrganization({
+      name: "MAXY Digital",
+      alternateName: "MAXY",
+      url: "https://www.maxy.asia",
+      logo: "https://www.maxy.asia/light/assets/imgs/logo-maxy-dark.png",
+      description:
+        "Singapore agentic AI and software company building custom AI agents, AI-native web and mobile applications, and digital growth systems for SMEs.",
+      email: "hello@maxy.asia",
+      address: {
+        streetAddress: "21B Bukit Pasoh Road",
+        addressLocality: "Singapore",
+        postalCode: "089835",
+        addressCountry: "SG",
+      },
+    }),
+  },
+  robots: {
+    groups: [
+      {
+        userAgent: ["*"],
+        allow: ["/"],
+        disallow: ["/case-studies/"],
+      },
+    ],
+  },
+  sitemap: {
+    zeroRuntime: true,
+    exclude: ["/case-studies/**", "/api/**"],
+    urls: [
+      { loc: "/", changefreq: "monthly", priority: 1 },
+      { loc: "/solutions", changefreq: "monthly", priority: 0.9 },
+      { loc: "/solutions/agentic-ai", changefreq: "monthly", priority: 0.9 },
+      { loc: "/solutions/web-app", changefreq: "monthly", priority: 0.8 },
+      { loc: "/solutions/digital-growth", changefreq: "monthly", priority: 0.8 },
+      { loc: "/roadmap", changefreq: "monthly", priority: 0.8 },
+      { loc: "/contact", changefreq: "yearly", priority: 0.6 },
+    ],
+  },
+  routeRules: {
+    "/case-studies/**": { robots: false, sitemap: false },
+    "/api/**": { robots: false, sitemap: false },
   },
   app: {
     head: {
-      title: "MAXY Digital | Agentic AI & Digital Agency",
       htmlAttrs: {
         lang: "en",
       },
@@ -32,24 +81,18 @@ export default defineNuxtConfig({
         {
           rel: "icon",
           href: "/light/assets/imgs/favicon.ico",
-          type: "image/svg+xml",
+          type: "image/x-icon",
         },
         {
           rel: "shortcut icon",
           href: "/light/assets/imgs/favicon.ico",
-          type: "image/svg+xml",
+          type: "image/x-icon",
         },
         // Preload critical background images to prevent flash on load
         {
           rel: "preload",
           as: "image",
           href: "/light/assets/imgs/header/bg1.jpg",
-          fetchpriority: "high",
-        },
-        {
-          rel: "preload",
-          as: "image",
-          href: "/light/assets/imgs/header/b5.jpg",
           fetchpriority: "high",
         },
         // Google Fonts

@@ -13,4 +13,19 @@ import Header from '@/components/light/about/Header';
 import Intro from '@/components/light/about/Intro';
 import Marquee from '@/components/light/about/Marquee';
 import Intro2 from '@/components/light/about/Intro2';
+import { pageSeo } from '@/l-data/seo';
+
+usePageSeo({
+  ...pageSeo.roadmap,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'AI Transformation Roadmap', item: '/roadmap' },
+  ],
+  service: {
+    name: 'AI Transformation Roadmap',
+    serviceType: 'AI adoption strategy and transformation planning',
+    description: pageSeo.roadmap.description,
+    audience: 'Singapore SMEs planning practical AI adoption',
+  },
+});
 </script>

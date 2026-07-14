@@ -28,7 +28,7 @@
           <p>{{ step.text }}</p>
           <div class="o-hidden">
             <a href="/roadmap" class="rmore to-in mt-30">
-              <span class="sub-title">Read More</span>
+              <span class="sub-title">View AI Transformation Roadmap</span>
               <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
             </a>
           </div>

@@ -51,7 +51,16 @@ import Marquee from "@/components/light/services/Marquee";
 import Price from "@/components/light/services/Price";
 import Process from "@/components/light/services/Process";
 import portfolioData from "@/l-data/portofolios/workstand.json";
+import { pageSeo } from "@/l-data/seo";
 import { computed } from "vue";
+
+usePageSeo({
+  ...pageSeo.solutions,
+  breadcrumbs: [
+    { name: "Home", item: "/" },
+    { name: "Solutions", item: "/solutions" },
+  ],
+});
 
 const categoryOrder = ["Agentic AI", "Web & App", "Digital Growth"];
 

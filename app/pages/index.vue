@@ -17,4 +17,7 @@ import Intro from '@/components/light/home-main/Intro';
 import Marquee from '@/components/light/home-main/Marquee';
 import Services from '@/components/light/home-main/Services';
 import Services2 from '@/components/light/home-main/Services2';
+import { pageSeo } from '@/l-data/seo';
+
+usePageSeo(pageSeo.home);
 </script>
