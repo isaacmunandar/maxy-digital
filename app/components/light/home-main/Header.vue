@@ -8,7 +8,7 @@
               Singapore HQ - Agentic AI Solutions
             </p>
             <h4>
-              MAXY Digital builds production-grade agentic AI solutions for Singapore SMEs.
+              MAXY AI builds production-grade agentic AI solutions for Singapore SMEs.
               Custom agentic AI agents, AI-native software, and growth engines deployed in
               weeks.
             </h4>
@@ -32,14 +32,14 @@
       <div class="container">
         <div class="lg-text">
           <div class="d-flex">
-            <h6>MAXY Digital - Singapore</h6>
+            <h6>MAXY AI - Singapore</h6>
             <!-- <h6 class="ml-auto">AI AGENCY</h6> -->
           </div>
-          <h1>Maxy Digital</h1>
+          <h1>MAXY AI</h1>
         </div>
       </div>
       <div class="img">
-        <img src="/light/assets/imgs/header/2.png" alt="MAXY Digital agentic AI and software team in Singapore" />
+        <img src="/light/assets/imgs/header/2.png" alt="MAXY AI agentic AI and software team in Singapore" />
       </div>
     </div>
   </header>

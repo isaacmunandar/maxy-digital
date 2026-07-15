@@ -81,6 +81,12 @@
                     <li class="mb-15">
                       <a href="/contact">Book a Call</a>
                     </li>
+                    <li class="mb-15">
+                      <a href="https://maxy.academy" target="_blank" rel="noopener">MAXY Academy</a>
+                    </li>
+                    <li>
+                      <a href="/ai-playground">AI Playground</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -99,7 +105,7 @@
         </div>
         <div class="text-center pt-30 pb-30 sub-bg mt-80">
           <p class="fz-14">
-            © 2026 MAXY Digital. Part of
+            © 2026 MAXY AI. Part of
             <span class="underline main-color">
               <a href="https://maxy.asia" target="_blank">
                 MAXY Group
