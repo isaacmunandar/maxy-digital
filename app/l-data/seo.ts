@@ -16,8 +16,8 @@ export const solutionFaqs: Record<
         a: "Agentic AI is software that can plan and complete multi-step work toward a defined outcome. Unlike a basic chatbot that only responds, an AI agent can qualify a lead, update a CRM, draft a follow-up, and book a meeting within approved workflows.",
       },
       {
-        q: "What agentic AI solutions does MAXY Digital build in Singapore?",
-        a: "MAXY Digital builds custom AI agents for sales follow-up, lead qualification, customer support, assessments, employee insights, hospitality concierge services, and internal knowledge retrieval.",
+        q: "What agentic AI solutions does MAXY AI build in Singapore?",
+        a: "MAXY AI builds custom AI agents for sales follow-up, lead qualification, customer support, assessments, employee insights, hospitality concierge services, and internal knowledge retrieval.",
       },
       {
         q: "How long does custom AI agent development take?",
@@ -25,7 +25,7 @@ export const solutionFaqs: Record<
       },
       {
         q: "What data does an AI agent need?",
-        a: "The required data depends on the workflow. A sales agent may use CRM records, email history, and product knowledge, while a support agent may use documentation, FAQs, and ticket history. MAXY Digital reviews data readiness during discovery.",
+        a: "The required data depends on the workflow. A sales agent may use CRM records, email history, and product knowledge, while a support agent may use documentation, FAQs, and ticket history. MAXY AI reviews data readiness during discovery.",
       },
     ],
   },
@@ -34,12 +34,12 @@ export const solutionFaqs: Record<
     heading: "Frequently asked questions about web and app development in Singapore",
     items: [
       {
-        q: "What software development services does MAXY Digital provide?",
-        a: "MAXY Digital designs and builds conversion-focused websites, web applications, mobile applications, SaaS products, internal business systems, and API integrations with AI, analytics, and automation built into the product architecture.",
+        q: "What software development services does MAXY AI provide?",
+        a: "MAXY AI designs and builds conversion-focused websites, web applications, mobile applications, SaaS products, internal business systems, and API integrations with AI, analytics, and automation built into the product architecture.",
       },
       {
         q: "Can you integrate a web or mobile app with our CRM and existing systems?",
-        a: "Yes. MAXY Digital can connect products with existing CRM, analytics, automation, and operational tools so customer data and workflows move through one integrated system.",
+        a: "Yes. MAXY AI can connect products with existing CRM, analytics, automation, and operational tools so customer data and workflows move through one integrated system.",
       },
       {
         q: "How long does custom web or app development take?",
@@ -56,20 +56,20 @@ export const solutionFaqs: Record<
     heading: "Frequently asked questions about digital marketing and SEO in Singapore",
     items: [
       {
-        q: "What digital marketing services does MAXY Digital provide?",
-        a: "MAXY Digital provides SEO and GEO strategy, authority content, performance creative, short-form video, landing pages, lead magnets, nurture flows, analytics, and campaign optimization for qualified pipeline growth.",
+        q: "What digital marketing services does MAXY AI provide?",
+        a: "MAXY AI provides SEO and GEO strategy, authority content, performance creative, short-form video, landing pages, lead magnets, nurture flows, analytics, and campaign optimization for qualified pipeline growth.",
       },
       {
         q: "How do you choose the right digital growth channels?",
-        a: "Channel selection starts with the ideal customer profile, buying journey, existing demand, and commercial goal. MAXY Digital then prioritizes the channels most likely to capture or create qualified demand.",
+        a: "Channel selection starts with the ideal customer profile, buying journey, existing demand, and commercial goal. MAXY AI then prioritizes the channels most likely to capture or create qualified demand.",
       },
       {
         q: "How do you measure digital marketing success?",
         a: "Success is measured against qualified pipeline and revenue outcomes. Reporting connects SEO, content, paid creative, and landing-page performance to agreed conversion goals instead of relying only on reach or engagement.",
       },
       {
-        q: "Can MAXY Digital work with an in-house marketing team?",
-        a: "Yes. MAXY Digital can lead execution or work alongside internal marketing and sales teams on strategy, production, distribution, analytics, and continuous optimization.",
+        q: "Can MAXY AI work with an in-house marketing team?",
+        a: "Yes. MAXY AI can lead execution or work alongside internal marketing and sales teams on strategy, production, distribution, analytics, and continuous optimization.",
       },
     ],
   },
@@ -79,17 +79,17 @@ export const pageSeo = {
   home: {
     title: "Agentic AI & Software Company Singapore",
     description:
-      "MAXY Digital is a Singapore software and agentic AI company building custom AI agents, web and mobile apps, and digital growth systems for SMEs.",
+      "MAXY AI is a Singapore software and agentic AI company building custom AI agents, web and mobile apps, and digital growth systems for SMEs.",
   },
   solutions: {
     title: "AI, Software & Digital Solutions Singapore",
     description:
-      "Explore MAXY Digital's agentic AI, custom software development, web and mobile app, SEO, and digital growth solutions for Singapore SMEs.",
+      "Explore MAXY AI's agentic AI, custom software development, web and mobile app, SEO, and digital growth solutions for Singapore SMEs.",
   },
   agenticAi: {
     title: "Agentic AI Development Company Singapore",
     description:
-      "Build custom AI agents for sales, support, operations, assessments, and knowledge workflows with MAXY Digital, an agentic AI company in Singapore.",
+      "Build custom AI agents for sales, support, operations, assessments, and knowledge workflows with MAXY AI, an agentic AI company in Singapore.",
   },
   webApp: {
     title: "Web & Mobile App Development Singapore",
@@ -109,6 +109,21 @@ export const pageSeo = {
   contact: {
     title: "AI & Software Strategy Consultation Singapore",
     description:
-      "Book a strategy call with MAXY Digital to identify the best first use case for agentic AI, custom software, web and app development, or digital growth.",
+      "Book a strategy call with MAXY AI to identify the best first use case for agentic AI, custom software, web and app development, or digital growth.",
+  },
+  about: {
+    title: "About MAXY AI - Founders & Company",
+    description:
+      "Meet the founders of MAXY AI, a HolonIQ Top 50 Southeast Asia EdTech company and the agentic AI arm of MAXY AI Holdings.",
+  },
+  caseStudies: {
+    title: "Agentic AI Case Studies",
+    description:
+      "Real agentic AI deployments from MAXY AI across recruitment, sales, finance, hospitality, and marketing, with measurable outcomes for each.",
+  },
+  aiPlayground: {
+    title: "AI Playground - Free AI Learning Tools",
+    description:
+      "MAXY AI's free AI Playground: six browser-based tools for coding, cybersecurity, and business strategy. No account, no payment, open to anyone.",
   },
 } as const;
