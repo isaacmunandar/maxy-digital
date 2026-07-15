@@ -18,19 +18,19 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/seo"],
   site: {
     url: "https://www.maxy.asia",
-    name: "MAXY Digital",
+    name: "MAXY AI",
     description:
-      "MAXY Digital is a Singapore agentic AI and software company building custom AI agents, web and mobile apps, and digital growth systems for SMEs.",
+      "MAXY AI is a Singapore agentic AI and software company building custom AI agents, web and mobile apps, and digital growth systems for SMEs.",
     defaultLocale: "en",
   },
   schemaOrg: {
     identity: defineOrganization({
-      name: "MAXY Digital",
-      alternateName: "MAXY",
+      name: "MAXY AI",
+      alternateName: ["MAXY", "MAXY Digital"],
       url: "https://www.maxy.asia",
       logo: "https://www.maxy.asia/light/assets/imgs/logo-maxy-dark.png",
       description:
-        "Singapore agentic AI and software company building custom AI agents, AI-native web and mobile applications, and digital growth systems for SMEs.",
+        "MAXY AI is a Singapore agentic AI and software company building custom AI agents, AI-native web and mobile applications, and digital growth systems for SMEs.",
       email: "hello@maxy.asia",
       address: {
         streetAddress: "21B Bukit Pasoh Road",
