@@ -13,7 +13,7 @@
   <!-- Thin gold divider -->
   <rect x="136" y="8" width="1.2" height="30" fill="#fcb92a" opacity="0.7"/>
 
-  <!-- Digital — light weight, all-caps small -->
+  <!-- AI — light weight, all-caps small -->
   <text
     x="147"
     y="32"
@@ -23,5 +23,5 @@
     letter-spacing="4"
     fill="#ffffff"
     opacity="0.85"
-  >DIGITAL</text>
+  >AI</text>
 </svg>
