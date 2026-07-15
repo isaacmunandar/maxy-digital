@@ -55,8 +55,14 @@
               <li class="mb-15">
                 <a href="/roadmap">Roadmap</a>
               </li>
-              <li>
+              <li class="mb-15">
                 <a href="/contact">Contact</a>
+              </li>
+              <li class="mb-15">
+                <a href="https://maxy.academy" target="_blank" rel="noopener">MAXY Academy</a>
+              </li>
+              <li>
+                <a href="/ai-playground">AI Playground</a>
               </li>
             </ul>
           </div>
@@ -89,7 +95,7 @@
         </div>
         <div class="ml-auto">
           <p class="fz-14">
-            © 2026 MAXY Digital. Part of
+            © 2026 MAXY AI. Part of
             <span class="underline main-color">
               <a href="https://maxy.asia" target="_blank">
                 MAXY Group

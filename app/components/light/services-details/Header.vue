@@ -36,7 +36,7 @@ const pageContent = computed(() => {
       eyebrow: 'Agentic AI Solutions - Singapore - Live Deployments in Singapore, United States, and Indonesia',
       title: 'Agentic AI Development Company in Singapore',
       subheadline:
-        'MAXY Digital builds production-grade agentic AI solutions for Singapore SMEs - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
+        'MAXY AI builds production-grade agentic AI solutions for Singapore SMEs - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
       microcopy:
         'Live deployments in Singapore, the United States, and Indonesia.',
       breadcrumb: 'Agentic AI',

@@ -12,7 +12,7 @@
                 <span class="sub-title ml-15">Work With Us</span>
               </a>
             </div>
-            <img src="/light/assets/imgs/intro/04.png" alt="MAXY Digital team" class="radius-30" />
+            <img src="/light/assets/imgs/intro/04.png" alt="MAXY AI team" class="radius-30" />
           </div>
         </div>
         <div class="col-lg-6 valign">
@@ -34,7 +34,7 @@
               <div class="col-lg-11">
                 <div class="text">
                   <p>
-                    MAXY Digital is Singapore's agentic AI agency and the digital arm of
+                    MAXY AI is Singapore's agentic AI agency and the digital arm of
                     MAXY AI Holdings, recognized as a HolonIQ Top 50 Southeast Asia EdTech
                     company in 2025. We don't theorize about agentic AI. We deploy it in
                     Singapore and across markets — and we've been deploying since 2022,
