@@ -12,7 +12,7 @@
       { "value": "1,000-2,000", "label": "CVs screened per month" },
       { "value": "20 min", "label": "Manual certificate check per candidate, pre-automation" }
     ],
-    "image": "/light/assets/imgs/works/agentic-ai/hr-assessment-ai.png",
+    "image": "/light/assets/imgs/products/high-volume-recruitment-ai/1.jpeg",
     "gallery": []
   },
   {
@@ -28,8 +28,12 @@
       { "value": "$100M", "label": "Client turnover (TODO: confirm exact figure)" },
       { "value": "20", "label": "Sales leads under continuous audit (TODO: confirm exact figure)" }
     ],
-    "image": "/light/assets/imgs/works/agentic-ai/sales-follow-up-agent.png",
-    "gallery": []
+    "image": "/light/assets/imgs/products/sales-nurturing/1.jpeg",
+    "gallery": [
+      "/light/assets/imgs/products/sales-nurturing/2.jpeg",
+      "/light/assets/imgs/products/sales-nurturing/3.jpeg",
+      "/light/assets/imgs/products/sales-nurturing/4.jpeg"
+    ]
   },
   {
     "slug": "relationship-investment-manager-ai",
@@ -40,8 +44,12 @@
     "solution": "We built a digital twin of the banker's decision-making: a dashboard that reads each client's appetite, flags when an FCN position pushes a client toward over-exposure to one stock, and curates new investment opportunities that fit their risk profile.",
     "outcome": "The banker now gets an appetite-matched shortlist and an over-exposure alert instead of holding every client's risk tolerance in memory.",
     "metric": { "value": "Real-time", "label": "Over-exposure alerts and appetite-matched curation" },
-    "image": "",
-    "gallery": []
+    "image": "/light/assets/imgs/products/relationship-and-investment-manager/1.jpeg",
+    "gallery": [
+      "/light/assets/imgs/products/relationship-and-investment-manager/2.jpeg",
+      "/light/assets/imgs/products/relationship-and-investment-manager/3.jpeg",
+      "/light/assets/imgs/products/relationship-and-investment-manager/4.jpeg"
+    ]
   },
   {
     "slug": "hospitality-concierge-ai",
@@ -52,7 +60,7 @@
     "solution": "We built an agentic concierge that recommends restaurants, things to do, and places to visit around the property, drawing on real local knowledge instead of a generic FAQ script.",
     "outcome": "Guests get concierge-level recommendations on demand, without waiting on front-desk availability.",
     "metric": { "value": "24/7", "label": "Concierge-level guest recommendations" },
-    "image": "/light/assets/imgs/works/agentic-ai/hospitality-concierge-ai.png",
+    "image": "/light/assets/imgs/products/hospitality-concierge-ai/1.jpeg",
     "gallery": []
   },
   {
@@ -64,7 +72,7 @@
     "solution": "We built an agentic AI that runs continuous marketing analysis and market research, then feeds the findings into a directed digital strategy - publishing into both SEO and the AI systems (like ChatGPT) that increasingly shape buyer discovery.",
     "outcome": "Strategy stops being a quarterly deck and becomes a standing, on-trend process that keeps pace with the market instead of catching up to it.",
     "metric": { "value": "Continuous", "label": "Market research and strategy, replacing ad-hoc reviews" },
-    "image": "",
+    "image": "/light/assets/imgs/products/ai-cmo/1.jpeg",
     "gallery": []
   }
 ]
