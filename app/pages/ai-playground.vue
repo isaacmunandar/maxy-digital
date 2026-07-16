@@ -111,7 +111,7 @@ usePageSeo({
 });
 
 const accessStats = [
-  { value: 'Rp 0', label: 'Zero cost' },
+  { value: '$ 0', label: 'Zero cost' },
   { value: '0 sec', label: 'Zero login friction' },
   { value: 'Instant', label: 'Zero wait time' },
   { value: '6', label: 'Open tools' },
