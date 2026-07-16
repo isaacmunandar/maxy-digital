@@ -5,7 +5,7 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Agentic AI deployed for operators in Singapore</span>
+              <span>Agentic AI deployed in production</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
@@ -25,7 +25,7 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Agentic AI deployed for operators in Singapore</span>
+              <span>Agentic AI deployed in production</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>

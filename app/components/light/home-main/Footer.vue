@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-lg-3">
           <div class="logo mb-30" style="width: 140px;">
-            <img src="/light/assets/imgs/logo-light.svg" alt="MAXY Digital" />
+            <img src="/light/assets/imgs/logo-light.svg" alt="MAXY AI" />
           </div>
           <p class="fz-13 opacity-7">
             The agentic AI and digital agency arm of MAXY Group.<br />
@@ -54,7 +54,9 @@
             <h6 class="sub-title mb-30">Company</h6>
             <ul class="rest fz-14">
              <li class="mb-15"><a href="/roadmap">Roadmap</a></li>
-             <li><a href="/contact">Contact</a></li>
+             <li class="mb-15"><a href="/contact">Contact</a></li>
+             <li class="mb-15"><a href="https://maxy.academy" target="_blank" rel="noopener">MAXY Academy</a></li>
+             <li><a href="/ai-playground">AI Playground</a></li>
             </ul>
           </div>
         </div>
@@ -75,7 +77,7 @@
         </div> -->
         <div class="ml-auto">
           <p class="fz-14">
-            © 2026 MAXY Digital. Part of MAXY Group.
+            © 2026 MAXY AI. Part of MAXY Group.
           </p>
         </div>
       </div>

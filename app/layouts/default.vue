@@ -1,7 +1,7 @@
 <template>
-  <ProgressScroll />
   <Lines />
   <Navbar />
+  <FloatingCta />
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <slot />
@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
+import FloatingCta from "@/components/light/common/FloatingCta";
 import Lines from "@/components/light/common/Lines";
-import ProgressScroll from "@/components/light/common/ProgressScroll";
 import Navbar from "@/components/light/creative-agency/Navbar";
 import { nextTick, onBeforeUnmount, onMounted, watch } from "vue";
 

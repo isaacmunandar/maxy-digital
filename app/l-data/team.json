@@ -1,17 +1,16 @@
 [
   {
-    "img": "/light/assets/imgs/team/1.jpg",
+    "img": "/light/assets/imgs/team/isaac.jpg",
     "name": "Isaac Munandar",
-    "subName": "CEO & Co-Founder"
+    "subName": "CEO & Co-Founder",
+    "bio": "Leads product, delivery, and client outcomes across MAXY AI's markets.",
+    "linkedin": null
   },
   {
-    "img": "/light/assets/imgs/team/2.jpg",
-    "name": "Andy Munandar",
-    "subName": "CFO & Co-Founder"
-  },
-  {
-    "img": "/light/assets/imgs/team/3.jpg",
-    "name": "Sydney Bogss",
-    "subName": "Head of AI & Technology"
+    "img": "/light/assets/imgs/team/toro.jpg",
+    "name": "Toro",
+    "subName": "Co-Founder",
+    "bio": "Co-founder driving engineering and platform architecture.",
+    "linkedin": null
   }
 ]

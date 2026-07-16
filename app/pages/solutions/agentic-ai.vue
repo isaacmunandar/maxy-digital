@@ -30,7 +30,7 @@ usePageSeo({
     name: 'Agentic AI Development Services',
     serviceType: 'Custom agentic AI and AI agent development',
     description: pageSeo.agenticAi.description,
-    audience: 'Singapore SMEs and growth-stage companies',
+    audience: 'SMEs and growth-stage companies in Singapore, the US, and Southeast Asia',
   },
   faq: solutionFaqs['agentic-ai'].items,
 });

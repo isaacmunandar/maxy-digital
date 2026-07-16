@@ -24,7 +24,7 @@ const ogImage =
   "https://www.maxy.asia/light/assets/imgs/logo-maxy-light.png";
 
 export function usePageSeo(options: PageSeoOptions) {
-  const socialTitle = `${options.title} | MAXY Digital`;
+  const socialTitle = `${options.title} | MAXY AI`;
 
   useSeoMeta({
     title: options.title,
@@ -33,7 +33,7 @@ export function usePageSeo(options: PageSeoOptions) {
     ogDescription: options.description,
     ogType: "website",
     ogImage,
-    ogImageAlt: "MAXY Digital - Agentic AI and software company in Singapore",
+    ogImageAlt: "MAXY AI - Agentic AI and software company in Singapore",
     twitterCard: "summary_large_image",
     twitterTitle: socialTitle,
     twitterDescription: options.description,

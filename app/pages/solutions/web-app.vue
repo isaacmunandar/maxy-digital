@@ -30,7 +30,7 @@ usePageSeo({
     name: 'Custom Web and Mobile App Development',
     serviceType: 'Web, mobile app, SaaS, and custom software development',
     description: pageSeo.webApp.description,
-    audience: 'Singapore SMEs and growth-stage companies',
+    audience: 'SMEs and growth-stage companies in Singapore, the US, and Southeast Asia',
   },
   faq: solutionFaqs['web-app'].items,
 });

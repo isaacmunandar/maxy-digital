@@ -33,27 +33,27 @@ const pageKey = computed(() => {
 const pageContent = computed(() => {
   const map = {
     'agentic-ai': {
-      eyebrow: 'Agentic AI Solutions - Singapore - Live Deployments in Singapore, United States, and Indonesia',
+      eyebrow: 'Agentic AI Solutions - Live Deployments in Singapore, the United States, and Indonesia',
       title: 'Agentic AI Development Company in Singapore',
       subheadline:
-        'MAXY Digital builds production-grade agentic AI solutions for Singapore SMEs - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
+        'MAXY AI builds production-grade agentic AI solutions for SMEs and enterprises - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
       microcopy:
         'Live deployments in Singapore, the United States, and Indonesia.',
       breadcrumb: 'Agentic AI',
     },
     'web-app': {
-      eyebrow: 'AI-Native Web and App Development - Singapore',
+      eyebrow: 'AI-Native Web and App Development',
       title: 'Custom Web & Mobile App Development in Singapore',
       subheadline:
-        'We build AI-native websites and apps for Singapore SMEs, with automation, analytics, and integration baked in from day one.',
+        'We build AI-native websites and apps for SMEs and enterprises, with automation, analytics, and integration baked in from day one.',
       microcopy: 'Built to ship fast, scale cleanly, and plug into your stack.',
       breadcrumb: 'Web and App',
     },
     'digital-growth': {
-      eyebrow: 'Digital Growth Services - Singapore',
+      eyebrow: 'Digital Growth Services',
       title: 'Digital Marketing & SEO Agency in Singapore',
       subheadline:
-        'Content, performance creative, and SEO systems that drive qualified pipeline for Singapore SMEs.',
+        'Content, performance creative, and SEO systems that drive qualified pipeline for SMEs and enterprises.',
       microcopy: 'Measured on revenue, not vanity metrics.',
       breadcrumb: 'Digital Growth',
     },

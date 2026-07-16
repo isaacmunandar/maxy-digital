@@ -17,7 +17,7 @@
         <div class="col-lg-7">
           <div class="text">
             <h4>
-              The 12-month AI transformation roadmap for Singapore SMEs - from
+              The 12-month AI transformation roadmap for SMEs and growth-stage companies - from
               "we should look at AI" to "AI runs half our operations." Phase 01
               gets your first agentic AI deployment live, then we compound into
               multi-workflow automation across sales, support, and operations.
