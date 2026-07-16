@@ -3,7 +3,7 @@
     data-overlay-dark="9">
     <div class="container pt-100">
       <div class="text-center">
-        <h1 class="fz-100 text-u">AI, Software &amp; Digital Solutions for Singapore SMEs.</h1>
+        <h1 class="fz-100 text-u">AI, Software &amp; Digital Solutions for SMEs and Enterprises.</h1>
         <div class="mt-15">
           <a href="/">Home</a>
           <span class="padding-rl-20">|</span>

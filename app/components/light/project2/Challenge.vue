@@ -12,7 +12,7 @@
           <div class="text">
             <h5 class="line-height-40">{{ problem }}</h5>
           </div>
-          <div class="accordion bord mt-100">
+          <div class="accordion bord mt-40">
             <div class="item active mb-15 wow fadeInUp" data-wow-delay=".1s">
               <div @click="openAccordion" class="title">
                 <h6>Our Approach</h6>

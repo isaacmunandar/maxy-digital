@@ -3,7 +3,7 @@
     <div class="container">
       <div class="sec-head mb-80">
         <h6 class="sub-title main-color mb-25">
-          What we ship in Singapore and across Southeast Asia
+          What we ship
         </h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
           <h2 class="fw-600 d-rotate wow">

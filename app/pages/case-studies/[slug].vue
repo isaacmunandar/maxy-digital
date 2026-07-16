@@ -1,8 +1,8 @@
 <template>
   <main class="main-bg">
-    <Header :title="study.title" :summary="study.summary" :category="study.category" :metric="study.metric" />
+    <Header :title="study.title" :summary="study.summary" :category="study.category" :metric="study.metric" :gallery="study.gallery" :image="study.image" />
     <Challenge :problem="study.problem" :solution="study.solution" :outcome="study.outcome" />
-    <Story :summary="study.summary" :solution="study.solution" :gallery="study.gallery" />
+    <Story :outcome="study.outcome" :gallery="study.gallery" />
     <Next />
   </main>
   <Footer />

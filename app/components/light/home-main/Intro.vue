@@ -38,14 +38,14 @@
         <div class="col-lg-5">
           <div class="text">
             <p>
-              Most Singapore SMEs still treat AI as a productivity hack — a ChatGPT seat,
+              Most SMEs still treat AI as a productivity hack — a ChatGPT seat,
               a faster way to write emails. The companies pulling ahead are doing
               something different: deploying agentic AI systems into the workflows that move
               revenue. Lead qualification. Customer support. Sales operations. Internal knowledge.
             </p>
             <p class="mt-20">
               By the time it shows up in their P&amp;L, it's too late to copy. The
-              question isn't whether to deploy agentic AI in Singapore. It's where it earns first,
+              question isn't whether to deploy agentic AI. It's where it earns first,
               and how fast you can ship it.
             </p>
           </div>

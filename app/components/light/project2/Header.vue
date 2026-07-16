@@ -1,6 +1,6 @@
 <template>
   <header class="header-project2 section-padding pb-0">
-    <div class="container mt-80 mb-80">
+    <div class="container mt-30 mb-50">
       <div class="row align-items-end">
         <div class="col-lg-6">
           <div class="full-width mb-30">
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="row mt-50 pt-50 bord-thin-top">
+      <div class="row mt-30 pt-30 bord-thin-top">
         <div class="col-12">
           <div class="item d-flex align-items-center">
             <h2 class="fz-60 line-height-1">
@@ -44,23 +44,13 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid rest">
+    <div v-if="slides.length" class="container-fluid rest">
       <div class="project2" data-carousel="swiper" data-items="2" data-loop="true" data-space="30" data-center="true">
         <div id="content-carousel-container-unq-project2" class="swiper-container" data-swiper="container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div v-for="(slide, i) in slides" :key="i" class="swiper-slide">
               <div class="img">
-                <img src="/light/assets/imgs/works/projects/2/1.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="img">
-                <img src="/light/assets/imgs/works/projects/2/2.jpg" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="img">
-                <img src="/light/assets/imgs/works/projects/2/3.jpg" alt="" />
+                <img :src="slide" :alt="`${title} product interface`" />
               </div>
             </div>
           </div>
@@ -70,10 +60,30 @@
   </header>
 </template>
 <script setup>
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
   title: { type: String, required: true },
   summary: { type: String, required: true },
   category: { type: String, required: true },
   metric: { type: Object, required: true },
+  gallery: { type: Array, default: () => [] },
+  image: { type: String, default: '' },
 });
+
+const slides = computed(() => (props.gallery.length ? props.gallery : props.image ? [props.image] : []));
 </script>
+
+<style scoped>
+.project2 .img {
+  height: min(50vh, 520px);
+  min-height: 320px;
+}
+
+@media (max-width: 767px) {
+  .project2 .img {
+    height: auto;
+    min-height: 0;
+  }
+}
+</style>

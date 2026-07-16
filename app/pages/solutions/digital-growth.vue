@@ -30,7 +30,7 @@ usePageSeo({
     name: 'Digital Marketing, SEO, and GEO Services',
     serviceType: 'SEO, GEO, content, performance creative, and lead generation',
     description: pageSeo.digitalGrowth.description,
-    audience: 'Singapore SMEs and B2B growth teams',
+    audience: 'B2B growth teams in Singapore, the US, and Southeast Asia',
   },
   faq: solutionFaqs['digital-growth'].items,
 });

@@ -59,8 +59,8 @@
                   <div class="text mt-30">
                     <p>
                       We expand into adjacent workflows across sales, support, and
-                      operations. For Singapore-based clients, this phase often
-                      includes GEO optimization to appear in AI search results.
+                      operations. This phase often includes GEO optimization so you
+                      appear in AI search results.
                     </p>
                   </div>
                 </div>

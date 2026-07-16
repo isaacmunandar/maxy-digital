@@ -52,9 +52,6 @@
           <span>AI Playground</span>
           <span class="ti-arrow-top-right ml-5"></span>
         </a>
-        <a href="/contact" class="butn butn-sm butn-bord radius-30 d-none d-md-block" style="margin-right: 20px; padding: 10px 20px;">
-          <span>Book a Call</span>
-        </a>
         <div @click="toggleMenu" class="menu-icon cursor-pointer">
           <span class="icon ti-align-right"></span>
         </div>
@@ -153,7 +150,6 @@
             <div class="item mb-40">
               <h6 class="sub-title mb-15 opacity-7">Contact</h6>
               <h5><a href="mailto:hello@maxy.asia">hello@maxy.asia</a></h5>
-              <h5 class="underline mt-10"><a href="/contact">Book a Call</a></h5>
             </div>
           </div>
         </div>
@@ -251,31 +247,6 @@ function toggleSubMenu(event) {
 <style scoped>
 .navbar-nav .nav-link .rolling-text {
   white-space: nowrap;
-}
-.topnav > a.butn-bord {
-  white-space: nowrap;
-}
-.navbar.change .topnav > a.butn-bord {
-  border-color: #fff;
-  color: #fff;
-}
-.navbar.change .topnav > a.butn-bord:hover {
-  background: #fff;
-  color: #1a1a1a;
-}
-.navbar.change .topnav > a.butn-bord:hover span {
-  color: #1a1a1a;
-}
-.navbar.change.nav-scroll .topnav > a.butn-bord {
-  border-color: #1a1a1a;
-  color: #1a1a1a;
-}
-.navbar.change.nav-scroll .topnav > a.butn-bord:hover {
-  background: #1a1a1a;
-  color: #fff;
-}
-.navbar.change.nav-scroll .topnav > a.butn-bord:hover span {
-  color: #fff;
 }
 .playground-pill {
   border: 1px solid #14cf93;
