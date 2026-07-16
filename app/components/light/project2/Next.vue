@@ -3,7 +3,7 @@
     <div class="container-fluid rest">
       <div class="row">
         <div class="col-md-6 rest">
-          <div class="text-left box bg-img" style="background-image: url('/light/assets/imgs/works/projects/2/1.jpg')">
+          <div class="text-left box bg-img" style="background-image: url('/light/assets/imgs/products/relationship-and-investment-manager/1.jpeg')">
             <div class="cont d-flex align-items-center">
               <div>
                 <span class="mr-30 fz-30 ti-arrow-left"></span>
@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-md-6 rest">
-          <div class="text-right d-flex box bg-img" style="background-image: url('/light/assets/imgs/works/projects/4/1.jpg')">
+          <div class="text-right d-flex box bg-img" style="background-image: url('/light/assets/imgs/products/hospitality-concierge-ai/1.jpeg')">
             <div class="ml-auto">
               <div class="cont d-flex align-items-center">
                 <div>
