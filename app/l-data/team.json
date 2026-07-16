@@ -2,15 +2,15 @@
   {
     "img": "/light/assets/imgs/team/isaac.jpg",
     "name": "Isaac Munandar",
-    "subName": "CEO & Co-Founder",
-    "bio": "Leads product, delivery, and client outcomes across MAXY AI's markets.",
+    "subName": "Founder & CEO",
+    "bio": "Leads company strategy, growth, and client outcomes across MAXY AI's markets.",
     "linkedin": null
   },
   {
     "img": "/light/assets/imgs/team/toro.jpg",
     "name": "Toro",
-    "subName": "Co-Founder",
-    "bio": "Co-founder driving engineering and platform architecture.",
+    "subName": "Co-Founder & CTO",
+    "bio": "Leads product, engineering, and platform architecture across MAXY AI.",
     "linkedin": null
   }
 ]
