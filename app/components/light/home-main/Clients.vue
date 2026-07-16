@@ -9,7 +9,7 @@
           </h6>
         </div>
       </div>
-      <h6 class="sub-title main-color mb-25">Partners we build with</h6>
+      <h6 class="sub-title main-color mb-25">Our Clients</h6>
       <PartnersMarquee />
     </div>
   </section>

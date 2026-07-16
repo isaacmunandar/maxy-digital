@@ -16,15 +16,19 @@
 </template>
 <script setup>
 const partners = [
+  { file: 'adira-finance.png', name: 'Adira Finance' },
   { file: 'agape.png', name: 'Agape' },
+  { file: 'anteraja.png', name: 'Anteraja' },
   { file: 'asia-pacific-salvage.png', name: 'Asia Pacific Salvage' },
   { file: 'bgo.png', name: 'BGO' },
   { file: 'family-first-indonesia.png', name: 'Family First Indonesia' },
   { file: 'hkk.png', name: 'HKK' },
+  { file: 'ntuc-lhub.png', name: 'NTUC LearningHub' },
   { file: 'roeamah-indonesia.png', name: 'Roemah Indonesia' },
   { file: 'safe-care-taiwan.png', name: 'Safe Care Taiwan' },
   { file: 'sposea.png', name: 'SPOSEA' },
   { file: 'tbn-alliance.png', name: 'TBN Alliance' },
+  { file: 'triputra-group.png', name: 'Triputra Group' },
 ];
 </script>
 <style scoped>
