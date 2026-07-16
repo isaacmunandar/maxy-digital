@@ -13,7 +13,10 @@
       { "value": "20 min", "label": "Manual certificate check per candidate, pre-automation" }
     ],
     "image": "/light/assets/imgs/products/high-volume-recruitment-ai/1.jpeg",
-    "gallery": []
+    "gallery": [
+      "/light/assets/imgs/products/high-volume-recruitment-ai/2.jpeg",
+      "/light/assets/imgs/products/high-volume-recruitment-ai/3.jpeg"
+    ]
   },
   {
     "slug": "ai-sales-nurturing",
@@ -61,7 +64,10 @@
     "outcome": "Guests get concierge-level recommendations on demand, without waiting on front-desk availability.",
     "metric": { "value": "24/7", "label": "Concierge-level guest recommendations" },
     "image": "/light/assets/imgs/products/hospitality-concierge-ai/1.jpeg",
-    "gallery": []
+    "gallery": [
+      "/light/assets/imgs/products/hospitality-concierge-ai/2.jpeg",
+      "/light/assets/imgs/products/hospitality-concierge-ai/3.jpeg"
+    ]
   },
   {
     "slug": "ai-cmo",
@@ -73,6 +79,9 @@
     "outcome": "Strategy stops being a quarterly deck and becomes a standing, on-trend process that keeps pace with the market instead of catching up to it.",
     "metric": { "value": "Continuous", "label": "Market research and strategy, replacing ad-hoc reviews" },
     "image": "/light/assets/imgs/products/ai-cmo/1.jpeg",
-    "gallery": []
+    "gallery": [
+      "/light/assets/imgs/products/ai-cmo/2.jpeg",
+      "/light/assets/imgs/products/ai-cmo/3.jpeg"
+    ]
   }
 ]
