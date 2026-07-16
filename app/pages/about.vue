@@ -185,9 +185,15 @@ const timeline = [
   background: #f5f7f9;
   padding: 30px;
 }
+.founder-card .img {
+  max-width: 420px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .founder-card .img img {
   width: 100%;
-  height: 320px;
+  height: auto;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 .linkedin-circle {
