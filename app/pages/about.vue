@@ -20,7 +20,7 @@
     </header>
 
     <!-- TODO: verify exact years for the 2024 (6-market expansion) and 2025 (HolonIQ recognition) milestones -->
-    <!-- TODO: real founder bios + LinkedIn URLs from user -->
+    <!-- TODO: LinkedIn URLs from user -->
     <section class="section-padding">
       <div class="container">
         <div class="sec-head mb-50">
@@ -71,10 +71,8 @@
           <div class="bord pt-25 bord-thin-top d-flex align-items-center">
             <h2 class="fw-600">Backed by structure, <span class="fw-200">recognized for results.</span></h2>
             <div class="ml-auto">
-              <!-- TODO: swap for official HolonIQ badge art when provided -->
               <div class="holoniq-badge">
-                <i class="fas fa-award mr-10 main-color"></i>
-                <span class="sub-title main-color">HolonIQ &middot; Top 50 SEA EdTech 2025</span>
+                <img src="/light/assets/imgs/holoniq-top-50.png" alt="HolonIQ Top 50 Southeast Asia EdTech 2025" />
               </div>
             </div>
           </div>
@@ -83,7 +81,7 @@
         <div class="text-center">
           <div class="item-box radius-15 d-inline-block">
             <h4 class="mb-10">MAXY AI Holdings</h4>
-            <p class="opacity-8">Parent holding company</p>
+            <!-- <p class="opacity-8">Parent holding company</p> -->
           </div>
         </div>
         <div class="row mt-30 pt-30 bord-thin-top">
@@ -210,8 +208,11 @@ const timeline = [
 .holoniq-badge {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #14cf93;
-  border-radius: 30px;
-  padding: 12px 24px;
+  max-width: 170px;
+}
+.holoniq-badge img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 </style>

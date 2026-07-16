@@ -1,16 +1,16 @@
 [
   {
-    "img": "/light/assets/imgs/team/isaac.jpg",
+    "img": "/light/assets/imgs/team/isaac.png",
     "name": "Isaac Munandar",
     "subName": "Founder & CEO",
-    "bio": "Leads company strategy, growth, and client outcomes across MAXY AI's markets.",
+    "bio": "Isaac Munandar is the Co-Founder and CEO of MAXY Academy, an AI-driven EdTech company building an education-to-employment ecosystem across Indonesia and Southeast Asia. Since co-founding the company in July 2022, Isaac has led MAXY Academy's growth from a technology bootcamp platform into a full-fledged AI and digital skills ecosystem, steering strategy, growth, and client outcomes across the company's markets.",
     "linkedin": null
   },
   {
-    "img": "/light/assets/imgs/team/toro.jpg",
-    "name": "Toro",
-    "subName": "Co-Founder & CTO",
-    "bio": "Leads product, engineering, and platform architecture across MAXY AI.",
+    "img": "/light/assets/imgs/team/toro.png",
+    "name": "Andy Bintoro",
+    "subName": "Co-Founder",
+    "bio": "Andy Febrico Bintoro is the Co-Founder and CTO of MAXY Academy, leading product, engineering, and platform architecture. Andy has been central to building MAXY's AI-powered learning tools since the company's founding, translating its education mission into working technology.",
     "linkedin": null
   }
 ]

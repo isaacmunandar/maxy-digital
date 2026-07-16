@@ -32,7 +32,7 @@
       <div class="container">
         <div class="lg-text">
           <div class="d-flex">
-            <h6>MAXY AI</h6>
+            <!-- <h6>MAXY AI</h6> -->
             <!-- <h6 class="ml-auto">AI AGENCY</h6> -->
           </div>
           <h1>MAXY AI</h1>
