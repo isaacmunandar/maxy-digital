@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-11">
           <div v-if="gallery[0]" class="img">
-            <img :src="gallery[0]" alt="" style="width: 100%; height: 420px; object-fit: cover" class="radius-15" />
+            <img :src="gallery[0]" alt="" style="width: 100%; height: auto" class="radius-15" />
           </div>
           <div class="cont mt-60 mb-60">
             <div class="row">
@@ -19,7 +19,7 @@
             </div>
           </div>
           <div v-if="gallery[1]" class="img">
-            <img :src="gallery[1]" alt="" style="width: 100%; height: 420px; object-fit: cover" class="radius-15" />
+            <img :src="gallery[1]" alt="" style="width: 100%; height: auto" class="radius-15" />
           </div>
         </div>
       </div>
