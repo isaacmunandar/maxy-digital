@@ -91,7 +91,7 @@ const sectionContent = computed(() => {
       subTitle: 'What We Deploy',
       headline: "Agentic AI systems we've shipped - live in production.",
       body:
-        'A MAXY agent is a software employee trained on your proprietary data, integrated into your stack, and accountable to a specific outcome. We deploy custom agentic AI agents for sales follow-up, lead qualification, customer support, and internal knowledge retrieval across Singapore and beyond.',
+        'A MAXY agent is a software employee trained on your proprietary data, integrated into your stack, and accountable to a specific outcome. We deploy custom agentic AI agents for sales follow-up, lead qualification, customer support, and internal knowledge retrieval across our markets.',
       bulletsLeft: [
         'Sales and revenue AI agents',
         'Customer experience AI agents',

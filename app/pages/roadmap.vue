@@ -25,7 +25,7 @@ usePageSeo({
     name: 'AI Transformation Roadmap',
     serviceType: 'AI adoption strategy and transformation planning',
     description: pageSeo.roadmap.description,
-    audience: 'Singapore SMEs planning practical AI adoption',
+    audience: 'SMEs and growth-stage companies planning practical AI adoption',
   },
 });
 </script>

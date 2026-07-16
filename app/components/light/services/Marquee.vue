@@ -5,7 +5,7 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Agentic AI Solutions Singapore</span>
+              <span>Agentic AI Solutions</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>
@@ -31,7 +31,7 @@
         <div class="box">
           <div class="item">
             <h4 class="d-flex align-items-center">
-              <span>Agentic AI Solutions Singapore</span>
+              <span>Agentic AI Solutions</span>
               <span class="fz-50 ml-50 stroke icon">*</span>
             </h4>
           </div>

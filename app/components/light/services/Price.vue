@@ -18,7 +18,7 @@
               </h3>
               <div class="text mt-20">
                 <p>
-                  Indicative ranges for Singapore SMEs. Final scope sized to your problem, not a price card.
+                  Indicative ranges for SMEs and enterprises. Final scope sized to your problem, not a price card.
                 </p>
               </div>
               <ul class="rest list-arrow mt-30 pt-30 bord-thin-top">

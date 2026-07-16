@@ -5,7 +5,7 @@
         <h6 class="sub-title main-color mb-25">How We Work</h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
           <h2 class="fw-600">
-            From pilot to <span class="fw-200">production in Singapore.</span>
+            From pilot to <span class="fw-200">production.</span>
           </h2>
           <div class="ml-auto">
             <a href="/roadmap" class="go-more">
