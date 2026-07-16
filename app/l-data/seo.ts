@@ -9,14 +9,14 @@ export const solutionFaqs: Record<
 > = {
   "agentic-ai": {
     subTitle: "Agentic AI FAQs",
-    heading: "Frequently asked questions about agentic AI in Singapore",
+    heading: "Frequently asked questions about agentic AI",
     items: [
       {
         q: "What is an agentic AI solution?",
         a: "Agentic AI is software that can plan and complete multi-step work toward a defined outcome. Unlike a basic chatbot that only responds, an AI agent can qualify a lead, update a CRM, draft a follow-up, and book a meeting within approved workflows.",
       },
       {
-        q: "What agentic AI solutions does MAXY AI build in Singapore?",
+        q: "What agentic AI solutions does MAXY AI build?",
         a: "MAXY AI builds custom AI agents for sales follow-up, lead qualification, customer support, assessments, employee insights, hospitality concierge services, and internal knowledge retrieval.",
       },
       {
@@ -31,7 +31,7 @@ export const solutionFaqs: Record<
   },
   "web-app": {
     subTitle: "Web & App Development FAQs",
-    heading: "Frequently asked questions about web and app development in Singapore",
+    heading: "Frequently asked questions about web and app development",
     items: [
       {
         q: "What software development services does MAXY AI provide?",
@@ -53,7 +53,7 @@ export const solutionFaqs: Record<
   },
   "digital-growth": {
     subTitle: "Digital Growth FAQs",
-    heading: "Frequently asked questions about digital marketing and SEO in Singapore",
+    heading: "Frequently asked questions about digital marketing and SEO",
     items: [
       {
         q: "What digital marketing services does MAXY AI provide?",
