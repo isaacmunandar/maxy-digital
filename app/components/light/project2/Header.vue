@@ -44,8 +44,8 @@
         </div>
       </div>
     </div>
-    <div v-if="slides.length" class="container-fluid rest">
-      <div class="project2" data-carousel="swiper" data-items="2" data-loop="true" data-space="30" data-center="true">
+    <div v-if="slides.length" class="container rest">
+      <div class="project2" data-carousel="swiper" data-items="1" data-loop="true" data-space="30" data-center="false">
         <div id="content-carousel-container-unq-project2" class="swiper-container" data-swiper="container">
           <div class="swiper-wrapper">
             <div v-for="(slide, i) in slides" :key="i" class="swiper-slide">
@@ -71,19 +71,23 @@ const props = defineProps({
   image: { type: String, default: '' },
 });
 
-const slides = computed(() => (props.gallery.length ? props.gallery : props.image ? [props.image] : []));
+const slides = computed(() => [props.image, ...props.gallery].filter(Boolean));
 </script>
 
 <style scoped>
-.project2 .img {
-  height: min(50vh, 520px);
-  min-height: 320px;
+.project2 {
+  width: 100%;
+  margin-left: 0;
 }
 
-@media (max-width: 767px) {
-  .project2 .img {
-    height: auto;
-    min-height: 0;
-  }
+.project2 .img {
+  height: auto;
+  min-height: 0;
+}
+
+.project2 .img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 </style>
