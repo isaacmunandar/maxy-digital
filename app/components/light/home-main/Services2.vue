@@ -6,24 +6,22 @@
           What we ship
         </h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-          <h2 class="fw-600 d-rotate wow">
-            <span class="rotate-text">
-              Three ways we put agentic AI to <span class="fw-200">work.</span>
-            </span>
+          <h2 v-reveal:clip class="fw-600">
+            Three ways we put agentic AI to <span class="fw-200">work.</span>
           </h2>
           <div class="ml-auto">
             <div class="swiper-arrow-control">
-              <div class="swiper-button-prev">
+              <button type="button" class="swiper-button-prev" aria-label="Previous">
                 <span class="ti-arrow-left"></span>
-              </div>
-              <div class="swiper-button-next">
+              </button>
+              <button type="button" class="swiper-button-next" aria-label="Next">
                 <span class="ti-arrow-right"></span>
-              </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <div class="serv-swiper" data-carousel="swiper" data-loop="true" data-space="30">
+      <div v-reveal="{ delay: 150 }" class="serv-swiper" data-carousel="swiper" data-loop="true" data-space="30">
         <Swiper id="content-carousel-container-unq-serv" class="swiper-container" data-swiper="container"
           v-bind="swiperOptions">
           <SwiperSlide v-for="(item, i) in data.slice(0, 4)" :key="i">
@@ -33,10 +31,10 @@
               </div>
               <h5 class="mb-15">{{ item.title }}</h5>
               <p>{{ item.desc }}</p>
-              <a :href="item.link" class="rmore mt-30">
+              <NuxtLink :to="item.link" class="rmore mt-30">
                 <span class="sub-title">Explore {{ item.title }}</span>
                 <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
-              </a>
+              </NuxtLink>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -47,38 +45,39 @@
 <script setup>
 import data from '@/l-data/services.json';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 const swiperOptions = {
   modules: [Navigation],
   speed: 600,
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: '.swiper-arrow-control .swiper-button-next',
     prevEl: '.swiper-arrow-control .swiper-button-prev',
   },
   breakpoints: {
-    // when window width is >= 640px
-    640: {
-      loop: true,
-      slidesPerView: 1,
+    0: {
+      slidesPerView: 1.1,
       spaceBetween: 20,
-      centeredSlides: false,
     },
-    // when window width is >= 768px
     768: {
-      loop: true,
       slidesPerView: 2,
-      spaceBetween: 50,
-      centeredSlides: false,
+      spaceBetween: 30,
     },
-    // when window width is >= 1200px
-    1000: {
-      loop: true,
+    1200: {
       slidesPerView: 3,
-      spaceBetween: 50,
-      centeredSlides: true,
+      spaceBetween: 30,
     },
   },
 };
 </script>
+<style scoped>
+.swiper-button-prev,
+.swiper-button-next {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+</style>
