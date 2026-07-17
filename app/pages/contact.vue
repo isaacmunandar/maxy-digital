@@ -1,10 +1,11 @@
 <template>
-  <!-- <LoadingScreen /> -->
-  <main class="main-bg">
-    <Header />
-    <Contact />
-  </main>
-  <Footer />
+  <div>
+    <main class="main-bg">
+      <Header />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from '@/components/light/blog-details/Footer';
