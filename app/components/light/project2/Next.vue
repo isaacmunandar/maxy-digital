@@ -10,9 +10,9 @@
               </div>
               <div>
                 <h6 class="sub-title fz-16 mb-5">Prev Project</h6>
-                <a href="/case-studies" class="fz-40 fw-600 stroke">
+                <NuxtLink to="/case-studies" class="fz-40 fw-600 stroke">
                   All Case Studies
-                </a>
+                </NuxtLink>
               </div>
             </div>
           </div>
@@ -23,9 +23,9 @@
               <div class="cont d-flex align-items-center">
                 <div>
                   <h6 class="sub-title fz-16 mb-5">Start Your Project</h6>
-                  <a href="/contact" class="fz-40 fw-600 stroke">
+                  <NuxtLink to="/contact" class="fz-40 fw-600 stroke">
                     Book a Strategy Call
-                  </a>
+                  </NuxtLink>
                 </div>
                 <div>
                   <span class="ml-30 fz-30 ti-arrow-right"></span>
@@ -37,10 +37,10 @@
       </div>
     </div>
     <div>
-      <a href="/case-studies" class="all-works-butn text-center">
+      <NuxtLink to="/case-studies" class="all-works-butn text-center">
         <span class="ti-view-grid fz-24 mb-10"></span>
         <span class="d-block fz-12 text-u ls1">All Case Studies</span>
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>
