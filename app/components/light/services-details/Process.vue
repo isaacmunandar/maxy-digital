@@ -4,17 +4,17 @@
       <div class="sec-head mb-80">
         <h6 class="sub-title main-color mb-25">{{ pageContent.subTitle }}</h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-          <h2 class="fw-600">{{ pageContent.headline }}</h2>
+          <h2 v-reveal:clip>{{ pageContent.headline }}</h2>
           <div class="ml-auto">
-            <a href="/roadmap" class="go-more">
+            <NuxtLink to="/roadmap" class="go-more">
               <span class="text">Full Roadmap</span>
               <span class="icon ti-arrow-top-right"></span>
-            </a>
+            </NuxtLink>
           </div>
         </div>
-        <p v-if="pageContent.note" class="mt-20">{{ pageContent.note }}</p>
+        <p v-if="pageContent.note" v-reveal="{ delay: 100 }" class="mt-20">{{ pageContent.note }}</p>
       </div>
-      <div class="row md-marg">
+      <div class="row md-marg" v-reveal:stagger="{ delay: 150 }">
         <div
           v-for="(step, index) in pageContent.steps"
           :key="step.title"
@@ -26,12 +26,10 @@
           </div>
           <h5 class="mb-15">{{ step.title }}</h5>
           <p>{{ step.text }}</p>
-          <div class="o-hidden">
-            <a href="/roadmap" class="rmore to-in mt-30">
-              <span class="sub-title">View AI Transformation Roadmap</span>
-              <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
-            </a>
-          </div>
+          <NuxtLink to="/roadmap" class="rmore mt-30">
+            <span class="sub-title">View AI Transformation Roadmap</span>
+            <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
+          </NuxtLink>
         </div>
       </div>
     </div>
