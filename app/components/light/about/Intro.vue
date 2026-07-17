@@ -4,7 +4,7 @@
       <div class="row justify-content-end">
         <div class="col-sm-9">
           <div class="img to-up fit-img">
-            <img src="/light/assets/imgs/background/4.jpg" alt="" />
+            <img src="/light/assets/imgs/background/4.jpg" alt="" data-speed="0.95" />
           </div>
         </div>
       </div>
@@ -12,11 +12,11 @@
     <div class="container section-padding">
       <div class="row">
         <div class="col-lg-5">
-          <h6 class="sub-title main-color">AI Transformation Roadmap</h6>
+          <h6 v-reveal class="sub-title main-color">AI Transformation Roadmap</h6>
         </div>
         <div class="col-lg-7">
           <div class="text">
-            <h4>
+            <h4 v-reveal:clip>
               The 12-month AI transformation roadmap for SMEs and growth-stage companies - from
               "we should look at AI" to "AI runs half our operations." Phase 01
               gets your first agentic AI deployment live, then we compound into
@@ -35,3 +35,9 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+.page-intro {
+  overflow-x: clip;
+}
+</style>
