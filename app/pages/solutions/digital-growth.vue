@@ -1,13 +1,15 @@
 <template>
-  <main class="main-bg">
-    <Header />
-    <Services />
-    <Process />
-    <Services2 />
-    <FAQS />
-    <WorkShowcase category="digital-growth" />
-  </main>
-  <Footer />
+  <div>
+    <main class="main-bg">
+      <Header />
+      <Services />
+      <Process />
+      <Services2 />
+      <FAQS />
+      <WorkShowcase category="digital-growth" />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from '@/components/light/modern-agency/Footer';
