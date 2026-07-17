@@ -93,7 +93,7 @@ export default defineEventHandler(async (event) => {
                         <tr>
                           <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee; color: #888888; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Email Address</td>
                           <td style="padding: 15px 0; border-bottom: 1px solid #eeeeee; font-size: 16px; font-weight: 500;">
-                            <a href="mailto:${email}" style="color: #0066FF; text-decoration: none;">${email}</a>
+                            <a href="mailto:${email}" style="color: #2563eb; text-decoration: none;">${email}</a>
                           </td>
                         </tr>
                         <tr>
