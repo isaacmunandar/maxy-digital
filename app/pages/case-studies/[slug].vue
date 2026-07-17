@@ -1,11 +1,13 @@
 <template>
-  <main class="main-bg">
-    <Header :title="study.title" :summary="study.summary" :category="study.category" :metric="study.metric" :gallery="study.gallery" :image="study.image" />
-    <Challenge :problem="study.problem" :solution="study.solution" :outcome="study.outcome" />
-    <Story :outcome="study.outcome" :gallery="study.gallery" />
-    <Next />
-  </main>
-  <Footer />
+  <div>
+    <main class="main-bg">
+      <Header :title="study.title" :summary="study.summary" :category="study.category" :metric="study.metric" :gallery="study.gallery" :image="study.image" />
+      <Challenge :problem="study.problem" :solution="study.solution" :outcome="study.outcome" />
+      <Story :outcome="study.outcome" :gallery="study.gallery" />
+      <Next />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from '@/components/light/blog-details/Footer';
