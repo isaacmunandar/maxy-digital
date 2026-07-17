@@ -1,47 +1,49 @@
 <template>
-  <main class="main-bg">
-    <Header />
-    <Services />
-    <Marquee />
-    <Price />
-    <Process />
-    <section class="work-stand section-padding sub-bg">
-      <div class="container">
-        <div class="sec-head mb-80">
-          <h6 class="sub-title main-color mb-25">Selected Work</h6>
-          <div class="bord pt-25 bord-thin-top">
-            <h2 class="fw-600">
-              Real agentic AI systems. Real revenue.
-              <span class="fw-200">Real operators.</span>
-            </h2>
+  <div>
+    <main class="main-bg">
+      <Header />
+      <Services />
+      <Marquee />
+      <Price />
+      <Process />
+      <section class="work-stand section-padding sub-bg">
+        <div class="container">
+          <div class="sec-head mb-80">
+            <h6 class="sub-title main-color mb-25">Selected Work</h6>
+            <div class="bord pt-25 bord-thin-top">
+              <h2 class="fw-600">
+                Real agentic AI systems. Real revenue.
+                <span class="fw-200">Real operators.</span>
+              </h2>
+            </div>
           </div>
-        </div>
-        <div v-for="group in caseStudyGroups" :key="group.label" class="mb-80">
-          <h5 class="fz-18 fw-600 mb-40 bord-thin-bottom pb-15">
-            {{ group.label }}
-          </h5>
-          <div class="row stand-marg">
-            <div
-              v-for="(item, i) in group.items"
-              :key="i"
-              class="col-lg-4 col-md-6"
-            >
-              <div class="item mt-40">
-                <div class="img">
-                  <img :src="item.img" :alt="item.title" />
-                </div>
-                <div class="cont mt-20">
-                  <h5 class="fz-20">{{ item.title }}</h5>
-                  <span class="sub-title opacity-7">{{ item.tag }}</span>
+          <div v-for="group in caseStudyGroups" :key="group.label" class="mb-80">
+            <h5 class="fz-18 fw-600 mb-40 bord-thin-bottom pb-15">
+              {{ group.label }}
+            </h5>
+            <div class="row stand-marg">
+              <div
+                v-for="(item, i) in group.items"
+                :key="i"
+                class="col-lg-4 col-md-6"
+              >
+                <div class="item mt-40">
+                  <div class="img work-thumb">
+                    <img :src="item.img" :alt="item.title" loading="lazy" />
+                  </div>
+                  <div class="cont mt-20">
+                    <h5 class="fz-20">{{ item.title }}</h5>
+                    <span class="sub-title opacity-7">{{ item.tag }}</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <Footer />
+      </section>
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from "@/components/light/modern-agency/Footer";
@@ -71,3 +73,15 @@ const caseStudyGroups = computed(() => {
   }));
 });
 </script>
+
+<style scoped>
+.work-thumb {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+.work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
