@@ -1,5 +1,7 @@
 import { defineOrganization } from "nuxt-schema-org/schema";
 
+const gtmId = process.env.NUXT_PUBLIC_GTM_ID || "";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   buildDir: process.env.NUXT_BUILD_DIR || ".nuxt",
@@ -96,35 +98,42 @@ export default defineNuxtConfig({
           fetchpriority: "high",
         },
         // Google Fonts
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" },
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap",
         },
         { rel: "stylesheet", href: "/light/assets/css/plugins.css" },
         { rel: "stylesheet", href: "/light/assets/css/transisitions.css" },
         { rel: "stylesheet", href: "/light/assets/css/satoshi.css" },
         { rel: "stylesheet", href: "/light/assets/css/style.css" },
       ],
-      script: [
-        { src: "/light/assets/js/plugins.js", defer: true },
-        { src: "/light/assets/js/gsap.min.js", defer: true },
-        { src: "/light/assets/js/splitting.min.js", defer: true },
-        { src: "/light/assets/js/ScrollTrigger.min.js", defer: true },
-        { src: "/light/assets/js/ScrollSmoother.min.js", defer: true },
-        { src: "/light/assets/js/isotope.pkgd.min.js", defer: true },
-        { src: "/light/assets/js/scripts.js", defer: true },
-      ],
+      script: gtmId
+        ? [
+            {
+              key: "gtm-script",
+              innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtmId}');`,
+              type: "text/javascript",
+            },
+          ]
+        : [],
+      noscript: gtmId
+        ? [
+            {
+              key: "gtm-noscript",
+              innerHTML: `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+              body: true,
+            },
+          ]
+        : [],
     },
     pageTransition: {
       name: "page",
       mode: "out-in",
     },
   },
-  css: ["swiper/css/bundle"],
+  css: ["swiper/css", "swiper/css/navigation", "@/assets/css/reveal.css"],
 
   webpack: {
     extractCSS: true,
