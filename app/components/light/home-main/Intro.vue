@@ -4,30 +4,20 @@
       <div class="row justify-content-between">
         <div class="col-lg-6">
           <div class="cont">
-            <h4 class="d-slideup wow">
-              <span class="sideup-text">
-                <span class="up-text">
-                  Your competitor isn't catching up.
+            <h4>
+              <span v-reveal:clip class="d-block">Your competitor isn't catching up.</span>
+              <span v-reveal:clip="{ delay: 80 }" class="d-block">They're already shipping agentic AI.</span>
+              <span v-reveal:clip="{ delay: 160 }" class="d-block">
+                Find out
+                <span class="underline">
+                  <NuxtLink to="/roadmap" class="main-color"> where agentic AI earns first </NuxtLink>
                 </span>
-              </span>
-              <span class="sideup-text">
-                <span class="up-text">
-                  They're already shipping agentic AI.
-                </span>
-              </span>
-              <span class="sideup-text">
-                <span class="up-text">
-                  Find out
-                  <span class="underline">
-                    <a href="/roadmap" class="main-color"> where agentic AI earns first </a>
-                  </span>
-                  in your business.
-                </span>
+                in your business.
               </span>
             </h4>
-            <div class="exp mt-80 md-mb15">
+            <div v-reveal="{ delay: 250 }" class="exp mt-80 md-mb15">
               <h2 class="fz-70 numb-font">
-                6
+                <span v-count>6</span>
                 <span class="sub-title main-font opacity-7 ml-15">
                   Markets with live agentic AI deployments
                 </span>
@@ -37,13 +27,13 @@
         </div>
         <div class="col-lg-5">
           <div class="text">
-            <p>
+            <p v-reveal>
               Most SMEs still treat AI as a productivity hack — a ChatGPT seat,
               a faster way to write emails. The companies pulling ahead are doing
               something different: deploying agentic AI systems into the workflows that move
               revenue. Lead qualification. Customer support. Sales operations. Internal knowledge.
             </p>
-            <p class="mt-20">
+            <p v-reveal="{ delay: 100 }" class="mt-20">
               By the time it shows up in their P&amp;L, it's too late to copy. The
               question isn't whether to deploy agentic AI. It's where it earns first,
               and how fast you can ship it.
