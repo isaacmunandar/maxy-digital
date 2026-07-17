@@ -1,13 +1,15 @@
 <template>
-  <main class="main-bg o-hidden">
-    <Header />
-    <Intro />
-    <Services2 />
-    <Services />
-    <Marquee />
-    <Clients />
-  </main>
-  <Footer />
+  <div>
+    <main class="main-bg o-hidden">
+      <Header />
+      <Intro />
+      <Services2 />
+      <Services />
+      <Marquee />
+      <Clients />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Clients from '@/components/light/home-main/Clients';
