@@ -1,11 +1,13 @@
 <template>
- <main class="main-bg">
-    <Header />
-    <Intro />
-    <Marquee />
-    <Intro2 />
-  </main>
-  <Footer />
+  <div>
+    <main class="main-bg">
+      <Header />
+      <Intro />
+      <Marquee />
+      <Intro2 />
+    </main>
+    <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from '@/components/light/blog-list/Footer';
