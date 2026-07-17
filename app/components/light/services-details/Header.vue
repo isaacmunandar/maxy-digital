@@ -3,14 +3,14 @@
     data-overlay-dark="9">
     <div class="container pt-100">
       <div class="text-center">
-        <h6 class="sub-title main-color mb-15">{{ pageContent.eyebrow }}</h6>
-        <h1>{{ pageContent.title }}</h1>
-        <p class="mt-20">{{ pageContent.subheadline }}</p>
-        <p class="mt-10">{{ pageContent.microcopy }}</p>
-        <div class="mt-15">
-          <a href="/">Home</a>
+        <h6 v-reveal class="sub-title main-color mb-15">{{ pageContent.eyebrow }}</h6>
+        <h1 class="hero-split">{{ pageContent.title }}</h1>
+        <p v-reveal="{ delay: 150 }" class="mt-20">{{ pageContent.subheadline }}</p>
+        <p v-reveal="{ delay: 200 }" class="mt-10">{{ pageContent.microcopy }}</p>
+        <div v-reveal="{ delay: 300 }" class="mt-15">
+          <NuxtLink to="/">Home</NuxtLink>
           <span class="padding-rl-20">|</span>
-          <a href="/solutions">Solutions</a>
+          <NuxtLink to="/solutions">Solutions</NuxtLink>
           <span class="padding-rl-20">|</span>
           <span class="main-color">{{ pageContent.breadcrumb }}</span>
         </div>
@@ -20,6 +20,8 @@
 </template>
 <script setup>
 import { computed } from 'vue';
+
+useHeroSplitReveal('.hero-split', 'words');
 
 const route = useRoute();
 
