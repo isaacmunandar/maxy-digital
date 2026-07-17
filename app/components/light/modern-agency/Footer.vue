@@ -38,19 +38,15 @@
         <div class="row pt-80">
           <div class="col-lg-7">
             <div class="call-action">
-              <h2 class="d-slideup wow fz-60 fw-600">
-                <span class="sideup-text">
-                  <span class="up-text">Ship agentic AI before your competitors</span>
-                </span>
-                <span class="sideup-text">
-                  <span class="up-text underline">
-                    <a href="/contact" class="main-color">
-                      finish their strategy deck.
-                    </a>
-                  </span>
+              <h2 v-reveal:clip class="fz-60 fw-600">
+                Ship agentic AI before your competitors
+                <span class="underline">
+                  <NuxtLink to="/contact" class="main-color">
+                    finish their strategy deck.
+                  </NuxtLink>
                 </span>
               </h2>
-              <div class="info mt-80 d-flex align-items-center">
+              <div v-reveal="{ delay: 150 }" class="info mt-80 d-flex align-items-center">
                 <div>
                   <a href="mailto:hello@maxy.asia" class="butn butn-md butn-bord-thin radius-30">
                     <span class="text">hello@maxy.asia</span>
@@ -59,33 +55,33 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 offset-lg-1 bord-left">
+          <div v-reveal="{ delay: 200 }" class="col-lg-4 offset-lg-1 bord-left">
             <div class="column">
               <h6 class="sub-title mb-30">Quick Links</h6>
               <div class="row">
                 <div class="col-6">
                   <ul class="rest fz-14">
                     <li class="mb-15">
-                      <a href="/solutions">Solutions</a>
+                      <NuxtLink to="/solutions">Solutions</NuxtLink>
                     </li>
                     <li class="mb-15">
-                      <a href="/roadmap">Roadmap</a>
+                      <NuxtLink to="/roadmap">Roadmap</NuxtLink>
                     </li>
                     <li>
-                      <a href="/contact">Contact</a>
+                      <NuxtLink to="/contact">Contact</NuxtLink>
                     </li>
                   </ul>
                 </div>
                 <div class="col-6">
                   <ul class="rest fz-14">
                     <li class="mb-15">
-                      <a href="/contact">Book a Call</a>
+                      <NuxtLink to="/contact">Book a Call</NuxtLink>
                     </li>
                     <li class="mb-15">
                       <a href="https://maxy.academy" target="_blank" rel="noopener">MAXY Academy</a>
                     </li>
                     <li>
-                      <a href="/ai-playground">AI Playground</a>
+                      <NuxtLink to="/ai-playground">AI Playground</NuxtLink>
                     </li>
                   </ul>
                 </div>
@@ -119,7 +115,11 @@
 </template>
 <script setup>
 import { onMounted } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 onMounted(() => {
+  gsap.registerPlugin(ScrollTrigger);
   gsap.set('.footer-container', { yPercent: -50 });
   const uncover = gsap.timeline({ paused: true });
   uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
