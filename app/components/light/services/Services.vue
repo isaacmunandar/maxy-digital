@@ -6,12 +6,12 @@
           What we ship
         </h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-          <h2 class="fw-600 text-u ls1">
+          <h2 v-reveal:clip class="fw-600 text-u ls1">
             Three ways we put agentic AI <span class="fw-200">to work.</span>
           </h2>
         </div>
       </div>
-      <div class="row pt-30">
+      <div class="row pt-30" v-reveal:stagger="{ delay: 100 }">
         <div v-for="(item, i) in data" :key="i" class="col-lg-3 col-md-6 items">
           <div class="item-box bg md-mb50">
             <div class="icon mb-40 opacity-5">
@@ -19,10 +19,10 @@
             </div>
             <h5 class="mb-15 text-u">{{ item.title }}</h5>
             <p>{{ item.desc }}</p>
-            <a :href="item.link" class="rmore mt-30">
+            <NuxtLink :to="item.link" class="rmore mt-30">
               <span class="sub-title">Explore {{ item.title }}</span>
               <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
