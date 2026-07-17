@@ -1,7 +1,7 @@
 <template>
   <section class="work-showcase section-padding sub-bg">
     <div class="container">
-      <div class="sec-head mb-80">
+      <div v-reveal class="sec-head mb-80">
         <h6 class="sub-title main-color mb-25">What We've Built</h6>
         <div class="bord pt-25 bord-thin-top d-flex align-items-center">
           <h2 class="fw-600">
@@ -9,7 +9,7 @@
           </h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row" v-reveal:stagger="{ delay: 100 }">
         <div
           v-for="(item, i) in items"
           :key="i"
@@ -20,6 +20,7 @@
               <img
                 :src="item.img"
                 :alt="item.title"
+                loading="lazy"
                 style="width: 100%; height: 260px; object-fit: cover"
               />
             </div>
