@@ -2,16 +2,14 @@
   <footer class="clean-footer crev bg-img" style="background-image: url('/light/assets/imgs/header/bg1.jpg'); background-color: #0d0d0d" data-overlay-dark="10">
     <div class="container pb-40 section-padding ontop">
       <div class="cal-action pb-50 mb-80 bord-thin-bottom">
-        <h2 class="fz-120 line-height-1 d-rotate wow">
-          <span class="rotate-text">
-            <a href="/contact">
-              Book a Strategy Call
-              <span class="ml-30 fz-70 ti-arrow-top-right"></span>
-            </a>
-          </span>
+        <h2 v-reveal:clip class="fz-120 line-height-1">
+          <NuxtLink to="/contact">
+            Book a Strategy Call
+            <span class="ml-30 fz-70 ti-arrow-top-right"></span>
+          </NuxtLink>
         </h2>
       </div>
-      <div class="row">
+      <div class="row" v-reveal:stagger="{ delay: 100 }">
         <div class="col-lg-3">
           <div class="logo" style="width: 140px;">
             <img src="/light/assets/imgs/logo-light.svg" alt="" />
@@ -37,13 +35,13 @@
             <h6 class="sub-title mb-30">Solutions</h6>
             <ul class="rest fz-14">
               <li class="mb-15">
-                <a href="/solutions/agentic-ai">Agentic AI</a>
+                <NuxtLink to="/solutions/agentic-ai">Agentic AI</NuxtLink>
               </li>
               <li class="mb-15">
-                <a href="/solutions/web-app">Web & App</a>
+                <NuxtLink to="/solutions/web-app">Web & App</NuxtLink>
               </li>
               <li>
-                <a href="/solutions/digital-growth">Digital Growth</a>
+                <NuxtLink to="/solutions/digital-growth">Digital Growth</NuxtLink>
               </li>
             </ul>
           </div>
@@ -53,16 +51,16 @@
             <h6 class="sub-title mb-30">Company</h6>
             <ul class="rest fz-14">
               <li class="mb-15">
-                <a href="/roadmap">Roadmap</a>
+                <NuxtLink to="/roadmap">Roadmap</NuxtLink>
               </li>
               <li class="mb-15">
-                <a href="/contact">Contact</a>
+                <NuxtLink to="/contact">Contact</NuxtLink>
               </li>
               <li class="mb-15">
                 <a href="https://maxy.academy" target="_blank" rel="noopener">MAXY Academy</a>
               </li>
               <li>
-                <a href="/ai-playground">AI Playground</a>
+                <NuxtLink to="/ai-playground">AI Playground</NuxtLink>
               </li>
             </ul>
           </div>
