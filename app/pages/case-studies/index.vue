@@ -1,4 +1,5 @@
 <template>
+  <div>
   <main class="main-bg">
     <header class="header page-header bg-img section-padding" style="background-image: url('/light/assets/imgs/header/b5.jpg'); background-color: #0d0d0d"
       data-overlay-dark="9">
@@ -8,7 +9,7 @@
           <h1>Agentic AI systems, deployed and measured</h1>
           <p class="mt-20">Five live deployments across recruitment, sales, finance, hospitality, and marketing - anonymized, with one headline metric each.</p>
           <div class="mt-15">
-            <a href="/">Home</a>
+            <NuxtLink to="/">Home</NuxtLink>
             <span class="padding-rl-20">|</span>
             <span class="main-color">Case Studies</span>
           </div>
@@ -26,11 +27,12 @@
         </div>
         <div class="row">
           <div v-for="study in caseStudies" :key="study.slug" class="col-lg-6 col-md-6 mb-50">
-            <a :href="`/case-studies/${study.slug}`" class="showcase-card d-block">
+            <NuxtLink :to="`/case-studies/${study.slug}`" class="showcase-card d-block">
               <div class="img o-hidden radius-15 mb-30">
                 <img
                   :src="study.image || '/light/assets/imgs/works/projects/2/1.jpg'"
                   :alt="study.title"
+                  loading="lazy"
                   style="width: 100%; height: 260px; object-fit: cover"
                 />
               </div>
@@ -39,13 +41,14 @@
                 <h4 class="fw-600 mb-15">{{ study.title }}</h4>
                 <span class="sub-title main-color">{{ study.metric.value }} &middot; {{ study.metric.label }}</span>
               </div>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
     </section>
   </main>
   <Footer />
+  </div>
 </template>
 <script setup>
 import Footer from '@/components/light/blog-details/Footer';
