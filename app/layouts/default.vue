@@ -14,24 +14,23 @@ import FloatingCta from "@/components/light/common/FloatingCta";
 import Lines from "@/components/light/common/Lines";
 import Navbar from "@/components/light/creative-agency/Navbar";
 import { nextTick, onBeforeUnmount, onMounted, watch } from "vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 let smoother;
 
 onMounted(() => {
-  if (
-    typeof gsap === "undefined" ||
-    typeof ScrollSmoother === "undefined" ||
-    typeof ScrollTrigger === "undefined"
-  ) {
-    return;
-  }
-
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-  ScrollTrigger.normalizeScroll(true);
-  smoother = ScrollSmoother.create({
-    smooth: 2,
-    effects: true,
-  });
+
+  // Skip the smooth-scroll layer on touch devices — it's the main source of
+  // scroll jank on mobile and native scroll already feels responsive there.
+  if (!ScrollTrigger.isTouch) {
+    smoother = ScrollSmoother.create({
+      smooth: 1,
+      effects: true,
+    });
+  }
 });
 
 const route = useRoute();
@@ -40,17 +39,17 @@ watch(
   () => route.fullPath,
   async () => {
     await nextTick();
-    if (typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.refresh();
+    if (smoother) {
+      smoother.scrollTo(0, false);
+    } else {
+      window.scrollTo(0, 0);
     }
-    if (smoother && typeof smoother.refresh === "function") {
-      smoother.refresh();
-    }
+    ScrollTrigger.refresh();
   },
 );
 
 onBeforeUnmount(() => {
-  if (smoother && typeof smoother.kill === "function") {
+  if (smoother) {
     smoother.kill();
   }
   smoother = null;
