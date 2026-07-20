@@ -1,268 +1,272 @@
 <template>
   <header class="hero" aria-label="MAXY AI">
-    <!-- Background: ken-burns + gradient, murni dekoratif -->
-    <div class="hero-bg" aria-hidden="true">
-      <div class="hero-bg-img"></div>
-      <div class="hero-bg-grad"></div>
-    </div>
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-hidden="true"
+    >
+      <source
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260613_180732_a54afbf6-b30d-470e-861f-669871f09f67.mp4"
+        type="video/mp4"
+      />
+    </video>
 
-    <div class="container hero-inner">
-      <!-- Status pill -->
-      <div class="hero-eyebrow">
-        <span class="hero-dot"><span class="hero-dot-ping"></span></span>
-        <span class="hero-eyebrow-text">Agentic AI — Deployed in Production</span>
-      </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
 
-      <!-- Headline -->
-      <h1 class="hero-title">
-        <span class="hero-line">Your AI transformation,</span>
-        <span class="hero-line hero-line-accent">engineered.</span>
+    <div class="hero-content">
+      <h1 class="hero-title text-glow">
+        Your AI transformation,<br> engineered.
       </h1>
 
-      <!-- Deskripsi + CTA, offset kanan seperti referensi -->
-      <div class="row justify-content-end">
-        <div class="col-lg-5 col-md-8">
-          <p class="hero-desc">
-            <strong>Production-grade agentic AI for enterprises</strong>
-            <span> — from your first agent to a full transformation roadmap across
-            Singapore, Southeast Asia, and the United States.</span>
-          </p>
-          <div class="hero-ctas">
-            <NuxtLink to="/contact" class="hero-cta-primary">
-              Book a Strategy Call
-              <span aria-hidden="true">↗</span>
-            </NuxtLink>
-            <NuxtLink to="/solutions" class="hero-cta-secondary">
-              Explore our solutions
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
+      <p class="hero-description">
+        Production-grade agentic AI for enterprises — from your first agent to a full transformation roadmap.
+      </p>
 
-      <!-- Stats: hairline + 4 kolom, terdorong ke bawah viewport -->
-      <div class="hero-stats-wrap">
-        <div class="hero-hairline"></div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <span v-count class="hero-stat-num">50+</span>
-            <span class="hero-stat-label">Enterprises<br />served</span>
-          </div>
-          <div class="hero-stat">
-            <span v-count class="hero-stat-num">6</span>
-            <span class="hero-stat-label">Markets with<br />live deployments</span>
-          </div>
-          <!-- TODO(user): 2 angka real di bawah ini sebelum merge -->
-          <div class="hero-stat">
-            <span v-count class="hero-stat-num">XX+</span>
-            <span class="hero-stat-label">Agents in<br />production</span>
-          </div>
-          <div class="hero-stat">
-            <span v-count class="hero-stat-num">X</span>
-            <span class="hero-stat-label">Weeks avg.<br />to production</span>
-          </div>
-        </div>
+      <NuxtLink to="/contact" class="button button-glow">
+        Book a Strategy Call
+      </NuxtLink>
+    </div>
+
+    <div class="sound-indicator" aria-label="Experience with sound">
+      <div class="sound-circle" aria-hidden="true">
+        <span class="sound-bar"></span>
+      </div>
+      <div class="sound-copy">
+        <p>Experience</p>
+        <p>with sound</p>
       </div>
     </div>
   </header>
 </template>
 
 <script setup>
-import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
-
-let tl, split, cleanupMagnetic;
+import { onMounted } from 'vue';
 
 onMounted(() => {
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!reduce) {
-    gsap.registerPlugin(SplitText);
-    split = new SplitText(".hero-line", { type: "words", mask: "words" });
-
-    tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-    tl.from(".hero-eyebrow", { autoAlpha: 0, y: 12, duration: 0.7 }, 0)
-      .from(split.words, {
-        yPercent: 115,
-        rotate: 3,
-        transformOrigin: "0% 100%",
-        duration: 0.8,
-        stagger: 0.07,
-      }, 0.15)
-      .from(".hero-desc", { autoAlpha: 0, y: 20, duration: 0.8 }, 0.7)
-      .from(".hero-ctas", { autoAlpha: 0, y: 20, duration: 0.8 }, 0.85)
-      .from(".hero-hairline", { scaleX: 0, transformOrigin: "0 0", duration: 0.9 }, 0.9)
-      .from(".hero-stat", { autoAlpha: 0, y: 20, duration: 0.7, stagger: 0.1 }, 1.0);
-
-    cleanupMagnetic = initMagnetic();
+  const heroVideo = document.querySelector(".hero-video");
+  if (heroVideo) {
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        /* CSS hero background or poster remains visible if autoplay is blocked. */
+      });
+    }
   }
 });
-
-onUnmounted(() => {
-  tl?.kill();
-  split?.revert();
-  cleanupMagnetic?.();
-});
-
-// Magnetic hover untuk CTA primary — desktop pointer only.
-function initMagnetic() {
-  if (window.matchMedia("(hover: none)").matches) return;
-  const btn = document.querySelector(".hero-cta-primary");
-  if (!btn) return;
-  const xTo = gsap.quickTo(btn, "x", { duration: 0.4, ease: "power3" });
-  const yTo = gsap.quickTo(btn, "y", { duration: 0.4, ease: "power3" });
-  const move = (e) => {
-    const r = btn.getBoundingClientRect();
-    xTo((e.clientX - r.left - r.width / 2) * 0.3);
-    yTo((e.clientY - r.top - r.height / 2) * 0.3);
-  };
-  const leave = () => { xTo(0); yTo(0); };
-  btn.addEventListener("mousemove", move);
-  btn.addEventListener("mouseleave", leave);
-  return () => {
-    btn.removeEventListener("mousemove", move);
-    btn.removeEventListener("mouseleave", leave);
-  };
-}
 </script>
 
 <style scoped>
+:root {
+  --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.text-glow {
+  text-shadow:
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 0 80px rgba(255, 255, 255, 0.2),
+    0 0 120px rgba(255, 255, 255, 0.1);
+}
+
+.button-glow {
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 300ms ease,
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
 .hero {
   position: relative;
-  min-height: 100svh;
-  display: flex;
+  height: 100vh;
+  min-height: 640px;
   overflow: hidden;
-  background: #0d0d0d;
   isolation: isolate;
+  background:
+    radial-gradient(circle at 52% 45%, rgba(29, 78, 216, 0.45), transparent 46%),
+    linear-gradient(135deg, #0a0e1a 0%, #030712 58%, #000000 100%);
 }
-.hero-inner {
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  filter: grayscale(80%) sepia(20%) hue-rotate(180deg) opacity(0.5);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(10, 14, 26, 0.5) 0%, rgba(10, 14, 26, 0.1) 55%, rgba(10, 14, 26, 0.6) 100%),
+    rgba(3, 7, 18, 0.3);
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  position: relative;
-  z-index: 1;
-  padding-top: 140px;   /* clear fixed navbar */
-  padding-bottom: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  text-align: center;
+  transform: translateY(-40px);
 }
 
-/* Background */
-.hero-bg { position: absolute; inset: 0; z-index: 0; }
-.hero-bg-img {
-  position: absolute;
-  inset: -3%;
-  background: url("/light/assets/imgs/header/bg1.jpg") center / cover no-repeat;
-  animation: hero-kenburns 24s ease-in-out infinite alternate;
-  will-change: transform;
-}
-@keyframes hero-kenburns {
-  from { transform: scale(1.03) translate(-0.5%, 0); }
-  to   { transform: scale(1.09) translate(0.5%, -0.5%); }
-}
-.hero-bg-grad {
-  position: absolute; inset: 0;
-  background: linear-gradient(to right,
-    rgba(13,13,13,.82), rgba(13,13,13,.45) 45%, rgba(13,13,13,.12));
-}
-
-/* Eyebrow */
-.hero-eyebrow { display: flex; align-items: center; gap: 10px; }
-.hero-eyebrow-text {
-  font-size: 11px; text-transform: uppercase; letter-spacing: .32em;
-  color: rgba(255,255,255,.65);
-}
-.hero-dot { position: relative; width: 7px; height: 7px; }
-.hero-dot::after {
-  content: ""; position: absolute; inset: 0; border-radius: 50%;
-  background: #fbb041;
-}
-.hero-dot-ping {
-  position: absolute; inset: 0; border-radius: 50%;
-  background: rgba(251,176,65,.7);
-  animation: hero-ping 1.6s cubic-bezier(0, 0, .2, 1) infinite;
-}
-@keyframes hero-ping {
-  from { transform: scale(1); opacity: .8; }
-  to   { transform: scale(2.6); opacity: 0; }
-}
-
-/* Headline */
 .hero-title {
-  font-family: "Instrument Serif", serif;
+  max-width: 1200px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(56px, 7.7vw, 110px);
   font-weight: 400;
-  margin: 32px 0 0;
-  color: #f5f1e8;
-  letter-spacing: -0.01em;
-}
-.hero-line { display: block; line-height: 0.92; font-size: clamp(44px, 8vw, 128px); }
-.hero-line-accent {
-  font-style: italic;
-  font-size: clamp(48px, 9vw, 146px);
-  margin-top: 0.1em;
-  color: #fbb041;
-  text-shadow: 0 0 24px rgba(251,176,65,.18);
-  padding-bottom: 0.08em; /* ruang descender italic agar tidak terpotong mask */
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  color: #fff;
+  text-wrap: balance;
 }
 
-/* Deskripsi + CTA */
-.hero-desc {
-  margin-top: 48px; max-width: 520px;
-  font-size: 16px; line-height: 1.6;
-}
-.hero-desc strong { color: #fff; font-weight: 500; }
-.hero-desc span { color: rgba(255,255,255,.6); }
-.hero-ctas {
-  margin-top: 32px; display: flex; flex-wrap: wrap;
-  align-items: center; gap: 16px 24px;
-}
-.hero-cta-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  min-height: 48px; padding: 12px 28px; border-radius: 999px;
-  background: #fbb041; color: #0d0d0d;
-  font-weight: 600; font-size: 14px;
-  transition: background-color .3s, color .3s;
-}
-.hero-cta-primary:hover { background: #fff; color: #0d0d0d; }
-.hero-cta-secondary {
-  display: inline-flex; align-items: center; min-height: 44px;
-  color: rgba(255,255,255,.8); font-size: 14px;
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-color: rgba(255,255,255,.3);
-  transition: color .3s, text-decoration-color .3s;
-}
-.hero-cta-secondary:hover { color: #fff; text-decoration-color: #fbb041; }
-.hero-cta-primary:focus-visible, .hero-cta-secondary:focus-visible {
-  outline: 2px solid #fbb041; outline-offset: 3px;
+.hero-description {
+  max-width: 576px;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.65;
+  text-wrap: balance;
 }
 
-/* Stats */
-.hero-stats-wrap { margin-top: auto; padding-top: 64px; }
-.hero-hairline { height: 1px; background: rgba(255,255,255,.14); }
-.hero-stats {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 24px; margin-top: 32px;
-}
-.hero-stat { display: flex; flex-direction: column; }
-.hero-stat-num {
-  font-family: "Instrument Serif", serif;
-  font-size: clamp(34px, 3.5vw, 46px); line-height: 1;
-  color: #f5f1e8; letter-spacing: -0.02em;
-}
-.hero-stat-label {
-  margin-top: 10px; font-size: 11px; text-transform: uppercase;
-  letter-spacing: .18em; line-height: 1.5; color: rgba(255,255,255,.55);
+.hero-content .button {
+  margin-top: 36px;
 }
 
-/* Responsif */
-@media (max-width: 991px) {
-  .hero-inner { padding-top: 120px; }
-  .hero-desc { margin-top: 36px; }
+.sound-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
+
+.sound-circle {
+  position: relative;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.01);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.sound-circle::before {
+  position: absolute;
+  inset: 0;
+  padding: 1.4px;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.45) 0%,
+    rgba(255,255,255,0.15) 20%,
+    transparent 40%,
+    transparent 60%,
+    rgba(255,255,255,0.15) 80%,
+    rgba(255,255,255,0.45) 100%
+  );
+  content: "";
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.sound-bar {
+  width: 12px;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.sound-copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
 @media (max-width: 767px) {
-  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
-  .hero-stats-wrap { padding-top: 48px; }
+  .hero {
+    min-height: 620px;
+  }
+  .hero-content {
+    transform: translateY(0);
+  }
+  .hero-title {
+    max-width: 680px;
+    font-size: clamp(42px, 11vw, 64px);
+    line-height: 0.95;
+  }
+  .hero-description {
+    max-width: 520px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .hero-content .button {
+    margin-top: 24px;
+  }
+  .sound-indicator {
+    display: none;
+  }
 }
 
-/* Reduced motion: matikan loop animations */
-@media (prefers-reduced-motion: reduce) {
-  .hero-bg-img, .hero-dot-ping { animation: none; }
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 42px;
+  }
+  .button {
+    padding-inline: 26px;
+  }
 }
 </style>
