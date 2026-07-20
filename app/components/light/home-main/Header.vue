@@ -30,16 +30,6 @@
         Book a Strategy Call
       </NuxtLink>
     </div>
-
-    <div class="sound-indicator" aria-label="Experience with sound">
-      <div class="sound-circle" aria-hidden="true">
-        <span class="sound-bar"></span>
-      </div>
-      <div class="sound-copy">
-        <p>Experience</p>
-        <p>with sound</p>
-      </div>
-    </div>
   </header>
 </template>
 
@@ -116,6 +106,7 @@ onMounted(() => {
   background:
     radial-gradient(circle at 52% 45%, rgba(29, 78, 216, 0.45), transparent 46%),
     linear-gradient(135deg, #0a0e1a 0%, #030712 58%, #000000 100%);
+  pointer-events: none;
 }
 
 .hero-video {
@@ -126,7 +117,7 @@ onMounted(() => {
   height: 100%;
   object-fit: cover;
   transform: scale(1.01);
-  filter: grayscale(80%) sepia(20%) hue-rotate(180deg) opacity(0.5);
+  opacity: 0.6;
 }
 
 .hero-overlay {
@@ -149,6 +140,11 @@ onMounted(() => {
   padding: 0 24px;
   text-align: center;
   transform: translateY(-40px);
+  pointer-events: none;
+}
+
+.hero-content > * {
+  pointer-events: auto;
 }
 
 .hero-title {
@@ -175,66 +171,6 @@ onMounted(() => {
   margin-top: 36px;
 }
 
-.sound-indicator {
-  position: absolute;
-  bottom: 32px;
-  left: 32px;
-  z-index: 20;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.sound-circle {
-  position: relative;
-  display: grid;
-  width: 40px;
-  height: 40px;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.01);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.sound-circle::before {
-  position: absolute;
-  inset: 0;
-  padding: 1.4px;
-  border-radius: inherit;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.45) 0%,
-    rgba(255,255,255,0.15) 20%,
-    transparent 40%,
-    transparent 60%,
-    rgba(255,255,255,0.15) 80%,
-    rgba(255,255,255,0.45) 100%
-  );
-  content: "";
-  pointer-events: none;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-
-.sound-bar {
-  width: 12px;
-  height: 2px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.75);
-}
-
-.sound-copy {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
-  line-height: 1.35;
-}
 
 @media (max-width: 767px) {
   .hero {
@@ -255,9 +191,6 @@ onMounted(() => {
   }
   .hero-content .button {
     margin-top: 24px;
-  }
-  .sound-indicator {
-    display: none;
   }
 }
 
