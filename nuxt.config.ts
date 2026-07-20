@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       routes: ["/robots.txt", "/sitemap.xml"],
     },
   },
+  runtimeConfig: {
+    public: {
+      gaMeasurementId: "", // default empty, overridden by NUXT_PUBLIC_GA_MEASUREMENT_ID
+    },
+  },
   compatibilityDate: "2026-06-04",
   modules: ["@nuxtjs/seo"],
   site: {
