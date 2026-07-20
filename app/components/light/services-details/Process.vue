@@ -51,7 +51,7 @@ const pageContent = computed(() => {
   const map = {
     'agentic-ai': {
       subTitle: 'How We Build',
-      headline: 'Six weeks from explore to agentic AI in production.',
+      headline: 'From explore to production in 4-8 weeks.',
       note: 'Live deployments in Singapore, the United States, and Indonesia.',
       steps: [
         {
