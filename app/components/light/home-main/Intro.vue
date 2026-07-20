@@ -5,8 +5,8 @@
         <div class="col-lg-6">
           <div class="cont">
             <h4>
-              <span v-reveal:clip class="d-block">Your competitor isn't catching up.</span>
-              <span v-reveal:clip="{ delay: 80 }" class="d-block">They're already shipping agentic AI.</span>
+              <span v-reveal:clip class="d-block">Your competitors aren't catching up.</span>
+              <span v-reveal:clip="{ delay: 80 }" class="d-block">They're shipping agentic AI.</span>
               <span v-reveal:clip="{ delay: 160 }" class="d-block">
                 Find out
                 <span class="underline">
@@ -29,7 +29,7 @@
           <div class="text">
             <p v-reveal>
               Most SMEs still treat AI as a productivity hack — a ChatGPT seat,
-              a faster way to write emails. The companies pulling ahead are doing
+              a faster way to write emails. The companies pulling ahead, from growth-stage teams to large enterprises are doing
               something different: deploying agentic AI systems into the workflows that move
               revenue. Lead qualification. Customer support. Sales operations. Internal knowledge.
             </p>
