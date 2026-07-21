@@ -3,7 +3,7 @@
     data-overlay-dark="9">
     <div class="container pt-100 pb-100">
       <div class="text-center">
-        <h1 class="fz-100 text-u hero-split">AI Transformation Roadmap for SMEs and Growth-Stage Companies.</h1>
+        <h1 class="hero-split">AI Transformation Roadmap for SMEs and Growth-Stage Companies.</h1>
         <div v-reveal="{ delay: 300 }" class="mt-15">
           <NuxtLink to="/">Home</NuxtLink>
           <span class="padding-rl-20">|</span>
