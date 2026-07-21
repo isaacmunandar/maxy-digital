@@ -19,11 +19,11 @@
 
     <div class="hero-content">
       <h1 class="hero-title text-glow">
-        Your AI transformation,<br> engineered.
+        Turn AI into measurable growth with custom agents and digital systems
       </h1>
 
       <p class="hero-description">
-        Production-grade agentic AI for enterprises — from your first agent to a full transformation roadmap.
+        MAXY AI builds production-grade agentic AI solutions for SMEs and enterprises. Custom agentic AI agents, AI-native software, and growth engines — live in production in 4-8 weeks.
       </p>
 
       <NuxtLink to="/contact" class="button button-glow">
