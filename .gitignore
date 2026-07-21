@@ -29,3 +29,5 @@ AGENTS.md
 .playwright-mcp
 
 docs/
+.agents/
+.claude/
