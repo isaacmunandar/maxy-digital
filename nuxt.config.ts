@@ -2,6 +2,14 @@ import { defineOrganization } from "nuxt-schema-org/schema";
 
 const gtmId = process.env.NUXT_PUBLIC_GTM_ID || "";
 
+const caseStudySlugs = [
+  "high-volume-recruitment-ai",
+  "ai-sales-nurturing",
+  "relationship-investment-manager-ai",
+  "hospitality-concierge-ai",
+  "ai-cmo",
+];
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   buildDir: process.env.NUXT_BUILD_DIR || ".nuxt",
@@ -52,13 +60,28 @@ export default defineNuxtConfig({
       {
         userAgent: ["*"],
         allow: ["/"],
-        disallow: ["/case-studies/"],
+      },
+      {
+        userAgent: [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "ClaudeBot",
+          "anthropic-ai",
+          "Claude-Web",
+          "PerplexityBot",
+          "Perplexity-User",
+          "Google-Extended",
+          "Bingbot",
+          "CCBot",
+        ],
+        allow: ["/"],
       },
     ],
   },
   sitemap: {
     zeroRuntime: true,
-    exclude: ["/case-studies/**", "/api/**"],
+    exclude: ["/api/**"],
     urls: [
       { loc: "/", changefreq: "monthly", priority: 1 },
       { loc: "/solutions", changefreq: "monthly", priority: 0.9 },
@@ -67,10 +90,15 @@ export default defineNuxtConfig({
       { loc: "/solutions/digital-growth", changefreq: "monthly", priority: 0.8 },
       { loc: "/roadmap", changefreq: "monthly", priority: 0.8 },
       { loc: "/contact", changefreq: "yearly", priority: 0.6 },
+      { loc: "/case-studies", changefreq: "monthly", priority: 0.7 },
+      ...caseStudySlugs.map((slug) => ({
+        loc: `/case-studies/${slug}`,
+        changefreq: "monthly" as const,
+        priority: 0.6,
+      })),
     ],
   },
   routeRules: {
-    "/case-studies/**": { robots: false, sitemap: false },
     "/api/**": { robots: false, sitemap: false },
   },
   app: {
