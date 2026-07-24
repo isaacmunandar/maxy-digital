@@ -62,8 +62,4 @@ usePageSeo({
     { name: 'Case Studies', item: '/case-studies' },
   ],
 });
-
-useSeoMeta({
-  robots: 'noindex, nofollow',
-});
 </script>
