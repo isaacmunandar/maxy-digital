@@ -1,9 +1,9 @@
 <template>
   <div>
     <main class="main-bg">
-      <Header :title="study.title" :summary="study.summary" :category="study.category" :metric="study.metric" :gallery="study.gallery" :image="study.image" />
+      <Header :title="study.title" :summary="study.summary" :category="study.category" :client="study.client" :metric="study.metric" :gallery="study.gallery" :image="study.image" />
       <Challenge :problem="study.problem" :solution="study.solution" :outcome="study.outcome" />
-      <Story :outcome="study.outcome" :gallery="study.gallery" />
+      <Story :gallery="study.gallery" />
       <Next />
     </main>
     <Footer />
@@ -32,9 +32,5 @@ usePageSeo({
     { name: 'Case Studies', item: '/case-studies' },
     { name: study.title, item: `/case-studies/${study.slug}` },
   ],
-});
-
-useSeoMeta({
-  robots: 'noindex, nofollow',
 });
 </script>
