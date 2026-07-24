@@ -151,7 +151,7 @@
             </div>
             <div class="item mb-50">
               <h6 class="sub-title mb-15 opacity-7">MAXY AI HUB</h6>
-              <h5>Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2 Blok F3,Karet Kuningan, South Jakarta 12950</h5>
+              <h5>Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2, South Jakarta 12950</h5>
             </div>
             <div class="item mb-40">
               <h6 class="sub-title mb-15 opacity-7">Contact</h6>
