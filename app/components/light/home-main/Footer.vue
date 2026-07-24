@@ -29,7 +29,7 @@
             <div class="mb-30">
               <h6 class="sub-title mb-15">MAXY AI HUB</h6>
               <h5 class="opacity-8 fz-15">
-                Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950
+                Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2, South Jakarta 12950
               </h5>
             </div>
             <a href="mailto:hello@maxy.asia" class="underline">

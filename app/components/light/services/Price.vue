@@ -71,14 +71,13 @@
                   <li class="mb-10">Scoping and documentation</li>
                   <li>30-day production support</li>
                 </ul>
+                <div style="height: 20px;"></div>
+                <NuxtLink to="/contact" class="butn butn-md butn-bord radius-30">
+                    <span class="fz-13">Start Here</span>
+                </NuxtLink>
               </div>
               <div class="mount ml-auto text-center">
-                <h3 class="numb-font"><span class="fz-20">from</span> SGD 7K</h3>
-                <div>
-                  <NuxtLink to="/contact" class="butn butn-md butn-bord radius-30">
-                    <span class="fz-13">Start Here</span>
-                  </NuxtLink>
-                </div>
+                <!-- <h3 class="numb-font"><span class="fz-20">from</span> SGD 7K</h3> -->
               </div>
             </div>
             <div v-reveal="{ delay: 120 }" class="item main-colorbg radius-10 text-dark d-flex align-items-center">
@@ -95,14 +94,13 @@
                   <li class="mb-10">Sales, ops, content, customer</li>
                   <li>Ongoing optimization retainer</li>
                 </ul>
-              </div>
-              <div class="mount ml-auto text-center">
-                <h3 class="numb-font"><span class="fz-20">from</span> SGD 35K</h3>
-                <div>
-                  <NuxtLink to="/contact" class="butn butn-md butn-bord text-dark radius-30">
+                <div style="height: 20px;"></div>
+                <NuxtLink to="/contact" class="butn butn-md butn-bord text-dark radius-30">
                     <span class="fz-13">Talk Scope</span>
                   </NuxtLink>
-                </div>
+              </div>
+              <div class="mount ml-auto text-center">
+                <!-- <h3 class="numb-font"><span class="fz-20">from</span> SGD 35K</h3> -->
               </div>
             </div>
           </div>

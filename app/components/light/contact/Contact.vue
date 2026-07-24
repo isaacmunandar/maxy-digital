@@ -23,7 +23,7 @@
               <div class="col-md-6">
                 <div class="morinfo mt-30">
                   <h6 class="mb-15">MAXY AI HUB</h6>
-                  <p>Graha Pengharapan Building, 2nd Floor,<br />Jl. Denpasar Raya No.2 Blok F3,<br />Karet Kuningan, South Jakarta 12950</p>
+                  <p>Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2, South Jakarta 12950</p>
                 </div>
               </div>
             </div>
