@@ -47,7 +47,7 @@ const pageContent = computed(() => {
       eyebrow: 'AI-Native Web and App Development',
       title: 'Custom Web & Mobile App Development in Singapore',
       subheadline:
-        'We build AI-native websites and apps for SMEs and enterprises, with automation, analytics, and integration baked in from day one.',
+        'We build AI-native websites and apps for enterprises, with automation, analytics, and integration baked in from day one.',
       microcopy: 'Built to ship fast, scale cleanly, and plug into your stack.',
       breadcrumb: 'Web and App',
     },

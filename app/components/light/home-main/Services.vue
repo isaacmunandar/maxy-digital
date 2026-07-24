@@ -19,21 +19,17 @@
           <div class="content full-width">
             <div class="sec-head mb-50">
               <h6 v-reveal class="sub-title mb-15 main-color">
-                Agentic AI operators - shipping since 2022
+                Agentic AI built by people who have shipped it since 2022
               </h6>
               <h2 v-reveal:clip="{ delay: 80 }" class="d-block">
-                Built by operators who've shipped agentic AI in three markets.
+                Built by a team that has deployed agentic AI in three markets — years before it was a headline.
               </h2>
             </div>
             <div class="row justify-content-end">
               <div class="col-lg-11">
                 <div class="text">
                   <p v-reveal="{ delay: 150 }">
-                    MAXY AI is the agentic AI and software arm of
-                    MAXY AI Holdings, recognized as a HolonIQ Top 50 Southeast Asia EdTech
-                    company in 2025. We don't theorize about agentic AI. We deploy it in
-                    Singapore, the US, and Indonesia — and we've been deploying since 2022,
-                    before most competitors had a name for it.
+                    MAXY AI is the agentic AI and software arm of MAXY AI Holdings, recognized as a HolonIQ Top 50 Southeast Asia EdTech company in 2025. We don't theorize about agentic AI— we deploy it in Singapore, the US, and Indonesia, and we've been deploying since 2022, before most competitors had a name for it.
                   </p>
                 </div>
                 <div class="row mt-50 pt-50 bord-thin-top" v-reveal:stagger="{ delay: 200 }">

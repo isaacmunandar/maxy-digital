@@ -39,7 +39,7 @@
               <div class="cont">
                 <span class="sub-title main-color fz-12 ls1 text-u mb-10 d-block">{{ study.category }}</span>
                 <h4 class="fw-600 mb-15">{{ study.title }}</h4>
-                <span class="sub-title main-color">{{ study.metric.value }} &middot; {{ study.metric.label }}</span>
+                <span class="sub-title">{{ study.metric.value }} &middot; {{ study.metric.label }}</span>
               </div>
             </NuxtLink>
           </div>

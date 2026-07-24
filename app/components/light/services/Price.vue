@@ -13,7 +13,7 @@
               </h3>
               <div class="text mt-20">
                 <p v-reveal="{ delay: 160 }">
-                  Indicative ranges for SMEs and enterprises. Final scope sized to your problem, not a price card.
+                  Scope and price are sized to your problem, not pulled from a price card. Production code, not a slide deck. Live in 4-8 weeks, not 6 months. Aligned scope and price to your business impact.
                 </p>
               </div>
               <ul class="rest list-arrow mt-30 pt-30 bord-thin-top" v-reveal:stagger="{ delay: 220 }">
