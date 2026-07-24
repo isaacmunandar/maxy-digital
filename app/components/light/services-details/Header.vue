@@ -36,7 +36,7 @@ const pageContent = computed(() => {
   const map = {
     'agentic-ai': {
       eyebrow: 'Agentic AI Solutions - Live Deployments in Singapore, the United States, and Indonesia',
-      title: 'Agentic AI Development Company in Singapore',
+      title: 'Agentic AI Development',
       subheadline:
         'MAXY AI builds production-grade agentic AI solutions for SMEs and enterprises - custom AI agents trained on your business, integrated into your stack, running in production within 4-8 weeks.',
       microcopy:
@@ -45,7 +45,7 @@ const pageContent = computed(() => {
     },
     'web-app': {
       eyebrow: 'AI-Native Web and App Development',
-      title: 'Custom Web & Mobile App Development in Singapore',
+      title: 'Custom Web & Mobile App Development',
       subheadline:
         'We build AI-native websites and apps for enterprises, with automation, analytics, and integration baked in from day one.',
       microcopy: 'Built to ship fast, scale cleanly, and plug into your stack.',
@@ -53,7 +53,7 @@ const pageContent = computed(() => {
     },
     'digital-growth': {
       eyebrow: 'Digital Growth Services',
-      title: 'Digital Marketing & SEO Agency in Singapore',
+      title: 'Digital Marketing & SEO Agency',
       subheadline:
         'Content, performance creative, and SEO systems that drive qualified pipeline for SMEs and enterprises.',
       microcopy: 'Measured on revenue, not vanity metrics.',
