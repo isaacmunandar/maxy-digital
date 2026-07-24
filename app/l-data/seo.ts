@@ -94,7 +94,7 @@ export const pageSeo = {
   webApp: {
     title: "Web & Mobile App Development Singapore",
     description:
-      "Custom web, mobile app, SaaS, and business software development in Singapore with AI, automation, analytics, and system integrations built in.",
+      "Custom web, mobile app, SaaS, and business software development with AI, automation, analytics, and system integrations built in.",
   },
   digitalGrowth: {
     title: "Digital Marketing & SEO Agency Singapore",
