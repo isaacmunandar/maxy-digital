@@ -19,8 +19,8 @@
               </div>
               <div class="col-md-4 sm-mb30">
                 <div class="item mb-30">
-                  <span class="opacity-8 mb-5">Built by :</span>
-                  <h6>MAXY AI</h6>
+                  <span class="opacity-8 mb-5">Client :</span>
+                  <h6>{{ client }}</h6>
                 </div>
               </div>
               <div class="col-md-4">
@@ -66,6 +66,7 @@ const props = defineProps({
   title: { type: String, required: true },
   summary: { type: String, required: true },
   category: { type: String, required: true },
+  client: { type: String, required: true },
   metric: { type: Object, required: true },
   gallery: { type: Array, default: () => [] },
   image: { type: String, default: '' },

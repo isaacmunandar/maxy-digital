@@ -54,9 +54,10 @@
       </div>
 
       <div class="topnav d-flex align-items-center">
-        <NuxtLink to="/ai-playground" class="playground-pill d-none d-md-flex align-items-center" style="margin-right: 20px;">
-          <span>AI Playground</span>
-          <span class="ti-arrow-top-right ml-5"></span>
+        <NuxtLink to="/ai-playground" class="playground-pill d-none d-md-flex align-items-center" style="margin-right: 20px;" aria-label="Explore AI Playground">
+          <span class="playground-ai">AI</span>
+          <span class="playground-word">Playground</span>
+          <span class="playground-arrow ti-arrow-top-right" aria-hidden="true"></span>
         </NuxtLink>
         <button type="button" @click="toggleMenu" class="menu-icon cursor-pointer" aria-label="Open menu" :aria-expanded="isOpen">
           <span class="icon ti-align-right"></span>
@@ -136,7 +137,11 @@
               <li @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
                 <div class="o-hidden">
                   <NuxtLink to="/ai-playground" class="link" @click="closeMenu">
-                    <span class="playground-pill-mobile">AI Playground <span class="ti-arrow-top-right"></span></span>
+                    <span class="playground-pill-mobile">
+                      <span class="playground-ai">AI</span>
+                      <span class="playground-word">Playground</span>
+                      <span class="playground-arrow ti-arrow-top-right" aria-hidden="true"></span>
+                    </span>
                   </NuxtLink>
                 </div>
               </li>
@@ -151,7 +156,7 @@
             </div>
             <div class="item mb-50">
               <h6 class="sub-title mb-15 opacity-7">MAXY AI HUB</h6>
-              <h5>Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2 Blok F3,Karet Kuningan, South Jakarta 12950</h5>
+              <h5>Graha Pengharapan Building, 2nd Floor, Jl. Denpasar Raya No.2, South Jakarta 12950</h5>
             </div>
             <div class="item mb-40">
               <h6 class="sub-title mb-15 opacity-7">Contact</h6>
@@ -276,27 +281,89 @@ function toggleSubMenu(event) {
   white-space: nowrap;
 }
 .playground-pill {
-  border: 1px solid #2563eb;
-  color: #2563eb;
+  position: relative;
+  isolation: isolate;
+  gap: 7px;
+  min-height: 44px;
+  border: 1px solid #1e5fcc;
+  color: #123e91;
   border-radius: 30px;
-  padding: 10px 20px;
-  background: transparent;
+  padding: 8px 16px 8px 9px;
+  background: #f5bd3c;
+  box-shadow: 0 10px 24px rgba(18, 62, 145, 0.18);
   white-space: nowrap;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  animation: playground-float 3.2s ease-in-out infinite;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.playground-pill::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -5px;
+  border: 1px solid rgba(30, 95, 204, 0.42);
+  border-radius: inherit;
+  animation: playground-ring 2.4s ease-out infinite;
 }
 .playground-pill:hover {
-  background: #2563eb;
-  color: #fff;
+  animation-play-state: paused;
+  background: #1e5fcc;
+  color: #f8fbff;
+  transform: translateY(-3px);
+}
+.playground-pill:active {
+  transform: translateY(1px) scale(0.98);
+}
+.playground-pill:focus-visible {
+  outline: 3px solid #f5bd3c;
+  outline-offset: 4px;
+}
+.playground-ai {
+  display: inline-grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 50%;
+  background: #1e5fcc;
+  color: #f8fbff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.playground-pill:hover .playground-ai {
+  background: #f5bd3c;
+  color: #123e91;
+}
+.playground-word {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+.playground-arrow {
+  display: inline-block;
+  font-size: 12px;
+  animation: playground-arrow 1.8s ease-in-out infinite;
 }
 .playground-pill-mobile {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid #2563eb;
-  color: #2563eb;
+  border: 1px solid #1e5fcc;
+  color: #123e91;
   border-radius: 30px;
-  padding: 8px 18px;
+  padding: 8px 18px 8px 9px;
+  background: #f5bd3c;
   font-size: 0.85em;
+}
+@keyframes playground-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes playground-ring {
+  0% { opacity: 0.65; transform: scale(0.96); }
+  75%, 100% { opacity: 0; transform: scale(1.12); }
+}
+@keyframes playground-arrow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(2px, -2px); }
 }
 .menu-icon,
 .close-menu {
@@ -318,5 +385,12 @@ function toggleSubMenu(event) {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .playground-pill,
+  .playground-pill::before,
+  .playground-arrow {
+    animation: none;
+  }
 }
 </style>
