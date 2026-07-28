@@ -1,0 +1,69 @@
+.playground-page {
+  --play-blue: #1e5fcc;
+  --play-blue-deep: #123e91;
+  --play-yellow: #f5bd3c;
+  --play-cream: #fbf7e9;
+  --play-sky: #eaf2ff;
+  --play-ink: #14264f;
+  background: var(--play-cream) !important;
+  color: var(--play-ink);
+  overflow: hidden;
+}
+
+.playground-page .hero-kicker,
+.playground-page .playground-eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--play-yellow);
+  color: var(--play-blue-deep) !important;
+  letter-spacing: 0.08em;
+}
+
+.playground-page .playground-button {
+  border: 1px solid var(--play-yellow);
+  background: var(--play-yellow);
+  color: var(--play-blue-deep);
+  box-shadow: 0 14px 32px rgba(18, 62, 145, 0.2);
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.playground-page .playground-button .text,
+.playground-page .playground-button .icon {
+  color: inherit !important;
+}
+
+.playground-page .playground-button:hover {
+  transform: translateY(-3px);
+  background: var(--play-cream);
+  color: var(--play-blue-deep);
+}
+
+.playground-page .playground-button:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.playground-page .playground-button:focus-visible,
+.playground-page .tool-card:focus-visible,
+.playground-page .tool-card-cta:focus-visible {
+  outline: 3px solid var(--play-yellow);
+  outline-offset: 4px;
+}
+
+.playground-page .bord-thin-top,
+.playground-page .bord-thin-bottom {
+  border-color: rgba(30, 95, 204, 0.28) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playground-page .playground-button,
+  .playground-page .tool-card-inner,
+  .playground-page .tool-card-cta,
+  .playground-page .partner-logo {
+    transition: none;
+  }
+}
