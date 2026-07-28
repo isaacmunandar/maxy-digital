@@ -1,0 +1,89 @@
+.nova-page {
+  --nova-navy: #171d4d;
+  --nova-navy-soft: #252c67;
+  --nova-amber: #f7a91b;
+  --nova-amber-light: #ffc85a;
+  --nova-blue: #1e5fcc;
+  --nova-paper: #f7f8fc;
+  --nova-white: #ffffff;
+  --nova-ink: #161b42;
+  background: var(--nova-paper);
+  color: var(--nova-ink);
+  overflow: hidden;
+}
+
+.nova-page .nova-eyebrow,
+.nova-page .nova-section-label {
+  margin-bottom: 24px;
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nova-page .nova-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 13px;
+  border: 1px solid rgba(247, 169, 27, 0.5);
+  border-radius: 999px;
+  color: var(--nova-amber-light);
+}
+
+.nova-page .nova-section-label {
+  color: var(--nova-blue);
+}
+
+.nova-page .nova-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 13px 24px;
+  border: 1px solid var(--nova-amber);
+  border-radius: 8px;
+  background: var(--nova-amber);
+  color: var(--nova-navy);
+  font-weight: 650;
+  box-shadow: 0 14px 32px rgba(247, 169, 27, 0.2);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.nova-page .nova-button:hover {
+  background: var(--nova-amber-light);
+  color: var(--nova-navy);
+  transform: translateY(-3px);
+}
+
+.nova-page .nova-button:focus-visible {
+  outline: 3px solid var(--nova-white);
+  outline-offset: 4px;
+}
+
+.nova-page .nova-meet h2,
+.nova-page .nova-heading-row h2,
+.nova-page .nova-outcomes h2,
+.nova-page .nova-final h2 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.nova-page .nova-large-copy {
+  margin-top: 28px;
+  color: rgba(22, 27, 66, 0.72);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nova-page .nova-button,
+  .nova-page .nova-card {
+    transition: none;
+  }
+}
