@@ -89,6 +89,7 @@ export default defineNuxtConfig({
       { loc: "/solutions/web-app", changefreq: "monthly", priority: 0.8 },
       { loc: "/solutions/digital-growth", changefreq: "monthly", priority: 0.8 },
       { loc: "/roadmap", changefreq: "monthly", priority: 0.8 },
+      { loc: "/nova-ai", changefreq: "monthly", priority: 0.8 },
       { loc: "/contact", changefreq: "yearly", priority: 0.6 },
       { loc: "/case-studies", changefreq: "monthly", priority: 0.7 },
       ...caseStudySlugs.map((slug) => ({
