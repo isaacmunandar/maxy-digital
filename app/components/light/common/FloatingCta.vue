@@ -3,6 +3,10 @@
     <span>Open AI Playground</span>
     <span class="icon ti-arrow-top-right ml-10"></span>
   </a>
+  <a v-else-if="isNova" href="https://nova.maxy.academy/" target="_blank" rel="noopener" class="floating-cta floating-cta-nova">
+    <span>Open NOVA AI</span>
+    <span class="icon ti-arrow-top-right ml-10"></span>
+  </a>
   <NuxtLink v-else to="/contact" class="floating-cta">
     <span>Book a Call</span>
     <span class="icon ti-arrow-top-right ml-10"></span>
@@ -12,6 +16,7 @@
 <script setup>
 const route = useRoute();
 const isPlayground = computed(() => route.path.startsWith('/ai-playground'));
+const isNova = computed(() => route.path.startsWith('/nova-ai'));
 </script>
 
 <style scoped>
@@ -42,6 +47,16 @@ const isPlayground = computed(() => route.path.startsWith('/ai-playground'));
   background: #fbb041;
   border-color: #fbb041;
   color: #1a1a1a;
+}
+.floating-cta-nova {
+  background: #171d4d;
+  border-color: #f7a91b;
+  color: #ffffff;
+}
+.floating-cta-nova:hover {
+  background: #f7a91b;
+  border-color: #f7a91b;
+  color: #171d4d;
 }
 @media (max-width: 768px) {
   .floating-cta {
