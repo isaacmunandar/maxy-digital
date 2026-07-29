@@ -82,6 +82,12 @@
   margin-top: 60px;
 }
 
+/* The theme's flat 60px inset leaves too little room for the phase headings on
+   phones and narrow desktops, so scale it with the viewport instead. */
+.page-intro-cerv .cont {
+  padding: clamp(20px, 2.5vw, 60px);
+}
+
 @media (min-width: 992px) {
   .phase-grid {
     display: grid;

@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="row" v-reveal:stagger>
-          <div v-for="(item, i) in timeline" :key="i" class="col-md-3 col-6 mb-30">
+          <div v-for="(item, i) in timeline" :key="i" class="col-lg-3 col-sm-6 col-12 mb-30">
             <h2 class="fz-100 numb-font">{{ i + 1 }}.</h2>
             <h4>{{ item.year }} &middot; {{ item.title }}</h4>
             <p class="opacity-8 mt-15">{{ item.body }}</p>
