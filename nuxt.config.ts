@@ -129,13 +129,6 @@ export default defineNuxtConfig({
           href: "/light/assets/imgs/favicon.ico",
           type: "image/x-icon",
         },
-        // Preload critical background images to prevent flash on load
-        {
-          rel: "preload",
-          as: "image",
-          href: "/light/assets/imgs/header/bg1.jpg",
-          fetchpriority: "high",
-        },
         // Google Fonts
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" },

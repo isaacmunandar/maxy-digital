@@ -233,7 +233,10 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 
 const isScrolled = ref(false);
 const route = useRoute();
-const hasDarkHeader = computed(() => !/^\/case-studies\/.+/.test(route.path));
+const hasDarkHeader = computed(() => {
+  const isDarkHero = !/^\/(case-studies|blog|contact)(\/.*)?$/.test(route.path);
+  return isDarkHero;
+});
 
 let navbarEl = null;
 let ticking = false;

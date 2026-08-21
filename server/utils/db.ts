@@ -44,12 +44,42 @@ export async function initDb() {
     );
   `);
 
+  await db.execute(`
+    CREATE TABLE IF NOT EXISTS categories (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL UNIQUE,
+      slug TEXT NOT NULL UNIQUE,
+      created_at TEXT DEFAULT (datetime('now'))
+    );
+  `);
+
   // Check if we have initial posts, if not seed a few sample high-quality articles
   const countRes = await db.execute('SELECT COUNT(*) as count FROM posts');
   const count = Number(countRes.rows[0]?.count || 0);
 
   if (count === 0) {
     await seedInitialPosts(db);
+  }
+
+  // Seed categories
+  const catCountRes = await db.execute('SELECT COUNT(*) as count FROM categories');
+  const catCount = Number(catCountRes.rows[0]?.count || 0);
+
+  if (catCount === 0) {
+    const defaultCategories = [
+      { id: 'cat-1', name: 'Agentic AI', slug: 'agentic-ai' },
+      { id: 'cat-2', name: 'Software Engineering', slug: 'software-engineering' },
+      { id: 'cat-3', name: 'Digital Growth', slug: 'digital-growth' },
+      { id: 'cat-4', name: 'Case Study', slug: 'case-study' },
+      { id: 'cat-5', name: 'Company News', slug: 'company-news' },
+      { id: 'cat-uncategorized', name: 'Uncategorized', slug: 'uncategorized' },
+    ];
+    for (const cat of defaultCategories) {
+      await db.execute({
+        sql: `INSERT OR IGNORE INTO categories (id, name, slug) VALUES (?, ?, ?)`,
+        args: [cat.id, cat.name, cat.slug],
+      });
+    }
   }
 }
 

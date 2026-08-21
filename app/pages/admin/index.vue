@@ -11,6 +11,9 @@
         </div>
 
         <div class="d-flex align-items-center gap-15">
+          <NuxtLink to="/admin/categories" class="btn-secondary">
+            <span class="ti-layers mr-5"></span> Manage Categories
+          </NuxtLink>
           <NuxtLink to="/admin/editor/new" class="btn-create">
             <span class="ti-plus mr-5"></span> Write Article
           </NuxtLink>
@@ -70,11 +73,9 @@
           <div class="d-flex gap-10">
             <select v-model="filterCategory" class="select-filter">
               <option value="All">All Categories</option>
-              <option value="Agentic AI">Agentic AI</option>
-              <option value="Software Engineering">Software Engineering</option>
-              <option value="Digital Growth">Digital Growth</option>
-              <option value="Case Study">Case Study</option>
-              <option value="Company News">Company News</option>
+              <option v-for="cat in categories" :key="cat.id" :value="cat.name">
+                {{ cat.name }}
+              </option>
             </select>
 
             <select v-model="filterStatus" class="select-filter">
@@ -90,11 +91,21 @@
           <table class="admin-table">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Author</th>
-                <th>Status</th>
-                <th>Date</th>
+                <th @click="sortBy('Title')" class="sortable">
+                  Title <span class="sort-icon" v-if="sortColumn === 'Title'">{{ sortOrder === 'asc' ? '▲' : '▼' }}</span>
+                </th>
+                <th @click="sortBy('Category')" class="sortable">
+                  Category <span class="sort-icon" v-if="sortColumn === 'Category'">{{ sortOrder === 'asc' ? '▲' : '▼' }}</span>
+                </th>
+                <th @click="sortBy('Author')" class="sortable">
+                  Author <span class="sort-icon" v-if="sortColumn === 'Author'">{{ sortOrder === 'asc' ? '▲' : '▼' }}</span>
+                </th>
+                <th @click="sortBy('Status')" class="sortable">
+                  Status <span class="sort-icon" v-if="sortColumn === 'Status'">{{ sortOrder === 'asc' ? '▲' : '▼' }}</span>
+                </th>
+                <th @click="sortBy('Date')" class="sortable">
+                  Date <span class="sort-icon" v-if="sortColumn === 'Date'">{{ sortOrder === 'asc' ? '▲' : '▼' }}</span>
+                </th>
                 <th class="text-right">Actions</th>
               </tr>
             </thead>
@@ -177,16 +188,19 @@ useHead({
 });
 
 const posts = ref([]);
+const categories = ref([]);
 const loading = ref(true);
 const searchQuery = ref('');
 const filterCategory = ref('All');
 const filterStatus = ref('All');
+const sortColumn = ref('Date');
+const sortOrder = ref('desc');
 
 const publishedCount = computed(() => posts.value.filter((p) => p.status === 'published').length);
 const draftCount = computed(() => posts.value.filter((p) => p.status === 'draft').length);
 
 const filteredPosts = computed(() => {
-  return posts.value.filter((post) => {
+  const filtered = posts.value.filter((post) => {
     const matchesSearch =
       !searchQuery.value ||
       post.title?.toLowerCase().includes(searchQuery.value.toLowerCase()) ||
@@ -201,7 +215,47 @@ const filteredPosts = computed(() => {
 
     return matchesSearch && matchesCategory && matchesStatus;
   });
+
+  return filtered.sort((a, b) => {
+    let valA, valB;
+    switch (sortColumn.value) {
+      case 'Title':
+        valA = (a.title || '').toLowerCase();
+        valB = (b.title || '').toLowerCase();
+        break;
+      case 'Category':
+        valA = (a.category || '').toLowerCase();
+        valB = (b.category || '').toLowerCase();
+        break;
+      case 'Author':
+        valA = (a.author_name || '').toLowerCase();
+        valB = (b.author_name || '').toLowerCase();
+        break;
+      case 'Status':
+        valA = (a.status || '').toLowerCase();
+        valB = (b.status || '').toLowerCase();
+        break;
+      case 'Date':
+      default:
+        valA = new Date(a.published_at || a.created_at || 0).getTime();
+        valB = new Date(b.published_at || b.created_at || 0).getTime();
+        break;
+    }
+
+    if (valA < valB) return sortOrder.value === 'asc' ? -1 : 1;
+    if (valA > valB) return sortOrder.value === 'asc' ? 1 : -1;
+    return 0;
+  });
 });
+
+function sortBy(column) {
+  if (sortColumn.value === column) {
+    sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
+  } else {
+    sortColumn.value = column;
+    sortOrder.value = column === 'Date' ? 'desc' : 'asc';
+  }
+}
 
 async function fetchPosts() {
   loading.value = true;
@@ -211,11 +265,27 @@ async function fetchPosts() {
       posts.value = res.data || [];
     }
   } catch (err) {
-    console.error('Failed to load posts:', err);
+    console.error('Failed to load articles', err);
   } finally {
     loading.value = false;
   }
 }
+
+async function fetchCategories() {
+  try {
+    const res = await $fetch('/api/admin/categories');
+    if (res?.success) {
+      categories.value = res.data || [];
+    }
+  } catch (err) {
+    console.error('Failed to load categories', err);
+  }
+}
+
+onMounted(() => {
+  fetchPosts();
+  fetchCategories();
+});
 
 function formatDate(dateStr) {
   if (!dateStr) return '-';
@@ -307,6 +377,26 @@ onMounted(() => {
   background: #1d4ed8;
   color: #fff;
   transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
 }
 
 .btn-logout {
@@ -427,6 +517,24 @@ onMounted(() => {
   color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   font-weight: 600;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.sortable:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sort-icon {
+  font-size: 9px;
+  margin-left: 5px;
+  opacity: 0.8;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .admin-table td {

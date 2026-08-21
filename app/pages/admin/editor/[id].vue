@@ -101,32 +101,13 @@
                 <span class="text-muted fz-12">HTML and Markdown formatting supported</span>
               </label>
 
-              <!-- Quick Formatting Toolbar -->
-              <div v-if="!showPreview" class="editor-toolbar mb-10">
-                <button type="button" @click="insertTag('<h2>', '</h2>')" title="Heading 2">H2</button>
-                <button type="button" @click="insertTag('<h3>', '</h3>')" title="Heading 3">H3</button>
-                <button type="button" @click="insertTag('<strong>', '</strong>')" title="Bold"><b>B</b></button>
-                <button type="button" @click="insertTag('<em>', '</em>')" title="Italic"><i>I</i></button>
-                <button type="button" @click="insertTag('<blockquote>', '</blockquote>')" title="Quote">Quote</button>
-                <button type="button" @click="insertTag('<ul>\n  <li>', '</li>\n</ul>')" title="Bullet List">List</button>
-                <button type="button" @click="insertTag('<pre><code>', '</code></pre>')" title="Code Block">Code</button>
-                <button type="button" @click="insertLink" title="Insert Link">Link</button>
-                <button type="button" @click="insertImage" title="Insert Image Tag">Image</button>
+              <!-- Quill Editor -->
+              <div v-show="!showPreview" class="quill-wrapper">
+                <div ref="quillEditorEl" class="admin-quill-editor"></div>
               </div>
 
-              <!-- Textarea Editor -->
-              <textarea
-                v-if="!showPreview"
-                ref="contentInputEl"
-                v-model="form.content"
-                rows="18"
-                class="input-content"
-                placeholder="Write your article content here in rich HTML or markdown formatting..."
-                required
-              ></textarea>
-
               <!-- Live Article Preview Box -->
-              <div v-else class="preview-container">
+              <div v-show="showPreview" class="preview-container">
                 <div class="preview-badge">Live Reader Preview</div>
                 <div class="article-content" v-html="form.content"></div>
               </div>
@@ -143,11 +124,9 @@
             <div class="form-group mb-20">
               <label class="form-label">Category *</label>
               <select v-model="form.category" class="input-control">
-                <option value="Agentic AI">Agentic AI</option>
-                <option value="Software Engineering">Software Engineering</option>
-                <option value="Digital Growth">Digital Growth</option>
-                <option value="Case Study">Case Study</option>
-                <option value="Company News">Company News</option>
+                <option v-for="cat in categories" :key="cat.id" :value="cat.name">
+                  {{ cat.name }}
+                </option>
               </select>
             </div>
 
@@ -184,38 +163,28 @@
           <div class="card-panel mb-25">
             <h6 class="panel-title mb-15">Cover Banner Image</h6>
 
-            <div class="form-group mb-15">
-              <label class="form-label">Cover Image URL</label>
-              <input
-                v-model="form.coverImage"
-                type="text"
-                class="input-control"
-                placeholder="/light/assets/imgs/works/agentic-ai/..."
-              />
-            </div>
+            <div class="image-upload-wrapper">
+              <!-- Image Preview Thumbnail -->
+              <div v-if="form.coverImage" class="cover-preview mb-15">
+                <img :src="form.coverImage" alt="Cover Preview" />
+              </div>
 
-            <div class="upload-box mb-15">
               <input
                 type="file"
-                ref="fileInputEl"
-                @change="handleFileUpload"
+                ref="coverInputEl"
+                @change="(e) => handleFileUpload(e, 'coverImage')"
                 accept="image/*"
                 class="d-none"
               />
               <button
                 type="button"
-                @click="$refs.fileInputEl.click()"
+                @click="$refs.coverInputEl.click()"
                 class="btn-upload"
-                :disabled="uploading"
+                :disabled="uploading === 'coverImage'"
               >
-                <span v-if="uploading">Uploading image...</span>
-                <span v-else>📁 Upload Banner Image</span>
+                <span v-if="uploading === 'coverImage'">Uploading image...</span>
+                <span v-else>📸 Upload / Change Banner Image</span>
               </button>
-            </div>
-
-            <!-- Image Preview Thumbnail -->
-            <div v-if="form.coverImage" class="cover-preview">
-              <img :src="form.coverImage" alt="Cover Preview" />
             </div>
           </div>
 
@@ -244,13 +213,31 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label">Author Avatar URL</label>
-              <input
-                v-model="form.authorAvatar"
-                type="text"
-                class="input-control"
-                placeholder="/light/assets/imgs/logo-maxy-dark.png"
-              />
+              <label class="form-label mb-10">Author Avatar</label>
+              <div class="d-flex align-items-center gap-15">
+                <div class="avatar-preview">
+                  <img :src="form.authorAvatar" alt="Avatar" />
+                </div>
+                <div class="flex-grow-1">
+                  <input
+                    type="file"
+                    ref="avatarInputEl"
+                    @change="(e) => handleFileUpload(e, 'authorAvatar')"
+                    accept="image/*"
+                    class="d-none"
+                  />
+                  <button
+                    type="button"
+                    @click="$refs.avatarInputEl.click()"
+                    class="btn-upload"
+                    style="padding: 8px; font-size: 12px;"
+                    :disabled="uploading === 'authorAvatar'"
+                  >
+                    <span v-if="uploading === 'authorAvatar'">Uploading...</span>
+                    <span v-else>📸 Upload Avatar</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -286,18 +273,27 @@ const form = ref({
 });
 
 const tagsInput = ref('Agentic AI, Enterprise');
+const categories = ref([]);
 const showPreview = ref(false);
 const saving = ref(false);
-const uploading = ref(false);
+const uploading = ref('');
 const successMsg = ref('');
 const errorMsg = ref('');
 
-const contentInputEl = ref(null);
+const coverInputEl = ref(null);
+const avatarInputEl = ref(null);
+let quill = null;
 const fileInputEl = ref(null);
 
 useHead({
   title: computed(() => `${isNew.value ? 'New Article' : 'Edit: ' + form.value.title} | Admin CMS`),
   meta: [{ name: 'robots', content: 'noindex, nofollow' }],
+  script: [
+    { src: 'https://cdn.quilljs.com/1.3.6/quill.js', defer: true }
+  ],
+  link: [
+    { rel: 'stylesheet', href: 'https://cdn.quilljs.com/1.3.6/quill.snow.css' }
+  ]
 });
 
 function handleTitleInput() {
@@ -315,41 +311,13 @@ function togglePreview() {
   showPreview.value = !showPreview.value;
 }
 
-function insertTag(startTag, endTag) {
-  const el = contentInputEl.value;
-  if (!el) return;
 
-  const start = el.selectionStart;
-  const end = el.selectionEnd;
-  const text = form.value.content || '';
-  const selected = text.substring(start, end) || 'text';
 
-  form.value.content = text.substring(0, start) + startTag + selected + endTag + text.substring(end);
-  nextTick(() => {
-    el.focus();
-    el.setSelectionRange(start + startTag.length, start + startTag.length + selected.length);
-  });
-}
-
-function insertLink() {
-  const url = prompt('Enter URL:', 'https://');
-  if (url) {
-    insertTag(`<a href="${url}" target="_blank">`, '</a>');
-  }
-}
-
-function insertImage() {
-  const url = prompt('Enter Image URL:', '/light/assets/imgs/works/...');
-  if (url) {
-    form.value.content += `\n<img src="${url}" alt="Image" class="radius-15 my-20" style="width: 100%; height: auto;" />\n`;
-  }
-}
-
-async function handleFileUpload(e) {
+async function handleFileUpload(e, targetField) {
   const file = e.target.files?.[0];
   if (!file) return;
 
-  uploading.value = true;
+  uploading.value = targetField;
   errorMsg.value = '';
 
   const formData = new FormData();
@@ -362,14 +330,17 @@ async function handleFileUpload(e) {
     });
 
     if (res?.url) {
-      form.value.coverImage = res.url;
+      form.value[targetField] = res.url;
       successMsg.value = 'Image uploaded successfully!';
       setTimeout(() => (successMsg.value = ''), 4000);
     }
   } catch (err) {
     errorMsg.value = 'Failed to upload image: ' + (err?.data?.statusMessage || err?.message);
   } finally {
-    uploading.value = false;
+    uploading.value = '';
+    // Reset file input so same file can be uploaded again if needed
+    if (targetField === 'coverImage' && coverInputEl.value) coverInputEl.value.value = '';
+    if (targetField === 'authorAvatar' && avatarInputEl.value) avatarInputEl.value.value = '';
   }
 }
 
@@ -394,6 +365,10 @@ async function fetchArticle() {
         readTime: d.readTime || '5 min read',
       };
       tagsInput.value = Array.isArray(d.tags) ? d.tags.join(', ') : d.tags || '';
+      
+      if (quill) {
+        quill.root.innerHTML = form.value.content;
+      }
     }
   } catch (err) {
     errorMsg.value = 'Failed to load article: ' + (err?.data?.statusMessage || err?.message);
@@ -455,8 +430,56 @@ async function saveArticle(overrideStatus) {
   }
 }
 
+const fetchCategories = async () => {
+  try {
+    const res = await $fetch('/api/admin/categories');
+    if (res?.success) {
+      categories.value = res.data;
+      // Set default category if creating new post and list is not empty
+      if (isNew.value && categories.value.length > 0 && form.value.category === 'Agentic AI') {
+        const hasAgentic = categories.value.find(c => c.name === 'Agentic AI');
+        if (!hasAgentic) {
+           form.value.category = categories.value[0].name;
+        }
+      }
+    }
+  } catch (err) {
+    console.error('Failed to load categories', err);
+  }
+};
+
 onMounted(() => {
+  fetchCategories();
   fetchArticle();
+  
+  const initQuill = () => {
+    if (quillEditorEl.value && window.Quill) {
+      quill = new window.Quill(quillEditorEl.value, {
+        theme: 'snow',
+        placeholder: 'Write your article content here...',
+        modules: {
+          toolbar: [
+            [{ 'header': [2, 3, false] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            ['link', 'image'],
+            ['clean']
+          ]
+        }
+      });
+      quill.on('text-change', () => {
+        form.value.content = quill.root.innerHTML;
+      });
+      if (form.value.content) {
+        quill.root.innerHTML = form.value.content;
+      }
+    } else {
+      setTimeout(initQuill, 300);
+    }
+  };
+  
+  initQuill();
 });
 </script>
 
@@ -724,6 +747,24 @@ onMounted(() => {
   object-fit: cover;
 }
 
+.avatar-preview {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .alert {
   padding: 12px 16px;
   border-radius: 8px;
@@ -734,4 +775,67 @@ onMounted(() => {
 .alert-danger { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4); color: #fca5a5; }
 
 .text-muted { color: rgba(255, 255, 255, 0.4); }
+
+/* Quill Editor Dark Theme Overrides */
+:deep(.quill-wrapper) {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+:deep(.ql-toolbar.ql-snow) {
+  background: rgba(255, 255, 255, 0.04);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+}
+
+:deep(.ql-toolbar.ql-snow .ql-stroke) {
+  stroke: rgba(255, 255, 255, 0.7);
+}
+:deep(.ql-toolbar.ql-snow .ql-fill) {
+  fill: rgba(255, 255, 255, 0.7);
+}
+:deep(.ql-toolbar.ql-snow .ql-picker) {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+:deep(.ql-toolbar.ql-snow button:hover .ql-stroke),
+:deep(.ql-toolbar.ql-snow button.ql-active .ql-stroke) {
+  stroke: #3b82f6;
+}
+:deep(.ql-toolbar.ql-snow button:hover .ql-fill),
+:deep(.ql-toolbar.ql-snow button.ql-active .ql-fill) {
+  fill: #3b82f6;
+}
+:deep(.ql-toolbar.ql-snow .ql-picker:hover),
+:deep(.ql-toolbar.ql-snow .ql-picker.ql-expanded) {
+  color: #3b82f6;
+}
+
+:deep(.ql-container.ql-snow) {
+  border: none;
+  min-height: 400px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+:deep(.ql-editor) {
+  min-height: 400px;
+  color: #fff !important;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+:deep(.ql-editor p),
+:deep(.ql-editor span),
+:deep(.ql-editor li) {
+  color: #fff !important;
+}
+
+:deep(.ql-editor.ql-blank::before) {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-style: normal;
+}
 </style>

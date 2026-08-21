@@ -24,4 +24,15 @@ import Services2 from '@/components/light/home-main/Services2';
 import { pageSeo } from '@/l-data/seo';
 
 usePageSeo(pageSeo.home);
+
+useHead({
+  link: [
+    {
+      rel: "preload",
+      as: "image",
+      href: "/light/assets/imgs/header/bg1.jpg",
+      fetchpriority: "high",
+    },
+  ],
+});
 </script>
