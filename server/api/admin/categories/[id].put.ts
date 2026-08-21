@@ -59,7 +59,7 @@ export default defineEventHandler(async (event) => {
       });
     }
 
-    const oldName = oldCatRes.rows[0].name as string;
+    const oldName = oldCatRes.rows[0]?.name as string;
 
     // Update category
     await db.execute({

@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const file = files[0];
-  if (!file.filename || !file.data) {
+  if (!file || !file.filename || !file.data) {
     throw createError({
       statusCode: 400,
       statusMessage: 'Invalid file payload',

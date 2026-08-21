@@ -60,14 +60,15 @@ export default defineEventHandler(async (event) => {
       args: [id],
     });
 
-    if (!existing.rows.length) {
+    const firstRow = existing.rows[0];
+    if (!firstRow) {
       throw createError({
         statusCode: 404,
         statusMessage: 'Article not found',
       });
     }
 
-    let publishedAt: any = existing.rows[0].published_at;
+    let publishedAt: any = firstRow.published_at;
     if (status === 'published' && !publishedAt) {
       publishedAt = now;
     }

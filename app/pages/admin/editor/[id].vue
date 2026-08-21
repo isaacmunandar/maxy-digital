@@ -282,6 +282,7 @@ const errorMsg = ref('');
 
 const coverInputEl = ref(null);
 const avatarInputEl = ref(null);
+const quillEditorEl = ref(null);
 let quill = null;
 const fileInputEl = ref(null);
 
