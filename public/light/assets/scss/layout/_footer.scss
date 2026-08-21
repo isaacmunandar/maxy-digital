@@ -48,15 +48,15 @@ footer {
         content: "";
         position: absolute;
         top: 0;
-        left: 40px;
+        left: 0;
         right: 0;
-        bottom: 40px;
-        background: #1a1a1a;
+        bottom: 0;
+        background: #0d0d0d;
         z-index: 2;
       }
 
       &:before {
-        background: linear-gradient(180deg, $sub-bg, rgba(29, 29, 29, 0.5));
+        display: none;
       }
     }
   }

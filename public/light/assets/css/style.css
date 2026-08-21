@@ -1229,12 +1229,16 @@ figure {
 
 .slide-har.st1 .box {
   position: relative;
+  transform: translateZ(0);
+  will-change: transform;
   -webkit-animation: slide-har 80s linear infinite;
   animation: slide-har 80s linear infinite;
 }
 
 .slide-har.st2 .box {
   position: relative;
+  transform: translateZ(0);
+  will-change: transform;
   -webkit-animation: slide-har-revers 80s linear infinite;
   animation: slide-har-revers 80s linear infinite;
 }
@@ -5708,24 +5712,15 @@ footer.clean-footer.crev:after {
   content: "";
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 0;
   right: 0;
-  bottom: 40px;
-  background: #1a1a1a;
+  bottom: 0;
+  background: #0d0d0d;
   z-index: 2;
 }
 
 footer.clean-footer.crev:before {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#f5f7f9),
-    to(rgba(29, 29, 29, 0.5))
-  );
-  background: -webkit-linear-gradient(top, #f5f7f9, rgba(29, 29, 29, 0.5));
-  background: -o-linear-gradient(top, #f5f7f9, rgba(29, 29, 29, 0.5));
-  background: linear-gradient(180deg, #f5f7f9, rgba(29, 29, 29, 0.5));
+  display: none;
 }
 
 .modern-footer {

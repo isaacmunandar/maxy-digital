@@ -3,12 +3,12 @@
     <div class="slide-har st1">
       <div class="box">
         <div v-for="logo in partners" :key="logo.file" class="item">
-          <img :src="`/light/assets/imgs/partners/${logo.file}`" :alt="logo.name" class="partner-logo" />
+          <img :src="`/light/assets/imgs/partners/${logo.file}`" :alt="logo.name" loading="lazy" decoding="async" class="partner-logo" />
         </div>
       </div>
       <div class="box">
         <div v-for="logo in partners" :key="`dup-${logo.file}`" class="item">
-          <img :src="`/light/assets/imgs/partners/${logo.file}`" :alt="logo.name" class="partner-logo" />
+          <img :src="`/light/assets/imgs/partners/${logo.file}`" :alt="logo.name" loading="lazy" decoding="async" class="partner-logo" />
         </div>
       </div>
     </div>
@@ -38,9 +38,15 @@ const partners = [
   filter: grayscale(1);
   opacity: 0.7;
   transition: filter 0.4s, opacity 0.4s;
+  transform: translateZ(0);
 }
 .partner-logo:hover {
   filter: grayscale(0);
   opacity: 1;
+}
+.slide-har .box {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
 }
 </style>

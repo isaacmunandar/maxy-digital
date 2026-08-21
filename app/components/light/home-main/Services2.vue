@@ -27,13 +27,13 @@
           <SwiperSlide v-for="(item, i) in data.slice(0, 4)" :key="i">
             <div class="item-box radius-15">
               <div class="icon mb-40 opacity-5">
-                <img :src="item.img" alt="" />
+                <img :src="item.img" alt="" loading="lazy" decoding="async" />
               </div>
               <h5 class="mb-15">{{ item.title }}</h5>
               <p>{{ item.desc }}</p>
               <NuxtLink :to="item.link" class="rmore mt-30">
                 <span class="sub-title">Explore {{ item.title }}</span>
-                <img src="/light/assets/imgs/arrow-right.png" alt="" class="icon-img-20 ml-5" />
+                <img src="/light/assets/imgs/arrow-right.png" alt="" loading="lazy" decoding="async" class="icon-img-20 ml-5" />
               </NuxtLink>
             </div>
           </SwiperSlide>

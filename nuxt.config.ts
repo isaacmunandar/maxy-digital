@@ -1,4 +1,6 @@
-import { defineOrganization } from "nuxt-schema-org/schema";
+/// <reference path="./.nuxt/types/nitro-nuxt.d.ts" />
+/// <reference path="./.nuxt/types/nuxt-sitemap-augments.d.ts" />
+/// <reference path="./.nuxt/types/og-image-augments.d.ts" />
 
 const gtmId = process.env.NUXT_PUBLIC_GTM_ID || "";
 
@@ -39,7 +41,8 @@ export default defineNuxtConfig({
     defaultLocale: "en",
   },
   schemaOrg: {
-    identity: defineOrganization({
+    identity: {
+      type: "Organization",
       name: "MAXY AI",
       alternateName: ["MAXY", "MAXY Digital"],
       url: "https://www.maxy.asia",
@@ -53,7 +56,7 @@ export default defineNuxtConfig({
         postalCode: "089835",
         addressCountry: "SG",
       },
-    }),
+    },
   },
   robots: {
     groups: [
@@ -80,8 +83,8 @@ export default defineNuxtConfig({
     ],
   },
   sitemap: {
-    zeroRuntime: true,
-    exclude: ["/api/**"],
+    sources: ['/api/__sitemap__/urls'],
+    exclude: ["/api/**", "/admin/**"],
     urls: [
       { loc: "/", changefreq: "monthly", priority: 1 },
       { loc: "/solutions", changefreq: "monthly", priority: 0.9 },
@@ -91,16 +94,18 @@ export default defineNuxtConfig({
       { loc: "/roadmap", changefreq: "monthly", priority: 0.8 },
       { loc: "/nova-ai", changefreq: "monthly", priority: 0.8 },
       { loc: "/contact", changefreq: "yearly", priority: 0.6 },
+      { loc: "/blog", changefreq: "weekly", priority: 0.8 },
       { loc: "/case-studies", changefreq: "monthly", priority: 0.7 },
       ...caseStudySlugs.map((slug) => ({
         loc: `/case-studies/${slug}`,
-        changefreq: "monthly" as const,
+        changefreq: "monthly",
         priority: 0.6,
-      })),
+      } as const)),
     ],
   },
   routeRules: {
     "/api/**": { robots: false, sitemap: false },
+    "/admin/**": { robots: false, sitemap: false },
   },
   app: {
     head: {
@@ -161,7 +166,7 @@ export default defineNuxtConfig({
             {
               key: "gtm-noscript",
               innerHTML: `<iframe src="https://www.googletagmanager.com/ns.html?id=${gtmId}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-              body: true,
+              tagPosition: "bodyOpen",
             },
           ]
         : [],

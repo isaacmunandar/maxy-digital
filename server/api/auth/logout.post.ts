@@ -1,0 +1,9 @@
+import { clearSessionCookie } from '~~/server/utils/auth';
+
+export default defineEventHandler(async (event) => {
+  clearSessionCookie(event);
+  return {
+    success: true,
+    message: 'Logged out successfully',
+  };
+});

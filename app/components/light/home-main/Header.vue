@@ -34,17 +34,35 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, onUnmounted } from 'vue';
+
+let videoObserver = null;
 
 onMounted(() => {
   const heroVideo = document.querySelector(".hero-video");
-  if (heroVideo) {
-    const playPromise = heroVideo.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        /* CSS hero background or poster remains visible if autoplay is blocked. */
-      });
-    }
+  const heroEl = document.querySelector(".hero");
+
+  if (heroVideo && heroEl) {
+    videoObserver = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            heroVideo.play().catch(() => {});
+          } else {
+            heroVideo.pause();
+          }
+        }
+      },
+      { threshold: 0.05 }
+    );
+    videoObserver.observe(heroEl);
+  }
+});
+
+onUnmounted(() => {
+  if (videoObserver) {
+    videoObserver.disconnect();
+    videoObserver = null;
   }
 });
 </script>

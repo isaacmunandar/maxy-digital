@@ -46,6 +46,11 @@
             </NuxtLink>
           </li>
           <li class="nav-item">
+            <NuxtLink class="nav-link" to="/blog">
+              <span class="rolling-text">Blog</span>
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
             <NuxtLink class="nav-link" to="/contact">
               <span class="rolling-text">Contact</span>
             </NuxtLink>
@@ -162,6 +167,13 @@
                 <div class="o-hidden">
                   <NuxtLink to="/roadmap" class="link" @click="closeMenu">
                     <span class="fill-text" data-text="Roadmap">Roadmap</span>
+                  </NuxtLink>
+                </div>
+              </li>
+              <li @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave">
+                <div class="o-hidden">
+                  <NuxtLink to="/blog" class="link" @click="closeMenu">
+                    <span class="fill-text" data-text="Blog">Blog</span>
                   </NuxtLink>
                 </div>
               </li>

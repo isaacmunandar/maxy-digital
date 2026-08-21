@@ -7,11 +7,13 @@
       <Services />
       <Marquee />
       <Clients />
+      <BlogSection />
     </main>
     <Footer />
   </div>
 </template>
 <script setup>
+import BlogSection from '@/components/light/home-main/BlogSection';
 import Clients from '@/components/light/home-main/Clients';
 import Footer from '@/components/light/home-main/Footer';
 import Header from '@/components/light/home-main/Header';
