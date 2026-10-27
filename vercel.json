@@ -1,6 +1,5 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/hospitalclaim",
@@ -24,6 +23,14 @@
     },
     {
       "source": "/hospitalclaim/claim-intelligence/",
+      "destination": "/hospitalclaim/claim-intelligence/index.html"
+    },
+    {
+      "source": "/simrs-intelligence",
+      "destination": "/hospitalclaim/simrs-intelligence/index.html"
+    },
+    {
+      "source": "/claim-intelligence",
       "destination": "/hospitalclaim/claim-intelligence/index.html"
     }
   ]
