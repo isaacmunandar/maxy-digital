@@ -1,5 +1,6 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/hospitalclaim",
@@ -11,11 +12,19 @@
     },
     {
       "source": "/hospitalclaim/simrs-intelligence",
-      "destination": "/hospitalclaim/simrs-intelligence.html"
+      "destination": "/hospitalclaim/simrs-intelligence/index.html"
+    },
+    {
+      "source": "/hospitalclaim/simrs-intelligence/",
+      "destination": "/hospitalclaim/simrs-intelligence/index.html"
     },
     {
       "source": "/hospitalclaim/claim-intelligence",
-      "destination": "/hospitalclaim/claim-intelligence.html"
+      "destination": "/hospitalclaim/claim-intelligence/index.html"
+    },
+    {
+      "source": "/hospitalclaim/claim-intelligence/",
+      "destination": "/hospitalclaim/claim-intelligence/index.html"
     }
   ]
 }
