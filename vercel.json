@@ -1,0 +1,21 @@
+{
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/hospitalclaim",
+      "destination": "/hospitalclaim/index.html"
+    },
+    {
+      "source": "/hospitalclaim/",
+      "destination": "/hospitalclaim/index.html"
+    },
+    {
+      "source": "/hospitalclaim/simrs-intelligence",
+      "destination": "/hospitalclaim/simrs-intelligence.html"
+    },
+    {
+      "source": "/hospitalclaim/claim-intelligence",
+      "destination": "/hospitalclaim/claim-intelligence.html"
+    }
+  ]
+}
