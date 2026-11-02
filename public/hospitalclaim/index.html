@@ -61,7 +61,7 @@ img{display:block;max-width:100%}
 .nav-cta:hover{background:var(--gold);color:var(--ink-dark);border-color:var(--gold);transform:translateY(-2px)}
 .nav-cta:hover span{transform:translate(2px,-2px)}
 .lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.025);border-radius:999px}
-.lang-switch button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.52);border-radius:999px;padding:0;width:27px;height:23px;display:grid;place-items:center;font-family:var(--mono);font-size:8px;font-weight:500;line-height:1;letter-spacing:.04em;transition:background .25s,color .25s}
+.lang-switch button{appearance:none;border:0;background:transparent;color:rgba(255,255,255,.52);border-radius:999px;padding:0;width:34px;height:32px;display:grid;place-items:center;font-family:var(--mono);font-size:8px;font-weight:500;line-height:1;letter-spacing:.04em;transition:background .25s,color .25s}
 .lang-switch button:hover{color:#fff}
 .lang-switch button.is-active{background:#fff;color:var(--ink-dark)}
 .lang-switch .lang-sep{width:1px;height:9px;background:rgba(255,255,255,.12)}
@@ -105,12 +105,13 @@ img{display:block;max-width:100%}
 .hero-kicker{display:inline-flex;align-items:center;gap:10px;min-height:34px;padding:6px 13px;border:1px solid rgba(255,255,255,.14);background:rgba(6,10,20,.46);backdrop-filter:blur(12px);border-radius:999px;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;color:rgba(255,255,255,.64);text-transform:uppercase;animation:fadeUp .9s .1s both}
 .hero-kicker .slash{color:rgba(255,255,255,.24)}
 .hero-kicker b{color:var(--gold-soft);font-weight:500;letter-spacing:.09em}
-.hero-title{margin:35px auto 0;max-width:1110px;font-family:var(--serif);font-weight:400;font-size:clamp(62px,8.25vw,120px);line-height:.84;letter-spacing:-.045em;text-wrap:balance;text-shadow:0 0 80px rgba(255,255,255,.12)}
-.hero-title .line{display:block;overflow:hidden;padding-bottom:.09em;margin-bottom:-.04em}
-.hero-title .line>span{display:block;transform:translateY(112%);animation:heroLine 1.15s var(--ease) forwards}
+.hero-title{margin:35px auto 0;max-width:1110px;font-family:var(--serif);font-weight:400;font-size:clamp(62px,8.25vw,120px);line-height:1.02;letter-spacing:-.045em;text-wrap:balance;text-shadow:0 0 80px rgba(255,255,255,.12)}
+.hero-title .line{display:block;padding-bottom:.08em}
+.hero-title .line:nth-child(2){max-width:19ch;margin:0 auto;font-size:.64em;line-height:1.12;letter-spacing:-.035em}
+.hero-title .line>span{display:block;animation:fadeUp .85s var(--ease) both}
 .hero-title .line:nth-child(2)>span{animation-delay:.13s}
 .hero-title em{font-style:italic;color:var(--gold-soft);text-shadow:0 0 70px rgba(246,184,63,.1)}
-.hero-lede{max-width:660px;margin:27px auto 0;color:rgba(242,244,250,.66);font-size:14px;line-height:1.85;text-wrap:balance;animation:fadeUp .9s .45s both}
+.hero-lede{width:min(100%,680px);overflow-wrap:break-word;margin:26px auto 0;color:rgba(242,244,250,.75);font-size:14px;line-height:1.8;animation:fadeUp .9s .45s both}
 .hero-lede b{color:#fff;font-weight:500}
 .hero-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;margin-top:29px;animation:fadeUp .9s .58s both}
 .hero-proof{display:flex;justify-content:center;flex-wrap:wrap;gap:9px 26px;margin-top:24px;animation:fadeUp .9s .7s both}
@@ -528,7 +529,7 @@ img{display:block;max-width:100%}
   .nav-links a:after{display:none}.nav-links a:hover,.nav-links a.active{color:var(--gold-soft)}
   .nav-actions .nav-cta{display:none}.menu-toggle{display:grid;z-index:3}
   .menu-open .nav-links{opacity:1;visibility:visible}
-  .lang-switch{padding:2px}.lang-switch button{width:25px;height:22px}
+  .lang-switch{padding:2px}.lang-switch button{width:36px;height:36px}
   .hero{padding-top:130px}.hero-title{font-size:clamp(58px,10.5vw,96px)}.hero-side{display:none}
   .section{padding:105px 0}.section-head,.manifesto-top,.evidence-head{grid-template-columns:1fr;gap:35px}.section-head{margin-bottom:45px}
   .context-grid{grid-template-columns:1fr;gap:45px}.context-copy{max-width:720px}
@@ -549,10 +550,11 @@ img{display:block;max-width:100%}
 @media (max-width:640px){
   :root{--shell:calc(100% - 30px)}
   .site-header{padding:13px 0}.brand-logo{width:110px}
-  .hero{min-height:760px;padding:118px 0 70px;align-items:flex-start}
+  .hero{min-height:100svh;padding:118px 0 70px;align-items:flex-start}
   .hero-kicker{font-size:7px;gap:7px;padding:6px 10px}.hero-kicker .optional{display:none}
-  .hero-title{margin-top:33px;font-size:clamp(53px,15vw,78px);line-height:.87}
-  .hero-lede{font-size:12.5px;line-height:1.8;margin-top:24px;max-width:93%}
+  .hero-title{margin-top:33px;font-size:clamp(48px,13vw,78px);line-height:1.02}
+  .hero-title .line:nth-child(2){font-size:.58em;max-width:17ch}
+  .hero-lede{font-size:13px;line-height:1.7;margin-top:24px;max-width:52ch}
   .hero-actions{flex-direction:column;align-items:stretch;margin-top:27px}.hero-actions .btn{width:100%}
   .hero-proof{gap:8px 15px;margin-top:20px}.hero-proof span{font-size:8.5px}.hero-caption{font-size:6.5px}
   .hero-orbit{width:110vw;top:54%}.scroll-cue{display:none}
@@ -1717,6 +1719,305 @@ button.nav-cta {
   "Jelajahi produk": "Explore product"
 };
 
+  Object.assign(enText,{
+  "Bukti untuk klaim yang siap diajukan.": "Evidence for claims ready to submit.",
+  "MAXY / CLAIM INTELLIGENCE": "MAXY / CLAIM INTELLIGENCE",
+  "EVIDENCE / CONTEXT / DECISION": "EVIDENCE / CONTEXT / DECISION",
+  "Scroll": "Scroll",
+  "Catatan klinis": "Clinical notes",
+  "Pemeriksaan kode": "Coding review",
+  "Temuan klaim": "Claim findings",
+  "Keputusan petugas": "Staff decisions",
+  "Pantau pembayaran": "Track payments",
+  "Jejak tindak lanjut": "Follow-up trail",
+  "01 / Claim intelligence": "01 / Claim intelligence",
+  "Dari pelayanan menuju": "From care to",
+  "Claim Intelligence membantu tim klaim melihat masalah lebih awal.": "Claim Intelligence helps claims teams spot issues earlier.",
+  "Data kunjungan, catatan klinis, kode, bukti penunjang, dan tagihan dapat diperiksa bersama sebelum pengajuan.": "Encounter data, clinical notes, codes, supporting evidence, and bills can be reviewed together before submission.",
+  "AI Verifier menandai ketidaksesuaian dan menampilkan alasan untuk ditinjau dokter, koder, dan tim klaim. Setelah pengajuan, status pending, dispute, dan pembayaran dapat dipantau hingga selesai.": "AI Verifier flags discrepancies and shows the rationale for clinicians, coders, and claims teams to review. After submission, pending claims, disputes, and payments can be tracked through resolution.",
+  "Temukan celah · tugaskan perbaikan · pantau pembayaran": "Find gaps · assign fixes · track payments",
+  "TAHAP": "STAGES",
+  "Selama perawatan, sebelum, dan sesudah pengajuan.": "During care, before submission, and afterward.",
+  "Pemeriksaan dimulai sebelum klaim masuk ke BPJS.": "Review starts before claims reach BPJS.",
+  "KLAIM": "CLAIM",
+  "Temuan dan tindak lanjut terlihat bersama.": "Findings and follow-up appear together.",
+  "Tim dapat melihat pemilik tugas dan status perbaikan.": "Teams can see task owners and the status of each fix.",
+  "DITINJAU": "REVIEWED",
+  "Dokter, koder, dan tim klaim tetap mengambil keputusan.": "Clinicians, coders, and claims teams remain responsible for decisions.",
+  "02 / Masalah klaim": "02 / Claim challenges",
+  "Dokter, koder, tim klaim, dan keuangan bekerja pada tahap yang berbeda. Saat catatan, kode, SEP, bukti, dan tagihan baru dicocokkan di akhir, kekurangan berkas memicu perbaikan, pending, atau dispute.": "Clinicians, coders, claims teams, and finance work at different stages. When notes, codes, SEP, evidence, and bills are matched only at the end, missing documents lead to rework, pending claims, or disputes.",
+  "Saat pasien dirawat.": "While the patient is in care.",
+  "Catatan atau bukti yang belum lengkap masih bisa diklarifikasi kepada dokter.": "Missing notes or evidence can still be clarified with the clinician.",
+  "Sebelum klaim diajukan.": "Before the claim is submitted.",
+  "Koder dan tim klaim memeriksa kecocokan kode, resume, SEP, dan tagihan.": "Coders and claims teams check codes, medical summaries, SEP, and bills for consistency.",
+  "Sesudah hasil verifikasi.": "After verification.",
+  "Pending, dispute, serta pembayaran memerlukan penanggung jawab sampai selesai.": "Pending claims, disputes, and payments need an owner through resolution.",
+  "Ringkasan klaim": "Claims overview",
+  "03 / The intelligence layer": "03 / The intelligence layer",
+  "Periksa catatan dan bukti ketika pasien masih dirawat.": "Review notes and evidence while the patient is still in care.",
+  "AI Verifier membantu tim klaim meninjau SEP, resume, kode, bukti, dan tagihan.": "AI Verifier helps claims teams review SEP, summaries, codes, evidence, and bills.",
+  "Alasan pending, tindak lanjut, dan pembayaran terlihat dalam alur kerja.": "Reasons for pending claims, follow-up, and payments remain visible in the workflow.",
+  "01 / BPJS": "01 / BPJS",
+  "02 / BPJS": "02 / BPJS",
+  "03 / BPJS": "03 / BPJS",
+  "04 / ASURANSI": "04 / INSURANCE",
+  "Kasus pasien yang masih dirawat dan memerlukan tindak lanjut.": "Active patient cases that need follow-up.",
+  "Antrean klaim dan pemeriksaan AI Verifier sebelum pengajuan.": "Claims queue and AI Verifier checks before submission.",
+  "Temuan hasil verifikasi dan pekerjaan yang perlu diselesaikan.": "Verification findings and tasks that need resolution.",
+  "Alur cashless serta pemantauan tagihan dan pembayaran dari sisi RS.": "Cashless workflow and hospital-side bill and payment tracking.",
+  "04 / Titik bantuan AI": "04 / Where AI helps",
+  "01 / PERAWATAN": "01 / DURING CARE",
+  "Celah terlihat lebih awal.": "Gaps become visible earlier.",
+  "AI membantu menandai catatan dan bukti yang perlu ditinjau saat pasien masih dirawat.": "AI flags notes and evidence for review while the patient is still in care.",
+  "1 temuan AI": "1 AI finding",
+  "CATATAN PELAYANAN": "CARE NOTES",
+  "Bukti tindakan perlu dilengkapi": "Procedure evidence needs completion",
+  "Catatan dokter belum memuat dasar tindakan yang ditagihkan.": "The physician's notes do not yet explain the billed procedure.",
+  "Untuk DPJP": "For the attending physician",
+  "Tinjau dan lengkapi catatan klinis": "Review and complete clinical notes",
+  "02 / PRA-PENGAJUAN": "02 / BEFORE SUBMISSION",
+  "Berkas diperiksa sebelum kirim.": "Review documents before submission.",
+  "AI Verifier menunjukkan klaim yang belum diperiksa dan temuan yang perlu diselesaikan koder serta tim klaim.": "AI Verifier highlights unchecked claims and findings for coders and claims teams to resolve.",
+  "Pemeriksaan klaim": "Claim review",
+  "SEP & identitas": "SEP & identity",
+  "Sesuai": "Valid",
+  "Lengkap": "Complete",
+  "Kode diagnosis": "Diagnosis code",
+  "Perlu tinjau": "Needs review",
+  "Tagihan": "Bill",
+  "1 temuan untuk koder sebelum pengajuan": "1 finding for the coder before submission",
+  "03 / TINDAK LANJUT": "03 / FOLLOW-UP",
+  "Klaim dipantau hingga selesai.": "Track claims through resolution.",
+  "Pending dan dispute diberi tindak lanjut, sementara status pembayaran tetap terlihat.": "Pending claims and disputes receive follow-up while payment status remains visible.",
+  "Tindak lanjut klaim": "Claim follow-up",
+  "Pending": "Pending",
+  "TEMUAN VERIFIKASI": "VERIFICATION FINDINGS",
+  "Klarifikasi bukti pelayanan": "Clarify care evidence",
+  "Diterima": "Received",
+  "Ditugaskan": "Assigned",
+  "Diajukan ulang": "Resubmitted",
+  "PIC: Tim klaim": "Owner: Claims team",
+  "Minta klarifikasi kepada DPJP": "Request clarification from the attending physician",
+  "05 / Workspace klaim rumah sakit": "05 / Hospital claims workspace",
+  "Dashboard memisahkan alur BPJS dan asuransi swasta, lalu menunjukkan siapa yang perlu bertindak pada setiap tahap.": "The dashboard separates BPJS and private insurance workflows and shows who needs to act at each stage.",
+  "Dokter dan koder mendapat kesempatan memperbaiki catatan sebelum pasien pulang.": "Clinicians and coders can correct notes before discharge.",
+  "Sebelum pengajuan": "Before submission",
+  "AI Verifier membantu tim klaim memeriksa SEP, resume, kode, bukti, dan tagihan.": "AI Verifier helps claims teams check SEP, summaries, codes, evidence, and bills.",
+  "Setelah hasil BPJS": "After BPJS verification",
+  "Pending dan dispute dikelola sebagai pekerjaan dengan alasan serta tindak lanjut.": "Pending claims and disputes are managed as tasks with reasons and follow-up.",
+  "Tim RS memantau manfaat, penjaminan, cashless, dan dokumen reimbursement.": "Hospital teams track benefits, coverage, cashless claims, and reimbursement documents.",
+  "AI memberi temuan; petugas mengambil keputusan.": "AI identifies findings; staff make decisions.",
+  "Dokter": "Clinician",
+  "Koder": "Coder",
+  "Tim klaim": "Claims team",
+  "Keuangan RS": "Hospital finance",
+  "01 / SOURCE": "01 / SOURCE",
+  "02 / CONTROL": "02 / CONTROL",
+  "AI membantu menemukan dan memprioritaskan masalah. Dokter, koder, dan tim klaim tetap memeriksa sebelum perubahan diterapkan.": "AI helps find and prioritize issues. Clinicians, coders, and claims teams review them before any change is made.",
+  "03 / AUDIT": "03 / AUDIT",
+  "Status dan tindak lanjut dicatat per kasus sehingga pekerjaan dapat ditelusuri kembali oleh tim rumah sakit.": "Status and follow-up are recorded for each case so hospital teams can trace the work.",
+  "07 / Alur klaim rumah sakit": "07 / Hospital claims workflow",
+  "01 / DOKTER": "01 / CLINICIAN",
+  "Catat.": "Document.",
+  "Diagnosis, tindakan, dan bukti pelayanan dilengkapi selama pasien dirawat.": "Diagnoses, procedures, and care evidence are completed during the patient's stay.",
+  "catatan klinis · bukti": "clinical notes · evidence",
+  "02 / KODER": "02 / CODER",
+  "Kodekan.": "Code.",
+  "Koder memeriksa kesesuaian kode dengan catatan dan meminta klarifikasi bila perlu.": "The coder checks codes against notes and requests clarification when needed.",
+  "kode · konfirmasi klinis": "codes · clinical confirmation",
+  "03 / TIM KLAIM": "03 / CLAIMS TEAM",
+  "Periksa.": "Review.",
+  "AI Verifier membantu menunjukkan kekurangan sebelum klaim diajukan melalui alur BPJS atau penjamin.": "AI Verifier helps identify gaps before claims are submitted to BPJS or an insurer.",
+  "SEP · resume · tagihan": "SEP · summary · bill",
+  "04 / KEUANGAN": "04 / FINANCE",
+  "Pantau.": "Track.",
+  "Pending, dispute, persetujuan, dan pembayaran ditindaklanjuti hingga selesai.": "Pending claims, disputes, approvals, and payments are tracked through resolution.",
+  "status · tugas · pembayaran": "status · tasks · payments",
+  "Katalog layanan SIMRS": "SIMRS service catalog",
+  "Medical check-up": "Medical check-up",
+  "Dokumen klaim": "Claim documents",
+  "SATUSEHAT & FHIR": "SATUSEHAT & FHIR",
+  "Jelajahi antrean klaim BPJS, tindak lanjut pending, serta alur cashless dan reimbursement asuransi swasta dari sisi rumah sakit.": "Explore BPJS claim queues and pending follow-up, plus hospital-side cashless and reimbursement workflows for private insurance.",
+  "Pilihan Tujuan Dashboard": "Choose a dashboard",
+  "Klaim asuransi": "Insurance claims"
+});
+
+  Object.assign(enText,{
+  "IKHTISAR": "OVERVIEW",
+  "Ringkasan": "Overview",
+  "BPJS KESEHATAN": "BPJS HEALTHCARE",
+  "Analitik BPJS": "BPJS analytics",
+  "ASURANSI SWASTA": "PRIVATE INSURANCE",
+  "Manfaat & penjaminan": "Benefits & coverage",
+  "Klaim & pembayaran": "Claims & payments",
+  "· Tipe B · Jakarta Timur": "· Type B · East Jakarta",
+  "Okt 2026": "Oct 2026",
+  "Ilustrasi": "Illustration",
+  "PUSAT KENDALI KLAIM": "CLAIMS CONTROL CENTER",
+  "BPJS dan asuransi swasta dalam satu pandangan.": "BPJS and private insurance in one view.",
+  "JKN · SEP · koding · E-Klaim": "JKN · SEP · coding · E-Claim",
+  "Cashless RS · tagihan ke penjamin": "Hospital cashless · insurer billing",
+  "Diajukan": "Submitted",
+  "Tagihan final": "Final bill",
+  "Layak": "Eligible",
+  "Disetujui": "Approved",
+  "Dibayar": "Paid",
+  "Dibayar RS": "Paid to hospital",
+  "Nilai klaim": "Claim amount",
+  "1.860 berkas": "1,860 files",
+  "Tingkat pending": "Pending rate",
+  "turun 0,8 poin": "down 0.8 points",
+  "Menunggu selesai": "Awaiting resolution",
+  "214 berkas": "214 files",
+  "Pulang → ajukan": "Discharge → submission",
+  "4,1 hari": "4.1 days",
+  "Sep: 4,9 hari": "Sep: 4.9 days",
+  "Nov 2025 – Okt 2026": "Nov 2025 – Oct 2026",
+  "Perlu ditindaklanjuti": "Needs follow-up",
+  "Pasien aktif berisiko": "At-risk active patients",
+  "Tinjau bukti klinis": "Review clinical evidence",
+  "Klaim belum diperiksa": "Unchecked claims",
+  "Jalankan AI Verifier": "Run AI Verifier",
+  "Tetapkan tindak lanjut": "Assign follow-up",
+  "BPJS · SEJAK PASIEN DIRAWAT": "BPJS · FROM THE START OF CARE",
+  "Kendali mutu dan biaya": "Quality and cost control",
+  "Temuan terlihat sebelum pasien pulang.": "Findings appear before discharge.",
+  "01 · DATA": "01 · DATA",
+  "Sinkronkan rekam medis": "Sync medical records",
+  "Diagnosa, tindakan, penunjang": "Diagnoses, procedures, diagnostics",
+  "02 · TINJAU": "02 · REVIEW",
+  "Temukan kekurangan": "Find gaps",
+  "Catatan dan kode diperiksa": "Review notes and codes",
+  "03 · BANDINGKAN": "03 · COMPARE",
+  "Pantau biaya": "Track costs",
+  "Billing vs estimasi tarif": "Billing vs estimated tariff",
+  "04 · PUTUSKAN": "04 · DECIDE",
+  "Tindak lanjut manusia": "Human follow-up",
+  "DPJP, koder, tim klaim": "Clinician, coder, claims team",
+  "Pasien aktif": "Active patients",
+  "Dalam pemantauan": "Under review",
+  "Prioritas tinggi": "High priority",
+  "Perlu telaah segera": "Needs prompt review",
+  "Temuan dokumen/kode": "Document/code findings",
+  "Perlu ditinjau": "Needs review",
+  "Billing di atas estimasi": "Billing above estimate",
+  "Cek biaya dan klinis": "Check costs and clinical data",
+  "Pasien rawat aktif": "Active inpatients",
+  "Buka kasus untuk melihat bukti dan PIC.": "Open a case to view evidence and owner.",
+  "Cari pasien, dokter, atau diagnosis": "Search patient, physician, or diagnosis",
+  "Semua risiko": "All risks",
+  "Semua unit": "All units",
+  "PASIEN / DIAGNOSIS": "PATIENT / DIAGNOSIS",
+  "UNIT / DPJP": "UNIT / PHYSICIAN",
+  "LAMA RAWAT": "LENGTH OF STAY",
+  "TEMUAN AI": "AI FINDINGS",
+  "Demam berdarah": "Dengue fever",
+  "Penyakit Dalam": "Internal medicine",
+  "Pneumonia": "Pneumonia",
+  "Paru": "Pulmonology",
+  "5 hari": "5 days",
+  "Jantung": "Cardiology",
+  "4 hari": "4 days",
+  "SEBELUM PENGAJUAN": "BEFORE SUBMISSION",
+  "Antrean klaim": "Claims queue",
+  "14 klaim baru menunggu pemeriksaan · 41 perlu perbaikan": "14 new claims awaiting review · 41 need fixes",
+  "Cari SEP, pasien, atau diagnosis": "Search SEP, patient, or diagnosis",
+  "Semua status": "All statuses",
+  "Risiko tertinggi": "Highest risk",
+  "KLAIM / PASIEN": "CLAIM / PATIENT",
+  "STATUS": "STATUS",
+  "RISIKO": "RISK",
+  "ESTIMASI": "ESTIMATE",
+  "Rawat inap · 14 Okt": "Inpatient · 14 Oct",
+  "Belum diperiksa": "Not reviewed",
+  "Menunggu AI Verifier": "Awaiting AI Verifier",
+  "Perlu perbaikan": "Needs fixes",
+  "Resume perlu tanda tangan": "Summary needs signature",
+  "Kode perlu tinjauan": "Code needs review",
+  "Rawat inap · 13 Okt": "Inpatient · 13 Oct",
+  "Siap diajukan": "Ready to submit",
+  "Temuan selesai": "Findings resolved",
+  "Rawat jalan · 13 Okt": "Outpatient · 13 Oct",
+  "SETELAH PENGAJUAN": "AFTER SUBMISSION",
+  "Berkas yang dikembalikan memiliki tindak lanjut dan PIC.": "Returned claims have follow-up and an owner.",
+  "Nilai pending": "Pending amount",
+  "6 berkas": "6 files",
+  "Nilai dispute": "Dispute amount",
+  "2 berkas": "2 files",
+  "Lewat 7 hari": "Over 7 days",
+  "4 berkas": "4 files",
+  "Perlu prioritas": "Needs priority",
+  "Baru dikembalikan": "Recently returned",
+  "Rutekan ke DPJP": "Route to physician",
+  "Dirutekan": "Routed",
+  "Dispute": "Dispute",
+  "Buat draf jawaban": "Draft response",
+  "Draf jawaban siap": "Response draft ready",
+  "Ajukan ulang": "Resubmit",
+  "Klaim rawat inap": "Inpatient claim",
+  "Menunggu BPJS": "Awaiting BPJS",
+  "Klaim dan pembayaran": "Claims and payments",
+  "Cashless: RS menagih asuransi dan mencocokkan pembayaran masuk.": "Cashless: the hospital bills the insurer and reconciles incoming payments.",
+  "RS menagih asuransi": "Hospital bills insurer",
+  "RS bantu berkas pasien": "Hospital assists with documents",
+  "Cek polis": "Check policy",
+  "AI: manfaat & limit": "AI: benefits & limits",
+  "Jaminan awal": "Initial guarantee",
+  "AI: berkas & respons": "AI: documents & response",
+  "Tagihan akhir": "Final bill",
+  "AI: biaya vs keputusan": "AI: cost vs decision",
+  "Pembayaran": "Payment",
+  "AI: selisih & piutang": "AI: variance & receivables",
+  "Kasus": "Cases",
+  "Perlu tindakan": "Action needed",
+  "Belum ditindaklanjuti": "No follow-up yet",
+  "Bagian pasien": "Patient share",
+  "Bukan pembayaran RS": "Not hospital payment",
+  "Belum dibayar RS": "Not yet paid to hospital",
+  "Selisih disetujui – dibayar": "Approved–paid difference",
+  "Kasus cashless": "Cashless cases",
+  "Cari klaim, pasien, asuransi": "Search claim, patient, or insurer",
+  "Semua tahap": "All stages",
+  "Semua prioritas": "All priorities",
+  "ASURANSI": "INSURANCE",
+  "TEMUAN AI · PIC": "AI FINDINGS · OWNER",
+  "TAGIHAN": "BILL",
+  "Rawat inap · Okt 2026": "Inpatient · Oct 2026",
+  "Cek manfaat kamar": "Check room benefits",
+  "Belum ada respons": "No response yet",
+  "Selisih biaya obat": "Medication cost difference",
+  "ASURANSI SWASTA · SEBELUM TAGIHAN AKHIR": "PRIVATE INSURANCE · BEFORE FINAL BILL",
+  "Manfaat dan penjaminan": "Benefits and coverage",
+  "Periksa kasus sebelum pasien pulang.": "Review cases before discharge.",
+  "AI: status & limit": "AI: status & limits",
+  "AI: lampiran & respons": "AI: attachments & response",
+  "Selama dirawat": "During care",
+  "AI: perubahan layanan": "AI: care changes",
+  "Jaminan akhir": "Final guarantee",
+  "AI: tagihan vs manfaat": "AI: bill vs benefits",
+  "Sebelum jaminan akhir": "Before final guarantee",
+  "Pemilik tugas belum selesai": "Open assigned tasks",
+  "Berkas belum lengkap": "Documents incomplete",
+  "Periksa lampiran": "Check attachments",
+  "Kasus penjaminan": "Coverage cases",
+  "7 kasus contoh": "7 sample cases",
+  "PIC: Admisi / tim klaim": "Owner: Admissions / claims team",
+  "Jaminan awal belum masuk": "Initial guarantee not received",
+  "Resume akhir belum ada": "Final summary missing",
+  "Kelas kamar di atas manfaat": "Room class exceeds benefits",
+  "Tindakan menunggu persetujuan": "Procedure awaiting approval"
+});
+
+  Object.assign(enText,{
+  "AS-26-1047 · Cek polis": "AS-26-1047 · Check policy",
+  "AS-26-1270 · Jaminan awal": "AS-26-1270 · Initial guarantee",
+  "AS-26-1493 · Jaminan akhir": "AS-26-1493 · Final guarantee",
+  "AS-26-1716 · Jaminan akhir": "AS-26-1716 · Final guarantee",
+  "AS-26-1939 · Cek polis": "AS-26-1939 · Check policy",
+  "AS-26-2162 · Jaminan awal": "AS-26-2162 · Initial guarantee",
+  "Selisih obat Rp 4,4 jt": "Medication difference Rp 4.4 million"
+});
+
   var textNodes=[];
   var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
     acceptNode:function(node){
@@ -1730,19 +2031,78 @@ button.nav-cta {
     textNodes.push({node:walker.currentNode,original:walker.currentNode.nodeValue});
   }
 
-  var localizedAttrs=[
-    ['.brand','aria-label','Maxy AI Hospital Intelligence — beranda','Maxy AI Hospital Intelligence — home'],
-    ['#navLinks','aria-label','Navigasi utama','Main navigation'],
-    ['.hero-proof','aria-label','Kemampuan utama','Key capabilities'],
-    ['.engine-console','aria-label','Ilustrasi alur Claim Intelligence','Claim Intelligence workflow illustration'],
-    ['.console-stages','aria-label','Tahap analisis klaim','Claim analysis stages'],
-    ['.doc-preview','aria-label','Contoh dokumen resume medis','Sample medical summary document'],
-    ['.evidence-graph','aria-label','Ilustrasi evidence graph','Evidence graph illustration'],
-    ['.module-panel','aria-label','Modul SIMRS Maxy AI Hospital Intelligence','Maxy AI Hospital Intelligence SIMRS modules'],
-    ['.context-story','aria-label','Ilustrasi ringkasan klaim','Claims overview illustration'],
-    ['.stack-chips','aria-label','Peran pengguna','User roles'],
-    ['#langSwitch','aria-label','Pilih bahasa','Select language']
-  ];
+  var enAttrs={
+  "Maxy AI Hospital Intelligence — beranda": "Maxy AI Hospital Intelligence — home",
+  "Navigasi utama": "Main navigation",
+  "Kemampuan utama": "Key capabilities",
+  "Ilustrasi alur dashboard Claim Intelligence": "Claim Intelligence dashboard workflow illustration",
+  "Tampilan dashboard klaim": "Claims dashboard views",
+  "Buka ringkasan dashboard Claim Intelligence": "Open Claim Intelligence dashboard overview",
+  "Ilustrasi ringkasan dashboard dengan BPJS, asuransi swasta, dan pekerjaan yang perlu ditindaklanjuti": "Dashboard overview illustration showing BPJS, private insurance, and follow-up tasks",
+  "Buka Selama perawatan di dashboard": "Open During care in the dashboard",
+  "Buka Pra-pengajuan di dashboard": "Open Before submission in the dashboard",
+  "Buka Pending & dispute di dashboard": "Open Pending & disputes in the dashboard",
+  "Buka Asuransi swasta di dashboard": "Open Private insurance in the dashboard",
+  "Buka pemeriksaan selama perawatan di dashboard": "Open during-care review in the dashboard",
+  "Buka pemeriksaan sebelum pengajuan di dashboard": "Open pre-submission review in the dashboard",
+  "Buka tindak lanjut klaim di dashboard": "Open claim follow-up in the dashboard",
+  "Ilustrasi dashboard: Selama perawatan": "Dashboard illustration: During care",
+  "Ilustrasi dashboard: Pra-pengajuan": "Dashboard illustration: Before submission",
+  "Ilustrasi dashboard: Pending & dispute": "Dashboard illustration: Pending & disputes",
+  "Ilustrasi dashboard: Asuransi swasta": "Dashboard illustration: Private insurance",
+  "Ilustrasi Selama perawatan pada dashboard": "Dashboard illustration: During care",
+  "Ilustrasi Sebelum pengajuan pada dashboard": "Dashboard illustration: Before submission",
+  "Ilustrasi Setelah hasil BPJS pada dashboard": "Dashboard illustration: After BPJS verification",
+  "Ilustrasi manfaat dan penjaminan asuransi pada dashboard": "Dashboard illustration: Insurance benefits and coverage",
+  "Lihat Selama perawatan di dashboard": "View During care in the dashboard",
+  "Lihat Sebelum pengajuan di dashboard": "View Before submission in the dashboard",
+  "Lihat Setelah hasil BPJS di dashboard": "View After BPJS verification in the dashboard",
+  "Lihat Asuransi swasta di dashboard": "View Private insurance in the dashboard",
+  "Modul SIMRS Maxy AI Hospital Intelligence": "Maxy AI Hospital Intelligence SIMRS modules",
+  "Peran pengguna": "User roles",
+  "Pilih bahasa": "Select language",
+  "Pilih dashboard tujuan": "Choose a destination dashboard",
+  "Tutup modal": "Close dialog",
+  "Tampilkan sandi": "Show password",
+  "Sembunyikan sandi": "Hide password"
+};
+  Object.assign(enText,{
+  "Rp 12,1 jt": "Rp 12.1M",
+  "Rp 7,8 jt": "Rp 7.8M",
+  "Rp 4,9 jt": "Rp 4.9M",
+  "Rp 210 rb": "Rp 210K",
+  "Rp 56 jt": "Rp 56M",
+  "Rp 5,1 jt": "Rp 5.1M",
+  "Rp 12,4 M": "Rp 12.4B",
+  "Rp 5,7 jt": "Rp 5.7M",
+  "Rp 8,2 jt": "Rp 8.2M",
+  "Rp 36,8 jt": "Rp 36.8M",
+  "Rp 14,4 jt": "Rp 14.4M",
+  "Rp 12,8 jt": "Rp 12.8M",
+  "Rp 9,7 jt": "Rp 9.7M",
+  "Rp 6,3 jt": "Rp 6.3M",
+  "Rp 10,2 M": "Rp 10.2B",
+  "Rp 18,5 jt": "Rp 18.5M",
+  "Rp 15,2 jt": "Rp 15.2M",
+  "Rp 1,7 M": "Rp 1.7B",
+  "Rp 8,4 jt": "Rp 8.4M",
+  "Rp 3,4 jt": "Rp 3.4M",
+  "Rp 8,7 M": "Rp 8.7B",
+  "Rp 69,6 jt": "Rp 69.6M",
+  "Rp 6,9 jt": "Rp 6.9M",
+  "Rp 4,2 jt": "Rp 4.2M",
+  "Rp 7,4 jt": "Rp 7.4M",
+  "Rp 11,2 jt": "Rp 11.2M",
+  "Rp 52 jt": "Rp 52M",
+  "Rp 8,9 jt": "Rp 8.9M",
+  "Rp 9,5 jt": "Rp 9.5M",
+  "Rp 6,8 jt": "Rp 6.8M",
+  "Rp 11,5 jt": "Rp 11.5M",
+  "8,2%": "8.2%"
+});
+  var localizedAttrs=Array.prototype.map.call(document.querySelectorAll('[aria-label], [placeholder], [title]'),function(el){
+    return {el:el,attrs:['aria-label','placeholder','title'].filter(function(name){return el.hasAttribute(name)}).map(function(name){return {name:name,original:el.getAttribute(name)}})};
+  });
 
   function translateTextNodes(lang){
     textNodes.forEach(function(item){
@@ -1756,9 +2116,16 @@ button.nav-cta {
 
   function updateLocalizedAttrs(lang){
     localizedAttrs.forEach(function(item){
-      var el=document.querySelector(item[0]);
-      if(el){el.setAttribute(item[1],lang==='en'?item[3]:item[2])}
+      item.attrs.forEach(function(attr){
+        item.el.setAttribute(attr.name,lang==='en'?(enAttrs[attr.original]||attr.original):attr.original);
+      });
     });
+    var passwordButton=document.getElementById('togglePasswordBtn');
+    var passwordInput=document.getElementById('loginPassword');
+    if(passwordButton&&passwordInput){
+      var isVisible=passwordInput.type==='text';
+      passwordButton.setAttribute('aria-label',lang==='en'?(isVisible?'Hide password':'Show password'):(isVisible?'Sembunyikan sandi':'Tampilkan sandi'));
+    }
   }
 
   function menuLabel(open){
@@ -1945,6 +2312,7 @@ button.nav-cta {
       var isPwd = loginPassword.getAttribute('type') === 'password';
       loginPassword.setAttribute('type', isPwd ? 'text' : 'password');
       togglePasswordBtn.innerHTML = isPwd ? eyeSvgClosed : eyeSvgOpen;
+      togglePasswordBtn.setAttribute('aria-label', currentLang === 'en' ? (isPwd ? 'Hide password' : 'Show password') : (isPwd ? 'Sembunyikan sandi' : 'Tampilkan sandi'));
     });
   }
 

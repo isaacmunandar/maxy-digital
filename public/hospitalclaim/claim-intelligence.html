@@ -18,7 +18,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#F2F5FA">
-<title>MAXY AI Claim Intelligence</title>
+<title>MAXY AI | Claim Intelligence</title>
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4NCA4NCI+CiAgPHJlY3Qgd2lkdGg9Ijg0IiBoZWlnaHQ9Ijg0IiByeD0iMTciIGZpbGw9IiNGQkFGNDEiLz4KICA8cG9seWxpbmUgcG9pbnRzPSIxOCw2MCAyNSwyMyAzOSw1NSA1NSwyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNNjQgNDQgQzU5IDQ5IDU4IDU0IDU4IDU4IEM1OCA2MyA2MSA2NiA2NSA2NiBDNjkgNjYgNzIgNjMgNzIgNTggQzcyIDUzIDY5IDQ4IDY1IDQ0IFoiIGZpbGw9IiNmZmZmZmYiLz4KPC9zdmc+Cg==" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap">
 <style>
 :root{
@@ -255,8 +256,8 @@ select.field{width:auto;padding-right:28px;min-width:118px}
 .bar-list{display:flex;flex-direction:column;gap:12px}
 .bar-row{display:flex;flex-direction:column;gap:5px}
 .bar-row .top{display:flex;justify-content:space-between;gap:12px;font-size:12.5px}
-.bar-row .top b{font-weight:700}
-.bar-row .top span{color:var(--muted);font-weight:700;white-space:nowrap}
+.bar-row .top b{font-weight:700;min-width:0;overflow-wrap:anywhere;flex:1 1 auto}
+.bar-row .top span{color:var(--muted);font-weight:700;white-space:nowrap;flex:none;margin-left:8px}
 .bar-track{height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden}
 .bar-track i{display:block;height:100%;background:var(--accent);border-radius:999px}
 .stack{display:flex;gap:2px;height:26px;border-radius:6px;overflow:hidden;background:var(--surface-2);margin-bottom:14px}
@@ -554,6 +555,13 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
  .path-copy strong{font-size:12.5px}
  .path-copy small{font-size:10px}
 }
+
+.dashboard-lang-switch{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line-2);border-radius:999px;background:var(--surface-2);flex:none}
+.dashboard-lang-switch button{border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:11px;font-weight:800;min-width:36px;min-height:36px;padding:0 8px}
+.dashboard-lang-switch button.is-active{background:var(--navy);color:#fff}
+.dashboard-lang-switch button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app-content .panel,.app-content .kpi,.app-content .payer-card,.app-content .flow-step,.app-content .journey-step,.app-content .insurance-paths button,.drawer{min-width:0;overflow-wrap:anywhere}
+@media(max-width:520px){.topbar .meta{width:100%;justify-content:space-between}.topbar .meta>span:first-child{flex:1 1 100%}.dashboard-lang-switch{margin-left:auto}.page-head,.section-label{min-width:0}.page-head h1,.page-head p{overflow-wrap:anywhere}}
 </style>
 </head>
 <body>
@@ -580,7 +588,7 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
         <button class="tab" data-tab="asuransi" aria-selected="false"><span class="nav-icon">▤</span>Klaim &amp; pembayaran <span class="count" id="cntInsurance">0</span></button>
       </div>
     </nav>
-    <div class="sidebar-bottom"><span class="status-dot"></span>Prototipe interaktif <small>Keputusan tetap pada petugas RS dan penjamin.</small></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span>Ruang kerja klaim <small>Keputusan tetap pada petugas RS dan penjamin.</small></div>
   </aside>
   <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
   <div class="app-content">
@@ -593,7 +601,8 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
     <div class="meta">
       <span><strong>RS Medika Nusantara</strong> · Tipe B · Jakarta Timur</span>
       <span>Periode <strong>Okt 2026</strong></span>
-      <span class="dummy">Data dummy</span>
+
+      <div class="dashboard-lang-switch" role="group" aria-label="Pilih bahasa"><button type="button" data-dashboard-lang="id" class="is-active" aria-label="Bahasa Indonesia" aria-pressed="true">ID</button><button type="button" data-dashboard-lang="en" aria-label="English" aria-pressed="false">EN</button></div>
     </div>
   </div>
 </header>
@@ -602,7 +611,7 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
 <section class="wrap" id="tab-ringkasan">
   <div class="page-head">
     <div>
-      
+
       <div class="eyebrow">Pusat kendali klaim</div>
       <h1>Ringkasan klaim</h1>
       <p>Pantau klaim yang perlu tindakan dan pembayaran yang belum masuk.</p>
@@ -614,15 +623,15 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
     <button class="payer-card active" data-goto="kmkb">
       <span class="payer-card-top"><span class="payer-icon">B</span><span><strong>BPJS Kesehatan</strong><small>JKN · alur SEP, koding, E-Klaim</small></span><span aria-hidden="true">↗</span></span>
       <span class="payer-card-metrics"><span><small>Diajukan</small><b>Rp 12,4 M</b></span><span><small>Layak</small><b>Rp 10,2 M</b></span><span><small>Dibayar</small><b>Rp 8,7 M</b></span></span>
-      
+
     </button>
     <button class="payer-card" data-goto="asuransi">
       <span class="payer-card-top"><span class="payer-icon insurance-icon">A</span><span><strong>Asuransi swasta</strong><small>Cashless RS · tagihan ke penjamin</small></span><span aria-hidden="true">↗</span></span>
       <span class="payer-card-metrics"><span><small>Tagihan final · 5 kasus</small><b>Rp 69,6 jt</b></span><span><small>Disetujui penjamin</small><b>Rp 52 jt</b></span><span><small>Dibayar ke RS</small><b>Rp 15,2 jt</b></span></span>
-      
+
     </button>
   </div>
-  <div class="section-label"><span>BPJS Kesehatan</span><span>Angka periode Oktober 2026 · data dummy</span></div>
+  <div class="section-label"><span>BPJS Kesehatan</span><span>Periode Oktober 2026</span></div>
   <p class="insurance-recon">Ringkasan ini mencakup 1.860 klaim yang diajukan pada Oktober 2026. Daftar kerja di halaman lain hanya contoh terpilih: 64 klaim sebelum pengajuan, 10 pasien aktif, dan 10 kasus pending/dispute. Angkanya tidak untuk dijumlahkan menjadi total periode.</p>
   <div class="kpis" id="kpis"></div>
 
@@ -674,7 +683,7 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
       <h1>Kendali mutu dan biaya</h1>
       <p>Tinjau temuan sebelum pasien pulang.</p>
     </div>
-    <span class="pill info">10 pasien aktif · data dummy</span>
+
   </div>
   <div class="flow-strip" aria-label="Alur bantuan AI selama perawatan">
     <div class="flow-step"><span>01 · DATA</span><b>Sinkronkan rekam medis</b><small>CPPT, diagnosis, tindakan, penunjang, dan billing dari SIMRS.</small></div>
@@ -779,7 +788,7 @@ footer .wrap{padding-block:0 34px;color:var(--soft);font-size:11.5px;line-height
       <h1>Klaim dan pembayaran</h1>
       <p id="insPageDesc">Cashless: RS menagih asuransi dan mencocokkan pembayaran yang masuk.</p>
     </div>
-    <span class="pill info">Data dummy</span>
+
   </div>
   <div class="claim-path-label">Pilih jalur klaim</div>
   <div class="insurance-paths" id="insurancePaths" role="tablist" aria-label="Jalur klaim asuransi">
@@ -987,7 +996,7 @@ function byId(i){return claims[i]}
 var MONTHS=['Nov','Des','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt'];
 var YEARS=['2025','2025','2026','2026','2026','2026','2026','2026','2026','2026','2026','2026'];
 var SERIES={
-  pending:{v:[12.9,13.2,12.6,13.4,12.8,12.5,12.1,11.4,10.6,9.8,9.0,8.2],max:15,step:5,unit:'%',title:'Tingkat pending',value:'8,2%',delta:'↓ 0,8 poin',note:'Garis putus-putus menandai awal simulasi MAXY AI. Tren data dummy tidak membuktikan dampak produk.'},
+  pending:{v:[12.9,13.2,12.6,13.4,12.8,12.5,12.1,11.4,10.6,9.8,9.0,8.2],max:15,step:5,unit:'%',title:'Tingkat pending',value:'8,2%',delta:'↓ 0,8 poin',note:'Garis putus-putus menandai awal simulasi MAXY AI. Tren ini tidak membuktikan dampak produk.'},
   days:{v:[7.6,7.9,7.4,8.1,7.7,7.5,7.3,6.4,5.8,5.3,4.9,4.1],max:10,step:2,unit:' hari',title:'Rata-rata hari dari pasien pulang ke pengajuan',value:'4,1 hari',delta:'↓ 0,8 hari',note:'Target ≤5 hari dari pasien pulang ke pengajuan.'}
 };
 var STATUS_COMP=[{l:'Layak',v:10200,p:82,c:'var(--s-layak)'},{l:'Pending',v:1000,p:8,c:'var(--s-pending)'},{l:'Dispute',v:700,p:6,c:'var(--s-dispute)'},{l:'Tidak layak',v:500,p:4,c:'var(--s-tolak)'}];
@@ -1359,6 +1368,15 @@ var pending=(function(){
 
 function draft(p){
   var ev=p.dx.ev.length?p.dx.ev:['Resume medis bertanda tangan DPJP'];
+  var i18n=window.MAXY_DASHBOARD_I18N;
+  if(i18n&&i18n.getLanguage()==='en'){
+    var translated=ev.map(function(item){return i18n.translate(item)});
+    return 'Dear BPJS Health Verifier\nEast Jakarta Branch Office\n\nSubject: Response to '+(p.type==='Dispute'?'disputed claim':'returned claim')+' SEP '+p.sep+'\n\n'+
+      'Regarding the verification notes for patient '+p.pasien+' with diagnosis '+p.dx.c+' '+i18n.translate(p.dx.n)+', we submit the following supporting documents:\n\n'+
+      translated.map(function(item,index){return (index+1)+'. '+item}).join('\n')+'\n\n'+
+      'These documents support the submitted diagnosis and procedures with clinical evidence from the care episode. Please review this claim again.\n\n'+
+      'Sincerely,\nCasemix Team '+RS;
+  }
   return 'Yth. Verifikator BPJS Kesehatan\nKantor Cabang Jakarta Timur\n\nPerihal: Tanggapan atas '+(p.type==='Dispute'?'klaim dispute':'pengembalian klaim')+' SEP '+p.sep+'\n\n'+
     'Menindaklanjuti catatan verifikasi atas klaim pasien '+p.pasien+' dengan diagnosis '+p.dx.c+' '+p.dx.n+', bersama ini kami sampaikan dokumen pendukung berikut:\n\n'+
     ev.map(function(e,k){return (k+1)+'. '+e}).join('\n')+'\n\n'+
@@ -1538,7 +1556,7 @@ function renderInsuranceDrawer(c){
  h.push('<section class="sec summary-card"><div class="sec-h"><h4>Kasus</h4></div><div class="meta-grid">'+
   '<div class="meta-item"><span>Pasien</span><b>'+esc(c.patient)+'</b></div>'+
   '<div class="meta-item"><span>Penjamin</span><b>'+esc(c.payer)+'</b></div>'+
-  
+
   '<div class="meta-item"><span>Layanan</span><b>'+esc(c.care)+'</b></div>'+
   '<div class="meta-item"><span>Anggota polis</span><b>'+esc(c.member)+'</b></div>'+
   '<div class="meta-item"><span>Pembaruan terakhir</span><b>'+esc(c.date)+'</b></div>'+
@@ -1903,5 +1921,6 @@ showTab(start);
 requestAnimationFrame(drawTrend);
 })();
 </script>
+<script src="dashboard-i18n.js"></script>
 </body>
 </html>
