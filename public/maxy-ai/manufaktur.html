@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>AI untuk Pabrik: Assessment 1 Hari | MAXY AI</title>
+<meta name="description" content="Petakan proses procurement mana yang bisa dijalankan oleh AI di pabrik Anda. Negosiasi dan keputusan tetap di tim Anda. Assessment on-site 1 hari, Rp10 juta.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI untuk Pabrik: Assessment 1 Hari | MAXY AI">
+<meta property="og:description" content="Petakan proses mana yang bisa dijalankan oleh AI di pabrik Anda.">
+<link rel="preload" href="media/fonts/Garet-Book.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/fonts/Agrandir-TextBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" href="media/favicon.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+<meta name="theme-color" content="#232e64">
+<style>
+/* Landing page format: one goal (Hubungi Kami), no site nav. Style: MAXY Brand Guideline 2026, same look as the v2 animated brand LP */
+@font-face{font-family:'Garet';src:url('media/fonts/Garet-Book.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Garet';src:url('media/fonts/Garet-Heavy.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Agrandir';src:url('media/fonts/Agrandir-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Agrandir';src:url('media/fonts/Agrandir-TextBold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Agrandir';src:url('media/fonts/Agrandir-GrandHeavy.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+:root{
+  --navy:#232e64;--navy-2:#2e3b7d;--space:#1a2250;--space-2:#0f1438;--mid:#3b4a8f;
+  --orange:#fbb041;--orange-2:#e99a22;--yellow:#ffc715;
+  --ink:#1a1a1a;--muted:#4b5563;--muted-2:#6b7280;--line:#e5e7eb;
+  --grey:#f5f7f9;--grey-2:#f1f3f5;--p-navy:#e8eaf2;--p-orange:#fdf0d9;
+  --r-card:28px;--r-box:36px;--r-pill:999px;--r-input:12px;
+  --head:'Agrandir',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --sans:'Garet',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--ink);background:#fff;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{width:min(1200px,92%);margin:0 auto}
+h1,h2,h3,h4{text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
+h2{font-family:var(--head);font-size:clamp(28px,3.3vw,42px);line-height:1.15;font-weight:700;letter-spacing:-.015em;margin-bottom:14px}
+h3{font-size:20px;line-height:1.3;font-weight:700;margin-bottom:8px}
+.lead{font-size:clamp(16px,1.4vw,18px);color:var(--muted);max-width:680px}
+section{padding:80px 0}
+::selection{background:#ffe2b0;color:var(--ink)}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:10px}
+.sitebar :focus-visible,.hero :focus-visible,.band :focus-visible,.final-box :focus-visible{outline-color:var(--orange)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
+.eyebrow::before{content:"";width:22px;height:3px;border-radius:2px;background:var(--orange)}
+.head{margin-bottom:40px}
+.head.center{text-align:center}.head.center h2,.head.center .lead{margin-left:auto;margin-right:auto}
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:var(--r-pill);font-weight:700;font-size:16px;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:transform .18s var(--ease),background-color .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--orange);color:var(--navy)}
+.btn-primary:hover{background:var(--orange-2);box-shadow:0 10px 24px rgba(251,176,65,.45)}
+.btn-wa{border-color:var(--line);color:var(--ink);background:#fff}
+.btn-wa:hover{border-color:#25D366}
+.btn-wa svg{width:20px;height:20px;fill:#25D366}
+.btn-outline{border-color:var(--navy);color:var(--navy);background:transparent}
+.btn-outline:hover{background:var(--navy);color:#fff}
+/* header: logo + one button, no menu */
+.sitebar{position:sticky;top:0;z-index:50;background:rgba(35,46,100,.95);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.sitebar .container{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.sitebar img{display:block;height:46px;width:auto}
+.sitebar .btn{min-height:44px;padding:0 22px;font-size:15px}
+/* hero: copy left, form right (above the fold) */
+.hero{position:relative;overflow:hidden;color:#fff;padding:64px 0 72px;background:radial-gradient(circle at 78% 30%,rgba(70,86,170,.55),transparent 48%),radial-gradient(circle at 8% 95%,rgba(251,176,65,.12),transparent 42%),linear-gradient(135deg,var(--navy),var(--space-2) 70%)}
+.hero .stars{position:absolute;inset:0;pointer-events:none;opacity:.55;background-image:radial-gradient(1px 1px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 28% 62%,#fff,transparent),radial-gradient(1px 1px at 44% 30%,#ffe9c4,transparent),radial-gradient(1px 1px at 58% 82%,#fff,transparent),radial-gradient(1px 1px at 66% 12%,#ffe9c4,transparent),radial-gradient(1px 1px at 82% 44%,#fff,transparent),radial-gradient(1px 1px at 92% 74%,#fff,transparent),radial-gradient(1px 1px at 6% 86%,#ffe9c4,transparent),radial-gradient(1px 1px at 36% 8%,#fff,transparent),radial-gradient(1.5px 1.5px at 52% 46%,#fff,transparent);animation:twinkle 6s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.35}to{opacity:.65}}
+.hero .arc{position:absolute;left:-10%;right:-30%;bottom:-300px;height:520px;border-radius:50% 50% 0 0/60% 60% 0 0;background:radial-gradient(ellipse at 50% 0,rgba(251,176,65,.16),rgba(10,14,26,0) 70%);border-top:1px solid rgba(251,176,65,.55);box-shadow:0 -12px 40px rgba(251,176,65,.2);pointer-events:none}
+.hero .container{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero .container>*{min-width:0}
+.hero h1{font-family:var(--head);font-weight:700;font-size:clamp(36px,4.6vw,62px);line-height:1.1;letter-spacing:-.02em;margin-bottom:22px}
+.hero h1 .hl{position:relative;display:inline-block;line-height:.875;padding:.26em .2em 0;margin-top:.04em;color:var(--navy)}
+.hero h1 .hl::before{content:"";position:absolute;inset:0;border-radius:14px;background:var(--orange);transform-origin:0 50%;animation:hl .8s var(--ease) .9s both}
+.hero h1 .hl span{position:relative;animation:hlText .01s linear 1.25s both;color:#fff}
+@keyframes hl{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes hlText{to{color:var(--navy)}}
+.hero .subhead{font-size:clamp(18px,1.7vw,21px);font-weight:700;margin-bottom:12px}
+.hero .sub{font-size:16px;color:rgba(255,255,255,.88);margin-bottom:26px;max-width:540px}
+.checks{display:flex;flex-wrap:wrap;gap:10px 26px;font-size:15px;list-style:none;color:rgba(255,255,255,.92)}
+.checks li{display:flex;align-items:center;gap:8px}
+.checks li::before{content:"✓";flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:12px;font-weight:900;background:rgba(255,255,255,.2)}
+.rise{animation:rise .8s var(--ease) both;animation-delay:calc(var(--d,0)*1ms)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* form */
+.fcard{background:#fff;color:var(--ink);border-radius:var(--r-card);padding:30px;box-shadow:0 30px 60px rgba(3,7,18,.3)}
+.fcard h2,.final-box .fcard h2{font-size:26px;margin-bottom:4px;color:var(--ink)}
+.fcard .fnote-top{color:var(--muted-2);font-size:14px;margin-bottom:16px}
+form{display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:14px;font-weight:700;display:grid;gap:6px}
+input,textarea{font-family:inherit;font-size:16px;padding:13px 16px;border-radius:var(--r-input);border:1px solid var(--line);background:var(--grey);color:var(--ink);width:100%;transition:border-color .18s,box-shadow .18s,background-color .18s}
+input:focus,textarea:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(251,176,65,.4)}
+textarea{resize:vertical;min-height:76px}
+form .btn{width:100%}
+.or{display:flex;align-items:center;gap:12px;color:var(--muted-2);font-size:14px}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.form-note{font-size:13px;color:var(--muted-2);text-align:center}
+/* logo strip */
+.proof{padding:40px 0 0;text-align:center}
+#tantangan{padding-top:64px}
+.proof p{font-family:var(--head);font-weight:700;font-size:clamp(18px,2vw,22px);margin-bottom:22px}
+.logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;max-width:1040px;margin:0 auto}
+.logo-pill{height:56px;padding:0 20px;min-width:120px;border-radius:var(--r-pill);background:var(--grey);display:grid;place-items:center}
+.logo-pill img{display:block;max-height:28px;max-width:92px;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply}
+.logo-pill.sq img{max-height:42px;max-width:44px}
+.logo-pill.w{min-width:170px}
+.logo-pill.w img{max-width:132px;max-height:36px}
+.logo-pill.z img{transform:scale(1.6)}
+.awards{display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;margin:0 auto 36px}
+.awards img{display:block;width:clamp(150px,18vw,200px);height:auto;border-radius:14px}
+.awards img+img{box-shadow:0 0 0 1px var(--line);border-radius:12px}
+/* summary strip under hero text for mobile-less pages: none */
+/* solution */
+.band{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.band::before{content:"";position:absolute;width:640px;height:640px;right:-200px;top:50%;transform:translateY(-50%);border-radius:50%;background:var(--mid);opacity:.5}
+.band .container{position:relative}
+.band .eyebrow{color:var(--orange)}
+.band .lead{color:rgba(255,255,255,.92)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split>*{min-width:0}
+.cats{display:grid;gap:12px;margin-top:28px}
+.cat{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.12);border-radius:24px;padding:20px 24px}
+.cat.on{background:#fff;color:var(--ink)}.cat.on p{color:var(--muted)}
+.cat .dot{flex:none;width:14px;height:14px;border-radius:50%;margin-top:7px;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.cat h4{font-size:19px;margin-bottom:4px}
+.cat p{font-size:16px;color:rgba(255,255,255,.96)}
+/* matrix mock: rows start scattered, settle into the table when it scrolls in */
+.mx{background:#fff;color:var(--ink);border-radius:var(--r-card);padding:26px;box-shadow:0 30px 60px rgba(3,7,18,.3)}
+.mx-head{font-weight:700;font-size:17px;margin-bottom:10px}
+.mx-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:12px 0;border-top:1px solid var(--line);font-size:14.5px;background:#fff;transition:transform .9s var(--ease),box-shadow .9s var(--ease),border-radius .9s var(--ease),padding .9s var(--ease);transition-delay:calc(var(--i)*110ms)}
+.mx-row small{display:block;color:var(--muted-2);font-size:13px}
+.mx-foot{display:flex;gap:10px;margin-top:14px}
+.bar{flex:1;background:var(--grey);border-radius:16px;padding:10px 14px;font-size:13px;color:var(--muted)}
+.bar b{display:block;font-size:18px;color:var(--ink)}
+.mx-note{margin-top:10px;font-size:13px;color:var(--muted-2);text-align:right}
+.tag{font-size:13px;font-weight:700;padding:5px 12px;border-radius:var(--r-pill);white-space:nowrap;transition:opacity .4s var(--ease),transform .4s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(900ms + var(--i)*120ms)}
+.t-ai{background:var(--p-orange);color:var(--navy)}.t-assist{background:var(--p-navy);color:var(--navy)}.t-manual{background:var(--grey-2);color:#4b5563}
+.js .mx:not(.in) .mx-row{transform:translate(var(--x),var(--y)) rotate(var(--r));box-shadow:0 14px 30px rgba(3,7,18,.18);border-radius:16px;padding-left:16px;padding-right:16px;border-top-color:transparent}
+.js .mx:not(.in) .tag{opacity:0;transform:scale(.7)}
+/* outcomes */
+.outs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;counter-reset:o}
+.out{display:flex;gap:16px;align-items:flex-start;background:var(--grey);border-radius:22px;padding:20px 24px;counter-increment:o;transition:transform .3s var(--ease),background-color .3s}
+.out::before{content:counter(o);flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px}
+.out b{display:block;font-size:17px}.out span{font-size:15px;color:var(--muted)}
+.out:hover{background:#fff;transform:translateY(-3px);box-shadow:0 14px 28px rgba(10,14,26,.08)}
+.outs-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:var(--grey);border-radius:var(--r-card);padding:28px;position:relative}
+.step.main{background:var(--navy);color:#fff}
+.step .num{width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:700;margin-bottom:16px}
+.step.main .num{background:var(--orange)}
+.step ul{list-style:none;display:grid;gap:10px;margin-top:12px}
+.step li{position:relative;padding-left:20px;font-size:15.5px;color:var(--muted)}
+.step li b{display:block;color:var(--ink)}
+.step.main li b{color:#fff}
+.step.main li{color:rgba(255,255,255,.92)}
+.step li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.step .time{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+/* testimonials */
+.testi-wrap{background:var(--grey);border-radius:var(--r-box);padding:48px 48px 52px}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tcard{background:#fff;border-radius:var(--r-card);padding:34px;display:flex;flex-direction:column;gap:18px;box-shadow:0 18px 40px rgba(10,14,26,.07)}
+.tcard blockquote{font-size:17px;line-height:1.6;font-weight:500}
+.tcard.feat{background:radial-gradient(circle at 85% 0%,rgba(70,86,170,.55),transparent 55%),linear-gradient(160deg,var(--space),var(--navy));color:#fff;justify-content:space-between}
+.tcard.feat blockquote{font-weight:700}
+.who{display:flex;gap:14px;align-items:center;padding-top:18px;border-top:1px solid rgba(26,26,26,.1)}
+.feat .who{border-top-color:rgba(255,255,255,.18)}
+.who .av{flex:none;width:52px;height:52px;border-radius:50%;background:var(--p-orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='18' r='8' fill='%23232e64'/%3E%3Cpath d='M9 41c0-9 6.7-14 15-14s15 5 15 14z' fill='%23232e64'/%3E%3C/svg%3E") center 60%/62% no-repeat}
+.feat .who .av{background-color:rgba(255,255,255,.14)}
+.who b{display:block;font-size:18px;line-height:1.2}.who small{display:block;color:var(--muted);font-size:14px;line-height:1.4;margin-top:3px}
+.feat .who small{color:rgba(255,255,255,.75)}
+/* price + final form */
+.final{padding-top:0}
+.final-box{background:radial-gradient(circle at 78% 30%,rgba(70,86,170,.55),transparent 50%),linear-gradient(135deg,var(--navy),var(--space-2) 70%);color:#fff;border-radius:var(--r-box);padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.final-box>*{min-width:0}
+.final-box .eyebrow{color:var(--orange)}
+.final-box h2{color:#fff}
+.plabel{font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:6px}
+.amount{display:block;font-family:var(--head);font-size:clamp(44px,5vw,64px);font-weight:700;line-height:1;letter-spacing:-.02em;margin:10px 0 8px}
+.pinc{list-style:none;display:grid;gap:12px;margin:22px 0}
+.pinc li{display:flex;gap:12px;font-size:16px}
+.pinc li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:12px;font-weight:900;margin-top:2px}
+.fine{font-size:14px;color:rgba(255,255,255,.85)}
+/* faq */
+.faq{max-width:780px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--grey);border-radius:24px;padding:0 26px;transition:background-color .2s}
+details[open]{background:var(--p-orange)}
+summary{cursor:pointer;list-style:none;padding:20px 0;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;font-size:22px;font-weight:500;transition:transform .25s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--muted);font-size:16px;line-height:1.7;max-width:68ch}
+details[open] p{animation:faqIn .3s var(--ease)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+/* footer (minimal) */
+footer{padding:44px 0 40px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+footer .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+footer img{display:block;height:44px;width:auto}
+footer .fl{display:flex;gap:18px;flex-wrap:wrap}
+footer a:hover{color:var(--navy)}
+.fab{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 20px rgba(37,211,102,.4);transition:transform .2s var(--ease)}
+.fab:hover{transform:scale(1.06)}.fab svg{width:30px;height:30px;fill:#fff}
+.mbar{display:none}
+/* scroll reveal */
+.js .rv{transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--d,0ms)}
+.js .rv:not(.in){opacity:0;transform:translateY(16px)}
+@media (max-width:1024px){
+  .steps{grid-template-columns:1fr}
+  .tgrid{grid-template-columns:1fr}
+}
+@media (max-width:900px){
+  section{padding:64px 0}
+  .hero{padding:44px 0 56px}
+  .hero .container,.split,.final-box{grid-template-columns:1fr}
+  .hero .container{gap:36px}
+  .outs{grid-template-columns:1fr}
+  .testi-wrap{padding:28px 18px;border-radius:28px}
+  .final-box{padding:36px 22px;border-radius:28px;gap:32px}
+  .sitebar .btn{display:none}
+  .fab{display:none}
+  .row2{grid-template-columns:1fr}
+  .logo-pill{min-width:0;width:calc(33.333% - 8px);padding:0 10px;height:50px}
+  .awards{gap:16px}.awards img{width:min(42vw,170px)}
+  footer{padding-bottom:104px}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:#fff;padding:10px 4%;box-shadow:0 -1px 0 var(--line)}
+  .mbar .btn{flex:1;min-height:50px}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .fcard{padding:22px}
+  .logo-pill{width:calc(50% - 6px)}
+  .tcard{padding:26px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none !important;animation:none !important}
+  .js .rv:not(.in){opacity:1;transform:none}
+  .logo-pill:hover,.logo-pill:hover img,.awards img:hover{transform:none !important}
+  .js .mx:not(.in) .mx-row,.js .mx:not(.in) .tag{transform:none;opacity:1;box-shadow:none;border-radius:0;padding-left:0;padding-right:0}
+  .hero h1 .hl::before{transform:none}.hero h1 .hl span{color:var(--navy)}
+}
+/* animated hero background: slow drifting glows + a quiet AI node network (canvas) */
+.hero .glow{position:absolute;border-radius:50%;pointer-events:none;will-change:transform}
+.hero .g1{width:640px;height:640px;left:-180px;top:-160px;background:radial-gradient(circle,rgba(86,104,200,.55),transparent 66%);animation:drift1 18s ease-in-out infinite alternate}
+.hero .g2{width:560px;height:560px;right:-120px;bottom:-200px;background:radial-gradient(circle,rgba(251,176,65,.26),transparent 66%);animation:drift2 22s ease-in-out infinite alternate}
+@keyframes drift1{to{transform:translate(220px,120px) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-240px,-90px) scale(1.2)}}
+.hero .net{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+/* logo strip hover: lift, colour comes back, the others dim */
+.js .rv.done{transition:opacity .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease),background-color .35s;transition-delay:0s}
+.logo-pill img{transition:filter .35s var(--ease),opacity .35s var(--ease),transform .45s var(--ease)}
+@media (hover:hover) and (pointer:fine){
+  .logo-pill{cursor:default}
+  .logo-pill:hover{transform:translateY(-5px);background:#fff;box-shadow:0 14px 28px rgba(10,14,26,.12),0 0 0 2px rgba(251,176,65,.55)}
+  .logo-pill:hover img{filter:none;opacity:1;transform:scale(1.08)}
+  .logo-pill.z:hover img{transform:scale(1.72)}
+  .logos:hover 
+  .awards img{transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .awards img:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 14px 28px rgba(10,14,26,.18)}
+}
+/* testimonials: carousel from the v2 brand page (same card layout for all) */
+.t-carousel{position:relative}
+.t-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 22px;scrollbar-width:thin;scrollbar-color:#c9ced8 transparent;-webkit-overflow-scrolling:touch}
+.t-track:focus-visible{outline:2px solid var(--orange);outline-offset:4px;border-radius:12px}
+.t-track .tcard{flex:0 0 min(400px,84vw);scroll-snap-align:start;margin:0;justify-content:flex-start}
+.t-track .who{margin-top:auto}
+.testi-wrap .who .av{width:72px;height:72px}
+.testi-wrap .who small{margin-top:2px}.testi-wrap .who b+small{margin-top:4px}
+.t-nav{display:flex;justify-content:center;gap:10px;margin-top:6px}
+.t-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:background-color .18s,color .18s,opacity .18s}
+.t-arrow svg{width:18px;height:18px}
+.t-arrow:hover:not(:disabled){background:var(--navy);color:#fff}
+.t-arrow:disabled{opacity:.35;cursor:default}
+.t-arrow:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+/* hero CTAs */
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:26px}
+.btn-white{background:#fff;border-color:#fff;color:var(--navy)}
+.btn-white:hover{background:#f1f3f5;box-shadow:0 10px 24px rgba(3,7,18,.35)}
+.btn-white svg{width:20px;height:20px;fill:#25D366}
+/* hero illustration: sources flow into the AI core, ledger rows tick off, one row is flagged for a human. Sized in cqw so it scales as one piece. */
+.ill{position:relative;container-type:inline-size;width:100%;max-width:520px;margin-left:auto;aspect-ratio:500/560;border-radius:32px;background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 60px rgba(3,7,18,.3)}
+.ill .lines{position:absolute;inset:0;width:100%;height:100%}
+.ill .ln{fill:none;stroke:rgba(255,226,176,.5);stroke-width:1.5;stroke-dasharray:4 8;animation:dash 1.4s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-12}}
+.ill .pk{fill:var(--orange)}
+.ill-chip{position:absolute;top:3.4%;transform:translateX(-50%);white-space:nowrap;padding:.9cqw 2.4cqw;border-radius:var(--r-pill);background:#fff;color:var(--navy);font-weight:700;font-size:max(11px,2.7cqw);line-height:1.4;box-shadow:0 8px 20px rgba(3,7,18,.25);animation:bob 4.5s ease-in-out infinite;animation-delay:calc(var(--i)*-.8s)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.ill-core{position:absolute;left:50%;top:36.6%;width:18.4cqw;aspect-ratio:1;transform:translate(-50%,-50%)}
+.ill-core img{position:relative;display:block;width:100%;height:100%;border-radius:24%;box-shadow:0 12px 30px rgba(251,176,65,.4)}
+.ill-core::before,.ill-core::after{content:"";position:absolute;inset:0;border:2px solid var(--orange);border-radius:24%;animation:ping 2.8s ease-out infinite}
+.ill-core::after{animation-delay:1.4s}
+@keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.9);opacity:0}}
+.ill-ledger{position:absolute;left:10%;top:55.4%;width:80%;background:#fff;color:var(--ink);border-radius:5cqw;padding:3cqw 3.6cqw 3.4cqw;display:flex;flex-direction:column;gap:2cqw;box-shadow:0 24px 50px rgba(3,7,18,.35)}
+.ill-ledger .lh{display:flex;align-items:center;justify-content:space-between;gap:2cqw}
+.ill-ledger .lh b{font-size:max(13px,3.2cqw)}
+.ill-ledger .tag{font-size:max(11px,2.5cqw);padding:.6cqw 2cqw}
+.lr{display:flex;align-items:center;gap:2.4cqw;min-height:6cqw}
+.ck{flex:none;position:relative;width:4.6cqw;height:4.6cqw;border-radius:50%;background:#e5e7eb}
+.ck::before{content:"✓";position:absolute;inset:0;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-size:max(9px,2.5cqw);font-weight:900;animation:tick 9s var(--ease) infinite both;animation-delay:var(--dl)}
+.bar2{position:relative;overflow:hidden;width:var(--w);height:1.9cqw;border-radius:99px;background:#e5e7eb}
+.bar2::after{content:"";position:absolute;inset:0;background:var(--orange);transform-origin:0 50%;animation:fillx 9s var(--ease) infinite both;animation-delay:var(--dl)}
+.lr.al{background:var(--p-orange);border-radius:3cqw;padding:1.4cqw 2.4cqw;animation:pop 9s var(--ease) infinite both;animation-delay:var(--dl)}
+.al-ico{flex:none;width:5.6cqw;height:5.6cqw;border-radius:50%;background:#ea3a1f;color:#fff;display:grid;place-items:center;font-weight:900;font-size:max(11px,3.2cqw)}
+.lr.al b{display:block;font-size:max(13px,3cqw);line-height:1.25}
+.lr.al small{display:block;font-size:max(12px,2.8cqw);color:var(--muted);line-height:1.3}
+@keyframes tick{0%,2%{opacity:0;transform:scale(.3)}7%,84%{opacity:1;transform:scale(1)}92%,100%{opacity:0;transform:scale(.3)}}
+@keyframes fillx{0%{transform:scaleX(0)}9%,84%{transform:scaleX(1)}92%,100%{transform:scaleX(0)}}
+@keyframes pop{0%{opacity:0;transform:translateY(8px) scale(.94)}6%,84%{opacity:1;transform:none}92%,100%{opacity:0;transform:translateY(8px) scale(.94)}}
+@media (max-width:900px){.ill{margin:0 auto}}
+@media (prefers-reduced-motion:reduce){
+  .ill .pk{display:none}
+  .ck::before,.bar2::after,.lr.al{opacity:1 !important;transform:none !important}
+}
+/* ---- Finance LP: five pain points as a bento grid ---- */
+.pb{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.pb>*{min-width:0}
+.pcard{position:relative;overflow:hidden;border-radius:var(--r-box);padding:36px;background:var(--grey);color:var(--ink);display:flex;flex-direction:column;gap:22px}
+.pcard.s7{grid-column:span 7}.pcard.s5{grid-column:span 5}.pcard.s12{grid-column:1/-1}
+.pcard h3{font-family:var(--head);font-weight:700;font-size:clamp(24px,2.5vw,34px);line-height:1.15;letter-spacing:-.015em;margin:0}
+.pcard.dark{background:radial-gradient(circle at 85% 0%,rgba(70,86,170,.55),transparent 55%),linear-gradient(160deg,var(--space),var(--navy));color:#fff}
+.pcard .o{color:var(--orange)}
+.pcard.grey .mark-navy,.pcard .mark{font-family:var(--head);font-weight:700;color:var(--navy);background:linear-gradient(transparent 62%,rgba(251,176,65,.55) 62%);padding:0 .1em}
+.pc-foot{font-size:clamp(17px,1.5vw,20px);line-height:1.45;color:var(--muted);margin-top:auto}
+.pc-foot b{color:var(--navy)}
+.pc-closing .pc-foot .mark{color:var(--navy)}
+.pcard.dark .pc-foot{color:rgba(255,255,255,.92)}
+/* closing, two "meme" photos with captions */
+.meme{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+.meme figure{position:relative;margin:0;border-radius:22px;overflow:hidden;min-height:clamp(190px,24vw,230px);background:var(--grey-2)}
+.meme img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform .6s var(--ease)}
+.meme figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 14px;text-align:center;color:#fff;font-weight:700;font-size:clamp(15px,1.4vw,19px);line-height:1.3;text-shadow:0 2px 10px rgba(0,0,0,.6);background:linear-gradient(transparent,rgba(10,14,40,.82))}
+/* five sources, chips pop in around the photo */
+.srcphoto{position:relative;margin:14px 0}
+.srcphoto img{display:block;width:100%;height:auto;aspect-ratio:516/236;object-fit:cover;border-radius:22px}
+.chips{position:absolute;left:14px;right:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chips.top{top:-14px}.chips.bot{bottom:-14px}
+.chip{display:inline-block;padding:7px 16px;border-radius:var(--r-pill);background:#fff;color:var(--navy);font-weight:700;font-size:15px;box-shadow:0 8px 20px rgba(3,7,18,.25);animation:bob 4.5s ease-in-out infinite;animation-delay:calc(var(--i)*-.7s)}
+.chip.o{background:var(--orange);color:var(--navy)}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -3px}}
+.pcard:not(.in) .chip{opacity:0;scale:.7}
+.pcard.in .chip{transition:opacity .45s var(--ease),scale .45s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(350ms + var(--i)*90ms)}
+/* flagged transactions, photo card */
+.pc-janggal{padding:0;min-height:460px;background:var(--space-2);color:#fff}
+.pc-janggal .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 10%;transition:transform .8s var(--ease)}
+.pc-janggal::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,34,80,0) 25%,rgba(26,34,80,.78) 58%,rgba(26,34,80,.96));pointer-events:none}
+.pc-over{position:relative;z-index:1;margin-top:auto;padding:36px}
+/* invoice, before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1}
+.ba figure,.ba .after{position:relative;margin:0;border-radius:22px;overflow:hidden;min-height:clamp(200px,22vw,300px)}
+.ba img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:saturate(.85)}
+.pill{position:absolute;top:14px;left:14px;z-index:1;padding:6px 14px;border-radius:var(--r-pill);background:#1a1a1a;color:#fff;font-weight:800;font-size:13px;letter-spacing:.04em}
+.pill.o{background:var(--orange);color:var(--navy)}
+.after{background:radial-gradient(circle at 80% 0%,rgba(70,86,170,.6),transparent 60%),linear-gradient(160deg,var(--space),var(--navy));display:flex;flex-direction:column;justify-content:flex-end;padding:16px;gap:12px}
+.skel{display:grid;gap:9px;padding:0 4px 2px}
+.skel i{display:block;height:10px;border-radius:6px;background:rgba(255,255,255,.18);position:relative;overflow:hidden}
+.skel i:nth-child(2){width:78%}.skel i:nth-child(3){width:54%}
+.skel i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-100%);animation:shim 2.6s var(--ease) infinite}
+.skel i:nth-child(2)::after{animation-delay:.25s}.skel i:nth-child(3)::after{animation-delay:.5s}
+@keyframes shim{0%{transform:translateX(-100%)}60%,100%{transform:translateX(100%)}}
+.alert{display:flex;align-items:center;gap:12px;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px;box-shadow:0 14px 30px rgba(3,7,18,.35)}
+.alert b{display:block;font-size:16px;line-height:1.2}.alert small{display:block;color:var(--muted);font-size:15px;line-height:1.3}
+.alert-ico{flex:none;width:34px;height:34px;border-radius:50%;background:#ea3a1f;color:#fff;display:grid;place-items:center;font-weight:900;font-size:19px}
+.pc-invoice:not(.in) .alert{opacity:0;transform:translateY(16px) scale(.96)}
+.pc-invoice.in .alert{transition:opacity .5s var(--ease) .5s,transform .6s cubic-bezier(.3,1.5,.5,1) .5s}
+/* receivables, invoice with a stamp that lands */
+.pc-piutang{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 48px}
+.pp-copy{display:grid;gap:14px}
+.pp-copy p{font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:rgba(255,255,255,.92)}
+.pp-copy p.strong{font-family:var(--head);font-weight:700;font-size:clamp(20px,2vw,26px)}
+.pp-art{display:grid;place-items:center;padding:20px 0}
+.inv{position:relative;width:min(340px,100%);background:#fff;border-radius:18px;padding:24px 24px 28px;transform:rotate(-4deg);box-shadow:0 30px 60px rgba(3,7,18,.4);display:grid;gap:12px}
+.inv b{font-family:var(--head);color:var(--navy);font-size:18px;letter-spacing:.02em}
+.bar-l{display:block;height:11px;border-radius:6px;background:#e5e7eb}.bar-l.w2{width:72%}.bar-l.w3{width:48%}
+.stamp{position:absolute;left:50%;top:50%;margin:-25px 0 0 -124px;width:248px;text-align:center;padding:8px 6px;border:4px solid #ea3a1f;border-radius:10px;color:#ea3a1f;font-weight:900;font-size:22px;white-space:nowrap;letter-spacing:.02em;background:rgba(255,255,255,.9);transform:rotate(-8deg)}
+.pc-piutang:not(.in) .stamp{opacity:0;transform:rotate(-8deg) scale(1.9)}
+.pc-piutang.in .stamp{transition:opacity .15s .55s,transform .45s cubic-bezier(.2,1.3,.4,1) .55s}
+@media (hover:hover) and (pointer:fine){
+  .pcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(10,14,26,.12)}
+  .pcard:hover .meme img{transform:scale(1.04)}
+  .pc-janggal:hover .bgimg{transform:scale(1.04)}
+}
+@media (max-width:1024px){
+  .pcard.s7,.pcard.s5{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .pcard{padding:26px 22px;border-radius:28px}
+  .pc-janggal{padding:0;min-height:420px}.pc-over{padding:26px 22px}
+  .pc-piutang{grid-template-columns:1fr;gap:20px;padding:30px 22px}
+  .stamp{font-size:20px;width:226px;margin-left:-113px}
+}
+@media (max-width:560px){
+  .meme,.ba{grid-template-columns:1fr}
+  .ba figure,.ba .after{min-height:210px}
+  .chips{left:8px;right:8px;gap:6px}
+  .chip{padding:5px 11px;font-size:13px}
+  .stamp{font-size:17px;width:184px;margin:-22px 0 0 -92px;border-width:3px;white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){
+  .pcard:not(.in) .chip,.pc-invoice:not(.in) .alert,.pc-piutang:not(.in) .stamp{opacity:1 !important;scale:1 !important}
+  .pc-invoice:not(.in) .alert{transform:none !important}
+  .pc-piutang:not(.in) .stamp{transform:rotate(-8deg) !important}
+  .pcard:hover{transform:none !important}
+}
+
+.alert-ico.ok{background:var(--navy)}
+</style>
+</head>
+<body>
+
+<header class="sitebar">
+  <div class="container">
+    <a href="#" aria-label="MAXY AI"><img src="media/logo-maxyai-dark.webp" width="560" height="180" alt="MAXY AI"></a>
+    <a href="#konsultasi" class="btn btn-primary">Hubungi Kami <span aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<!-- HERO + FORM -->
+<section class="hero">
+  <div class="stars" aria-hidden="true"></div><div class="glow g1" aria-hidden="true"></div><div class="glow g2" aria-hidden="true"></div><div class="arc" aria-hidden="true"></div><canvas class="net" aria-hidden="true"></canvas>
+  <div class="container">
+    <div>
+      <h1 class="rise" style="--d:100">Stok tidak sinkron, bahan baku telat. <span class="hl"><span>Telusuri&nbsp;prosesnya.</span></span></h1>
+      <p class="subhead rise" style="--d:250">Procurement, gudang, dan produksi: proses mana yang bisa dijalankan AI di pabrik&nbsp;Anda?</p>
+      <p class="sub rise" style="--d:350">Tim MAXY datang ke pabrik Anda selama satu hari, mengamati alur dokumen dan data, lalu memilah mana yang cocok diautomasi, dibantu AI, atau tetap manual.</p>
+      <div class="hero-ctas rise" style="--d:400">
+        <a href="#konsultasi" class="btn btn-primary">Hubungi Kami <span aria-hidden="true">→</span></a>
+        <a href="https://wa.me/628113555855?text=Halo%20MAXY%2C%20saya%20tertarik%20dengan%20AI%20Transformation%20Assessment%20untuk%20pabrik%20kami." class="btn btn-white" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.4z"/></svg>Chat via WhatsApp</a>
+      </div>
+      <ul class="checks rise" style="--d:450">
+        <li>On-site 1 hari penuh</li><li>Diskusi langsung dengan AI expert</li><li>AI Opportunity Matrix lengkap</li><li>Data rahasia, 100% milik perusahaan</li><li>Pemetaan proses procurement, gudang, dan produksi</li>
+      </ul>
+    </div>
+    <div class="ill rise" style="--d:300" role="img" aria-label="Ilustrasi: PO, surat jalan, stok gudang, dan data mesin masuk ke AI, baris dokumen tercentang otomatis, satu pengiriman tertunda ditandai menunggu keputusan manusia">
+      <svg class="lines" viewBox="0 0 500 560" aria-hidden="true">
+        <g>
+          <path class="ln" d="M72 56 C72 110 250 104 250 158"/>
+          <path class="ln" d="M192 56 C192 110 250 104 250 158"/>
+          <path class="ln" d="M322 56 C322 110 250 104 250 158"/>
+          <path class="ln" d="M438 56 C438 110 250 104 250 158"/>
+          <path class="ln" d="M250 251 L250 306"/>
+        </g>
+        <circle class="pk" r="3.5"><animateMotion dur="2.6s" begin="0.00s" repeatCount="indefinite" path="M72 56 C72 110 250 104 250 158"/></circle>
+        <circle class="pk" r="3.5"><animateMotion dur="2.6s" begin="0.65s" repeatCount="indefinite" path="M192 56 C192 110 250 104 250 158"/></circle>
+        <circle class="pk" r="3.5"><animateMotion dur="2.6s" begin="1.30s" repeatCount="indefinite" path="M322 56 C322 110 250 104 250 158"/></circle>
+        <circle class="pk" r="3.5"><animateMotion dur="2.6s" begin="1.95s" repeatCount="indefinite" path="M438 56 C438 110 250 104 250 158"/></circle>
+        <circle class="pk" r="4"><animateMotion dur="1.3s" begin="0s" repeatCount="indefinite" path="M250 251 L250 306"/></circle>
+      </svg>
+      <span class="ill-chip" style="left:14.4%;--i:0">PO</span>
+      <span class="ill-chip" style="left:38.4%;--i:1">Surat jalan</span>
+      <span class="ill-chip" style="left:64.4%;--i:2">Stok gudang</span>
+      <span class="ill-chip" style="left:87.6%;--i:3">Data mesin</span>
+      <div class="ill-core"><img src="media/logomark.webp" alt="" width="200" height="200"></div>
+      <div class="ill-ledger">
+        <div class="lh"><b>Pencocokan dokumen</b><span class="tag t-ai">Agentic AI</span></div>
+        <div class="lr" style="--dl:.6s"><span class="ck"></span><span class="bar2" style="--w:100%"></span></div>
+        <div class="lr" style="--dl:1.5s"><span class="ck"></span><span class="bar2" style="--w:78%"></span></div>
+        <div class="lr al" style="--dl:2.6s"><span class="al-ico">!</span><div><b>Pengiriman tertunda</b><small>menunggu keputusan Anda</small></div></div>
+        <div class="lr" style="--dl:3.7s"><span class="ck"></span><span class="bar2" style="--w:90%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="container">
+    <p class="rv">Berkolaborasi bersama 100+ perusahaan, kampus, dan institusi</p>
+    <div class="awards rv">
+      <img src="media/award-holoniq-2026.webp" alt="HolonIQ 2026 Southeast Asia EdTech 50" width="360" height="360" loading="lazy">
+      <img src="media/award-asocio-2026.webp" alt="ASOCIO AI in Education Award 2026 untuk PT Linkdataku Solusi Indonesia" width="420" height="372" loading="lazy">
+    </div>
+    <div class="logos">
+      <span class="logo-pill rv"><img src="media/partner-google-partner.webp" alt="Google Partner" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-schneider-electric.webp" alt="Schneider Electric" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-kawan-lama.webp" alt="Kawan Lama Group" loading="lazy"></span>
+      <span class="logo-pill z rv"><img src="media/partner-triputra-group.png" alt="Triputra Group" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-tata-sarana-mandiri.webp" alt="PT Tata Sarana Mandiri" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-hidigi.webp" alt="HiDigi" loading="lazy"></span>
+      <span class="logo-pill sq rv"><img src="media/partner-lingotalk.webp" alt="Lingotalk" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-tess-international.webp" alt="TESS International" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-tibco.webp" alt="TIBCO Software" loading="lazy"></span>
+      <span class="logo-pill z rv"><img src="media/partner-mitraautomation.webp" alt="PT Mitra Automation" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-pakuwon.webp" alt="Pakuwon Group" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-mito.webp" alt="MITO" loading="lazy"></span>
+      <span class="logo-pill rv"><img src="media/partner-daai-tv.webp" alt="DAAI TV" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-adira-drive.webp" alt="Adira Finance" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-anteraja-drive.webp" alt="Anteraja" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-astari-niagara.webp" alt="Astari Niagara" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-tzu-chi.webp" alt="Yayasan Buddha Tzu Chi Indonesia" loading="lazy"></span>
+      <span class="logo-pill sq rv"><img src="media/partner-galva-technologies.webp" alt="Galva Technologies" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-tdr.webp" alt="TDR High Performance Technology" loading="lazy"></span>
+      <span class="logo-pill w rv"><img src="media/partner-assa.webp" alt="ASSA" loading="lazy"></span>
+    </div>
+    </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="tantangan">
+  <div class="container">
+    <div class="head rv">
+      <h2>Lima pekerjaan berulang di pabrik yang masih dikerjakan manual.</h2>
+    </div>
+    <div class="pb">
+
+      <article class="pcard s7 pc-closing">
+        <h3>Tim procurement tiap kali bahan baku telat datang:</h3>
+        <div class="meme">
+          <figure><img src="media/mfg-procurement-boss.webp" width="468" height="250" alt="Pekerja pabrik berompi dan helm mengangkat tangan di lantai produksi" loading="lazy" decoding="async"><figcaption>“Bahan baku kapan datang, Pak?”</figcaption></figure>
+          <figure><img src="media/mfg-vendor-chat.webp" width="468" height="250" alt="Staf procurement menelepon vendor di antara tumpukan dokumen" loading="lazy" decoding="async"><figcaption>*chat vendor ke-12: ETA kapan, Pak?*</figcaption></figure>
+        </div>
+        <p class="pc-foot">Follow-up ETA vendor: kandidat <span class="mark">Agentic AI.</span></p>
+      </article>
+
+      <article class="pcard s5 dark pc-sumber">
+        <h3>Laporan produksi dari 5 sumber. <span class="o">Staf Anda yang merangkainya.</span></h3>
+        <div class="srcphoto">
+          <img src="media/mfg-produksi.webp" width="716" height="206" alt="Staf produksi menatap layar data di depan area pabrik" loading="lazy" decoding="async">
+          <div class="chips top"><span class="chip" style="--i:0">ERP</span><span class="chip" style="--i:1">Mesin</span><span class="chip" style="--i:2">QC</span></div>
+          <div class="chips bot"><span class="chip" style="--i:3">Gudang</span><span class="chip" style="--i:4">Maintenance</span><span class="chip o" style="--i:5">+ Excel</span></div>
+        </div>
+        <p class="pc-foot">Tiap pagi: tarik data, salin, rapikan. Waktu habis sebelum sempat analisis.</p>
+      </article>
+
+      <article class="pcard s5 pc-janggal">
+        <img class="bgimg" src="media/mfg-inspeksi.webp" width="800" height="690" alt="Petugas inspeksi berhelm di lantai pabrik" loading="lazy" decoding="async">
+        <div class="pc-over">
+          <h3>Rekap data inspeksi? <span class="o">Bisa digantikan oleh AI.</span> Reject batch? Tetap manusia.</h3>
+        </div>
+      </article>
+
+      <article class="pcard s7 grey pc-invoice">
+        <h3>Masih cocokkan PO, surat jalan &amp; invoice pakai <span class="mark-navy">stabilo?</span></h3>
+        <div class="ba">
+          <figure class="before"><img src="media/mfg-po-sebelum.webp" width="466" height="218" alt="Staf menandai tumpukan dokumen dengan stabilo dan kalkulator" loading="lazy" decoding="async"><span class="pill">SEBELUM</span></figure>
+          <div class="after">
+            <span class="pill o">SESUDAH</span>
+            <div class="skel" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="alert"><span class="alert-ico" aria-hidden="true">!</span><div><b>Qty tidak cocok</b><small>perlu review Anda</small></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pcard s12 dark pc-piutang">
+        <div class="pp-copy">
+          <h3>Kapan terakhir stok sistem sama dengan <span class="o">stok gudang?</span></h3>
+          <p>Input telat, dokumen tidak sinkron, rekap manual.</p>
+          <p class="o strong">Telusuri dulu prosesnya.</p>
+        </div>
+        <div class="pp-art" aria-hidden="true">
+          <div class="inv">
+            <b>KARTU STOK</b>
+            <span class="bar-l"></span><span class="bar-l w2"></span><span class="bar-l w3"></span><span class="bar-l w2"></span>
+            <div class="stamp">SELISIH</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="band">
+  <div class="container split">
+    <div>
+      <h2 class="rv">AI Transformation Assessment</h2>
+      <p class="lead rv">Tanpa diagnosis yang tepat, adopsi AI hanya buang waktu dan anggaran. Dengan konsultasi, kami identifikasi prosesnya, susun prioritasnya, dan menentukan langkah pertama Anda.</p>
+      <div class="cats">
+        <div class="cat on rv"><span class="dot" style="background:var(--navy)"></span><div><h4>Bisa dijalankan Agentic AI</h4><p>Tugas repetitif yang dapat dikerjakan AI dari awal sampai selesai.</p></div></div>
+        <div class="cat rv"><span class="dot" style="background:var(--orange)"></span><div><h4>Dibantu AI (human-in-the-loop)</h4><p>AI bantu prosesnya, Anda yang memutuskan.</p></div></div>
+        <div class="cat rv"><span class="dot" style="background:#fff"></span><div><h4>Tetap manual</h4><p>Manusia bertanggung jawab penuh atas seluruh keputusan.</p></div></div>
+      </div>
+    </div>
+    <div class="mx" aria-label="Contoh tampilan AI Opportunity Matrix">
+      <div class="mx-head">AI Opportunity Matrix</div>
+            <div class="mx-row" style="--i:0;--x:-18px;--y:150px;--r:-4deg"><div>Pencocokan PO, surat jalan &amp; invoice<small>Procurement</small></div><span class="tag t-ai" style="--i:0">Agentic AI</span></div>
+            <div class="mx-row" style="--i:1;--x:22px;--y:90px;--r:3deg"><div>Rekap data inspeksi<small>Quality Control</small></div><span class="tag t-ai" style="--i:1">Agentic AI</span></div>
+            <div class="mx-row" style="--i:2;--x:-14px;--y:40px;--r:-3deg"><div>Rekonsiliasi stok sistem &amp; gudang<small>Gudang</small></div><span class="tag t-assist" style="--i:2">Dibantu AI</span></div>
+            <div class="mx-row" style="--i:3;--x:20px;--y:-30px;--r:4deg"><div>Laporan produksi dari 5 sumber<small>Produksi</small></div><span class="tag t-assist" style="--i:3">Dibantu AI</span></div>
+            <div class="mx-row" style="--i:4;--x:-10px;--y:-90px;--r:-5deg"><div>Keputusan reject batch<small>Quality Control</small></div><span class="tag t-manual" style="--i:4">Tetap manual</span></div>
+      <div class="mx-foot"><div class="bar"><b>Prioritas</b>Dampak × Kemudahan × Risiko</div><div class="bar"><b>90 hari</b>Roadmap dan quick wins</div></div>
+      <div class="mx-note">Ilustrasi, bukan data klien</div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section id="outcomes">
+  <div class="container">
+    <div class="head rv">
+      <h2>Analisis proses bisnis, peluang AI, dan roadmap implementasi yang terarah.</h2>
+    </div>
+    <div class="outs">
+      <div class="out rv"><div><b>Ringkasan Eksekutif</b><span>Temuan utama, peluang terbesar, risiko, dan rekomendasi strategis.</span></div></div>
+      <div class="out rv"><div><b>Peta Proses Bisnis</b><span>Pemetaan proses kerja dan aktivitas yang telah dinilai.</span></div></div>
+      <div class="out rv"><div><b>AI Opportunity Matrix</b><span>Klasifikasi proses berdasarkan potensi otomasi dan kebutuhan intervensi manusia.</span></div></div>
+      <div class="out rv"><div><b>Skor Prioritas</b><span>Penilaian peluang berdasarkan dampak bisnis, kelayakan implementasi, dan risiko.</span></div></div>
+      <div class="out rv"><div><b>Estimasi Potensi Efisiensi</b><span>Estimasi penghematan waktu berdasarkan volume dan durasi aktivitas.</span></div></div>
+      <div class="out rv"><div><b>Kesiapan Data, Sistem, dan Tim</b><span>Identifikasi kesenjangan yang perlu ditangani sebelum implementasi.</span></div></div>
+      <div class="out rv"><div><b>Risiko dan Tata Kelola</b><span>Evaluasi aspek privasi data, kepatuhan, kontrol kualitas, dan peran manusia.</span></div></div>
+      <div class="out rv"><div><b>Quick Wins dan Roadmap 90 Hari</b><span>Prioritas implementasi awal dan langkah persiapan untuk tahap berikutnya.</span></div></div>
+    </div>
+    <div class="outs-cta rv">
+      <a href="media/maxy-ai-assessment-sample-report.pdf" target="_blank" rel="noopener" class="btn btn-outline">Lihat Assessment Report Sample</a>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="event-program" style="padding-top:0">
+  <div class="container">
+    <div class="head rv">
+      <h2>Tiga tahap assessment.</h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num">1</div><h3>Pre-Assessment Alignment</h3>
+        <ul><li><b>Discovery Call (30 menit)</b> Identifikasi tujuan bisnis, divisi prioritas, dan PIC terkait.</li><li><b>Kuesioner Pra-Assessment</b> Pemetaan struktur tim, sistem yang digunakan, serta proses kerja mana yang diprioritaskan.</li><li><b>Penjadwalan Sesi</b> Koordinasi jadwal assessment per divisi bersama PIC perusahaan.</li></ul></div>
+      <div class="step main rv"><div class="num">2</div><div class="time">On-site · 1 hari</div><h3>On-Site Assessment</h3>
+        <ul><li>Kick-off dengan Pimpinan (60 menit)</li><li>Deep-dive per Divisi (180 menit)</li><li>Pemetaan Proses Bisnis (150 menit)</li><li>Evaluasi Awal Peluang AI (60 menit)</li><li>Pembahasan Hasil Assessment (30 menit)</li></ul></div>
+      <div class="step rv"><div class="num">3</div><h3>Post-Assessment Review · Online</h3>
+        <ul><li><b>Penyusunan Laporan Assessment</b> Dokumentasi hasil analisis dan temuan utama.</li><li><b>Penyusunan Rekomendasi Strategis</b> Prioritas implementasi AI berdasarkan dampak dan kelayakan bisnis.</li><li><b>Presentasi Hasil Assessment</b> Pemaparan hasil dan rekomendasi secara online bersama perusahaan.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="testi-wrap">
+      <div class="head rv"><h2>Cerita dari tim yang sudah belajar bersama MAXY.</h2></div>
+      <div class="t-carousel">
+      <div class="t-track" tabindex="0" role="region" aria-label="Testimoni klien, geser untuk melihat lainnya">
+        <article class="tcard"><blockquote>“Sangat challenging tapi worth it banget. Kami belajar mengintegrasikan berbagai platform menjadi satu workflow utuh, termasuk bikin chatbot yang langsung bisa diimplementasikan untuk bisnis retail. Yang bikin pelatihan ini beda, trainernya enggak cuma jelasin teori tapi troubleshooting pun dibantu sampai selesai, dan semua materi disampaikan dengan sangat intens, detail, tapi tetap gampang dimengerti. Bisa diimplementasikan bareng di kantor.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-maulana-indah.webp') center/cover no-repeat"></span><div><b>Maulana Ikhsan &amp; Indah Yulianthy</b><small>AI Staff &amp; Head of Import</small><small>PT Industrial Multi Fan</small></div></div></article>
+        <article class="tcard"><blockquote>“Ikut pelatihan AI di MAXY Academy, semuanya berjalan lancar dan sesuai ekspektasi aku dari awal. Aku jadi lebih ngerti cara pakai AI dengan lebih efisien untuk kerjaan sehari-hari. Tool yang paling berkesan buat aku itu AI Agent karena bisa connect langsung ke Excel, padahal kerjaan aku memang banyak olah data sampai ratusan ribu bahkan jutaan baris, jadi sangat membantu banget. Pelatihnya juga sudah sesuai ekspektasi, semua materi tersampaikan dengan baik dan langsung bisa dipraktikkan.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-karel.webp') center/cover no-repeat"></span><div><b>Karel Nugraha</b><small>SSD Operation and Management Office, Departemen CBES</small><small>Adira Finance</small></div></div></article>
+        <article class="tcard"><blockquote>“Awalnya kami belum tahu gimana AI bisa berfungsi dengan baik untuk membantu pekerjaan, tapi setelah ikut training hari ini, ternyata sangat membantu terutama buat kami yang banyak mengolah data dan menyampaikan informasi secara lebih interaktif. Meskipun saya tidak punya background IT sama sekali. Dan justru menurut saya, training ini sangat cocok buat orang yang membutuhkan hal-hal baru prosesnya cepat, materinya jelas, dan amat sangat bisa dimengerti oleh siapa pun. Ini jadi salah satu alternatif yang akan kami pertimbangkan untuk diimplementasikan di departemen kami.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-muse.webp') center/cover no-repeat"></span><div><b>Muse</b><small>SSD Police, Departemen Prosedur</small><small>Adira Finance</small></div></div></article>
+        <article class="tcard"><blockquote>“Setelah ikut pelatihan di MAXY Academy, aku jadi tahu step-by-step yang benar yang terarah sampai cara evaluasi konten yang langsung bikin aku sadar kekurangan konten di Yayasan Gorontalo Baik selama ini. Trainer nya ngebantu banget! Trainernya jelas dan mau ngulang kalau ada yang ketinggalan.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-rhaditya.webp') center/cover no-repeat"></span><div><b>Rhaditya</b><small>Divisi Publikasi</small><small>Yayasan Gorontalo Baik Indonesia</small></div></div></article>
+        <article class="tcard"><blockquote>“Aku udah pakai banyak tools AI sendiri tapi tetap trial and error karena enggak tahu cara pakainya yang benar. Setelah ikut program MAXY, aku baru sadar betapa luasnya manfaat AI ternyata bisa jadi asisten pribadi lengkap dari bikin content plan, susun jadwal, sampai connect ke Excel dan Canva. Ekspektasi aku awalnya cuma mau belajar bikin karakter AI visual, tapi yang aku dapat jauh lebih dari itu. MAXY benar-benar mengubah cara pandang aku soal AI.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-anisa.webp') center/cover no-repeat"></span><div><b>Anisa</b><small>Content Creator</small><small>Insta Beauty Center</small></div></div></article>
+        <article class="tcard"><blockquote>“Meskipun saya tidak punya background IT, belajar AI di MAXY sama sekali tidak sulit. Trainingnya sangat mudah dipahami dan interaktif. Saya mendapat banyak pengetahuan baru, terutama tentang tools-tools AI yang sebelumnya belum pernah saya gunakan, lengkap dengan cara penggunaannya secara detail. Yang akan langsung saya aplikasikan di PT Adira Dinamika Multifinance. Rating saya 9 dari 10 saya sangat puas dengan pelatihan ini.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-dian.webp') center/cover no-repeat"></span><div><b>Dian Puspitasari</b><small>HC Operation Development</small><small>PT Adira Dinamika Multifinance</small></div></div></article>
+        <article class="tcard"><blockquote>“Saya ikut pelatihan ini karena sadar perkembangan AI sangat masif kalau kita baru belajar hari ini, bulan depan bisa ketinggalan. Sebagai profesional, kita tidak mau kalah sama AI, kita harus bisa memaksimalkannya. Yang menarik, MAXY mengajarkan AI bukan sekadar soal tools, tapi dikaitkan dengan happiness at work dan ternyata nyambung banget. Ketika kita bisa menyederhanakan pekerjaan yang repetitif dengan AI, kita jadi punya lebih banyak ruang untuk fokus pada hal-hal yang benar-benar bermakna dalam pekerjaan.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-irfan.webp') center/cover no-repeat"></span><div><b>Irfan Kurniawan</b><small>IT Manager</small><small>Dian Mandiri Foundation</small></div></div></article>
+        <article class="tcard"><blockquote>“Setelah ikut kelas di MAXY, AI udah jadi bagian dari hidup aku dan bantu gampangin segala pekerjaan. Aku jadi tahu cara bikin prompt yang bagus, dan yang tadinya butuh berhari-hari, sekarang bisa selesai dalam beberapa jam aja. Yang paling berkesan, setelah ikut kelas ini aku justru makin penasaran dan makin mau belajar lebih dalam karena aku sadar masih banyak banget yang bisa dieksplorasi dari AI ini.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-jeff.webp') center/cover no-repeat"></span><div><b>Jeff</b><small>Co-Founder</small><small>Mooerni Milk Space</small></div></div></article>
+        <article class="tcard"><blockquote>“Di MAXY Academy, materinya jauh lebih teknis dan detail: saya jadi tahu AI agent itu bisa digunakan untuk apa saja dan bagaimana tahapan penggunaannya secara konkret, terutama untuk diimplementasikan di level korporasi. Semua pertanyaan saya yang berkaitan dengan teknis terjawab di sini. Sesuatu yang tidak saya dapatkan dari training sebelumnya.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-sige.webp') center/cover no-repeat"></span><div><b>Sige</b><small>Marketing Specialist</small><small>PT. Garuda Metalindo</small></div></div></article>
+        <article class="tcard"><blockquote>“Jujur, saya kaget ternyata AI sepenting dan seberguna itu! Sebelumnya saya hanya pakai AI sangat sedikit, penggunaannya sangat terbatas. Pikiran saya benar-benar terbuka tentang betapa pentingnya AI di zaman sekarang, dalam hal apapun bisa dipakai dan sangat membantu untuk efisiensi waktu dan tenaga. Ini sangat relevan dan langsung bisa saya terapkan di Study Center.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-moneng.webp') center/cover no-repeat"></span><div><b>Moneng</b><small>Pengurus/Pembina</small><small>Study Center</small></div></div></article>
+        <article class="tcard"><blockquote>“Bukan sekadar teorinya, tapi bagaimana benar-benar mengimplementasikannya di perusahaan untuk meningkatkan kualitas orang-orang di dalamnya. Teorinya sebenarnya sudah lama ada, tapi implikasinya di perusahaan kami belum terlihat nyata dan itulah yang ingin kami ubah setelah program ini!”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-lintang-hr.webp') center/cover no-repeat"></span><div><b>Lintang</b><small>HR</small><small>PT Garuda Metalindo</small></div></div></article>
+        <article class="tcard"><blockquote>“Relevan banget untuk perusahaan modern seperti Ciputra karena tantangannya bukan cuma soal produktivitas, tapi bagaimana AI bisa berdampak pada human capital kita tanpa mengesampingkan kebahagiaan karyawan di tempat kerja. Trainer sangat fun dalam membawakan materi, tidak terasa boring sama sekali, transisi antar modulnya smooth dan semuanya nyambung. Hari ini saya dapat filosofinya, dan besok saya sudah tidak sabar untuk langsung implementasi AI-nya!”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-anita-ciputra.webp') center/cover no-repeat"></span><div><b>Anita</b><small>Human Capital Management</small><small>Ciputra</small></div></div></article>
+        <article class="tcard"><blockquote>“Sebagai HR di PT Indo Cyber Global Technology, saya ikut program di MAXY karena memang dibutuhkan untuk menjawab problem-problem yang ada di pekerjaan dan AI ternyata jadi salah satu solusinya. Yang paling relevan buat saya adalah strategi komunikasi internal HR dan antar karyawan, terutama karena tim kami tidak berada di satu lokasi. Hal baru yang saya dapatkan hari ini adalah solusi-solusi digital yang ternyata tidak susah untuk diterapkan. Dan ternyata produktif dan happy di tempat kerja itu bisa berjalan beriringan dan AI jadi jembatannya.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-anita-indocyber.webp') center/cover no-repeat"></span><div><b>Anita</b><small>HR</small><small>PT Indo Cyber Global Technology</small></div></div></article>
+        <article class="tcard"><blockquote>“Hal baru yang paling berkesan buat saya adalah menyadari bahwa AI ternyata sangat mudah dipelajari oleh semua kalangan. Tidak serumit yang dibayangkan. Strategi yang paling ingin saya aplikasikan di PT Dharma Satya Nusantara adalah cara melakukan analisis secara terstruktur menggunakan AI.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-wisnu.webp') center/cover no-repeat"></span><div><b>Wisnu Ertriatmoko</b><small>Executive Leader</small><small>PT. Dharma Satya Nusantara Tbk</small></div></div></article>
+        <article class="tcard"><blockquote>“Training hari ini seru banget. Saya dapat banyak ilmu baru yang selama ini enggak saya tahu. Ternyata AI itu ilmunya banyak banget, jauh lebih dari yang saya kira selama ini. Harapannya ilmu ini bisa langsung kepakai dan saya bisa lebih mengoptimalkan support dari AI untuk membantu kerjaan sehari-hari.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-pandhu.webp') center/cover no-repeat"></span><div><b>Pandhu</b><small>Corporate Building Service</small><small>Pakuwon Group Jakarta</small></div></div></article>
+        <article class="tcard"><blockquote>“Terima kasih MAXY untuk training yang benar-benar fruitful dan luar biasa! Kami mendapat begitu banyak insight dan pengetahuan baru karena teknologi AI memang sangat dibutuhkan saat ini.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-erick.webp') center/cover no-repeat"></span><div><b>Erick</b><small>Performance Management Manager</small><small>Pakuwon Group Jakarta</small></div></div></article>
+        <article class="tcard"><blockquote>“Training ini membuka perspektif saya tentang pentingnya happiness &amp; productivity dalam sebuah perusahaan dan kehidupan sehari-hari. Jadi sadar bahwa perusahaan bukan hanya target besar, tetapi juga perlu karyawan di dalamnya bisa merasa happiness agar dapat memberikan impact yang lebih baik untuk perusahaan.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-haryadi.webp') center/cover no-repeat"></span><div><b>Haryadi</b><small>Executive Leader</small><small>TBN Indonesia, Jakarta</small></div></div></article>
+        <article class="tcard"><blockquote>“Sebagai brand activation di Mito, aku sudah cukup familiar dengan tools AI. Tapi yang aku dapat di MAXY benar-benar membawa aku ke level berikutnya. Materi prompting-nya sangat membantu banget, karena di dunia kreatif kita sering butuh ide-ide segar yang belum kepikiran, dan dengan prompting yang benar hasilnya jadi jauh lebih maksimal. Semuanya makin jelas dan sangat berguna khususnya untuk para pekerja di industri seperti kami.”</blockquote><div class="who"><span class="av" style="background:#fff url('media/testi-yessi.webp') center/cover no-repeat"></span><div><b>Yessi</b><small>Brand Activation</small><small>Mito Elektronik &amp; Mitochiba</small></div></div></article>
+      </div>
+      <div class="t-nav">
+        <button type="button" class="t-arrow" data-dir="-1" aria-label="Testimoni sebelumnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" class="t-arrow" data-dir="1" aria-label="Testimoni berikutnya"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE + FORM -->
+<section class="final" id="investasi">
+  <div class="container">
+    <div class="final-box">
+      <div>
+        <div class="plabel rv">AI Transformation Assessment</div>
+        <div class="amount rv">Rp10.000.000</div>
+        <div class="rv">Perusahaan · 1 lokasi</div>
+        <ul class="pinc rv">
+          <li>Discovery call &amp; kuesioner pra-assessment</li>
+          <li>Assessment on-site oleh 2 konsultan selama 1 hari</li>
+          <li>Analisis proses bisnis lintas divisi</li>
+          <li>Laporan dan rekomendasi strategis</li>
+          <li>Presentasi hasil assessment</li>
+          <li>Roadmap implementasi AI 90 hari</li>
+        </ul>
+        <p class="fine rv">Harga belum termasuk PPN. Biaya perjalanan di luar Jabodetabek dan Surabaya mengikuti biaya aktual.</p>
+      </div>
+      <div class="fcard rv" id="konsultasi">
+        <h2>Jadwalkan Discovery Call</h2>
+        <p class="fnote-top">Kami merespons dalam 1 hari kerja.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Terima kasih! Kami akan menghubungi Anda dalam 1 hari kerja.';">
+        <label>Nama lengkap<input required name="nama" autocomplete="name" placeholder="Nama Anda"></label>
+        <label>Nama perusahaan<input required name="perusahaan" autocomplete="organization" placeholder="PT ..."></label>
+        <div class="row2">
+          <label>Email kantor<input required type="email" name="email" autocomplete="email" placeholder="nama@perusahaan.co.id"></label>
+          <label>No. WhatsApp<input required type="tel" name="wa" autocomplete="tel" placeholder="08xx-xxxx-xxxx"></label>
+        </div>
+        <label>Proses yang paling ingin Anda percepat (opsional)<textarea name="proses" placeholder="mis. pencocokan PO, rekap inspeksi, follow-up vendor"></textarea></label>
+        <button class="btn btn-primary" type="submit">Hubungi Kami <span aria-hidden="true">→</span></button>
+        <div class="or">atau</div>
+        <a class="btn btn-wa" href="https://wa.me/628113555855?text=Halo%20MAXY%2C%20saya%20tertarik%20dengan%20AI%20Transformation%20Assessment%20untuk%20pabrik%20kami." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.4z"/></svg>Chat via WhatsApp</a>
+        <p class="form-note">Data Anda hanya dipakai untuk menghubungi Anda terkait layanan ini.</p>
+      </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding-top:0">
+  <div class="container">
+    <div class="head center rv"><h2>Pertanyaan yang sering diajukan</h2></div>
+    <div class="faq">
+      <details open class="rv"><summary>Apa bedanya assessment ini dengan pelatihan AI?</summary><p>Pelatihan membekali tim dengan keterampilan. Assessment adalah diagnosis: kami memetakan proses bisnis Anda dan merekomendasikan di mana AI layak diterapkan. Banyak perusahaan memulai dari assessment, lalu melanjutkan ke pelatihan yang tepat sasaran.</p></details>
+      <details class="rv"><summary>Apakah AI akan mengambil keputusan procurement atau reject batch?</summary><p>Tidak. Assessment memetakan proses mana yang bisa dijalankan AI, mana yang dibantu AI, dan mana yang tetap manual. Negosiasi dan keputusan tetap di tim Anda, reject batch tetap di manusia.</p></details>
+      <details class="rv"><summary>Apakah data perusahaan kami aman?</summary><p>Aman. Kami bersedia menandatangani NDA sebelum assessment. Kami tidak membutuhkan akses langsung ke sistem operasional. Cukup penjelasan alur, contoh dokumen yang sudah disamarkan, dan data volume serta waktu kerja.</p></details>
+      <details class="rv"><summary>Divisi apa saja yang bisa dinilai?</summary><p>Umumnya Procurement, Gudang, Produksi, Quality Control, Maintenance, dan Finance. Divisi prioritas kita sepakati saat discovery call.</p></details>
+      <details class="rv"><summary>Bagaimana jika kantor kami di luar Jabodetabek?</summary><p>Bisa. Tim kami berbasis di Jakarta dan Surabaya, jadi untuk area Jabodetabek dan Surabaya tidak ada biaya perjalanan tambahan. Untuk kota lain, biaya perjalanan konsultan dibebankan sesuai aktual.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <img src="media/logo-maxyai-light.webp" width="900" height="285" alt="MAXY AI" loading="lazy">
+    <div class="fl"><a href="https://maxy.academy/privacy-policy" target="_blank" rel="noopener">Kebijakan Privasi</a><a href="https://www.facebook.com/maxy.aicenter/" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/maxy.aicenter" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/628113555855" target="_blank" rel="noopener">WhatsApp</a></div>
+    <p>© 2026 MAXY AI by PT. Linkdataku Solusi Indonesia. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/628113555855?text=Halo%20MAXY%2C%20saya%20tertarik%20dengan%20AI%20Transformation%20Assessment%20untuk%20pabrik%20kami." target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.5-.7-2.2-1.4-.6-.5-1-1.2-1.2-1.6-.1-.2 0-.4.1-.5l.4-.5.3-.5v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.4z"/></svg>
+</a>
+<div class="mbar"><a href="#konsultasi" class="btn btn-primary">Hubungi Kami <span aria-hidden="true">→</span></a></div>
+
+<script>
+(function(){
+  var sel = '.rv,.pcard,.mx';
+  var els = Array.prototype.slice.call(document.querySelectorAll(sel));
+  els.forEach(function(el){
+    if (!el.classList.contains('rv')) el.classList.add('rv');
+    var sibs = Array.prototype.filter.call(el.parentNode.children, function(c){ return els.indexOf(c) > -1; });
+    el.style.setProperty('--d', Math.min(sibs.indexOf(el) * 70, 350) + 'ms');
+  });
+  var show = function(el){ el.classList.add('in'); setTimeout(function(){ el.classList.add('done'); }, 800 + (parseInt(el.style.getPropertyValue('--d'), 10) || 0)); };
+  if (!('IntersectionObserver' in window)) { els.forEach(show); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+<script>
+/* Hero background: drifting node network. Nodes lean toward the pointer, pauses off-screen, one still frame under reduced motion. */
+(function(){
+  var hero = document.querySelector('.hero'), cv = hero && hero.querySelector('.net'); if (!cv) return;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches, fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var ctx = cv.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2), W = 0, H = 0, nodes = [], vis = true, ptr = { x: -9999, y: -9999 }, LINK = 130, raf = 0;
+  function size(){
+    W = hero.clientWidth; H = hero.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.max(24, Math.min(fine ? 70 : 34, Math.round(W * H / 17000)));
+    while (nodes.length < n) nodes.push({ x: Math.random() * W, y: Math.random() * H, vx: (Math.random() - .5) * .4, vy: (Math.random() - .5) * .4 });
+    nodes.length = n;
+  }
+  function draw(move){
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < nodes.length; i++) {
+      var a = nodes[i];
+      if (move) {
+        var dx = ptr.x - a.x, dy = ptr.y - a.y, d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 180 && d > 1) { a.vx += dx / d * .012; a.vy += dy / d * .012; }
+        a.vx *= .99; a.vy *= .99;
+        var v = Math.sqrt(a.vx * a.vx + a.vy * a.vy);
+        if (v < .1) { a.vx += (Math.random() - .5) * .05; a.vy += (Math.random() - .5) * .05; } else if (v > 1.2) { a.vx *= 1.2 / v; a.vy *= 1.2 / v; }
+        a.x += a.vx; a.y += a.vy;
+        if (a.x < 0 || a.x > W) a.vx *= -1;
+        if (a.y < 0 || a.y > H) a.vy *= -1;
+      }
+      for (var j = i + 1; j < nodes.length; j++) {
+        var b = nodes[j], ex = a.x - b.x, ey = a.y - b.y, e2 = ex * ex + ey * ey;
+        if (e2 < LINK * LINK) { ctx.strokeStyle = 'rgba(255,214,150,' + ((1 - Math.sqrt(e2) / LINK) * .28).toFixed(3) + ')'; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+      }
+      var pd = Math.sqrt((a.x - ptr.x) * (a.x - ptr.x) + (a.y - ptr.y) * (a.y - ptr.y));
+      if (pd < 160) { ctx.strokeStyle = 'rgba(255,236,200,' + ((1 - pd / 160) * .5).toFixed(3) + ')'; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(ptr.x, ptr.y); ctx.stroke(); }
+    }
+    ctx.fillStyle = 'rgba(255,236,200,.8)';
+    for (var k = 0; k < nodes.length; k++) { ctx.beginPath(); ctx.arc(nodes[k].x, nodes[k].y, 1.6, 0, 6.283); ctx.fill(); }
+  }
+  function loop(){ if (vis) draw(true); raf = requestAnimationFrame(loop); }
+  size(); window.addEventListener('resize', size);
+  if (reduce) { draw(false); return; }
+  if ('IntersectionObserver' in window) new IntersectionObserver(function(en){ vis = en[0].isIntersecting; }).observe(hero);
+  if (fine) {
+    hero.addEventListener('pointermove', function(e){ var r = hero.getBoundingClientRect(); ptr.x = e.clientX - r.left; ptr.y = e.clientY - r.top; }, { passive: true });
+    hero.addEventListener('pointerleave', function(){ ptr.x = ptr.y = -9999; });
+  }
+  loop();
+})();
+</script>
+<script>
+/* Testimonial carousel: arrows scroll one card; arrows disable at the ends. */
+(function(){
+  var tr = document.querySelector('.t-track'); if (!tr) return;
+  var arrows = Array.prototype.slice.call(document.querySelectorAll('.t-arrow'));
+  var step = function(){ var c = tr.querySelector('.tcard'); return c ? c.getBoundingClientRect().width + 20 : 300; };
+  var sync = function(){ var max = tr.scrollWidth - tr.clientWidth - 2; arrows[0].disabled = tr.scrollLeft <= 8; arrows[1].disabled = tr.scrollLeft >= max - 6; };
+  arrows.forEach(function(a){ a.addEventListener('click', function(){ tr.scrollBy({ left: step() * parseInt(a.getAttribute('data-dir'), 10), behavior: 'smooth' }); }); });
+  tr.addEventListener('scroll', sync, { passive: true }); window.addEventListener('resize', sync); sync();
+})();
+</script>
+</body>
+</html>

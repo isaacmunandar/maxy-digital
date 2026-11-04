@@ -32,6 +32,42 @@
     {
       "source": "/claim-intelligence",
       "destination": "/hospitalclaim/claim-intelligence/index.html"
+    },
+    {
+      "source": "/maxy-ai/finance",
+      "destination": "/maxy-ai/finance/index.html"
+    },
+    {
+      "source": "/maxy-ai/finance/",
+      "destination": "/maxy-ai/finance/index.html"
+    },
+    {
+      "source": "/maxy-ai/manufaktur",
+      "destination": "/maxy-ai/manufaktur/index.html"
+    },
+    {
+      "source": "/maxy-ai/manufaktur/",
+      "destination": "/maxy-ai/manufaktur/index.html"
+    },
+    {
+      "source": "/maxy-ai/healthcare",
+      "destination": "/maxy-ai/healthcare/index.html"
+    },
+    {
+      "source": "/maxy-ai/healthcare/",
+      "destination": "/maxy-ai/healthcare/index.html"
+    },
+    {
+      "source": "/maxy-ai/ai-assessment-v2",
+      "destination": "/maxy-ai/ai-assessment-v2/index.html"
+    },
+    {
+      "source": "/maxy-ai/ai-assessment-v2/",
+      "destination": "/maxy-ai/ai-assessment-v2/index.html"
+    },
+    {
+      "source": "/maxy-ai/:subpage/media/:match*",
+      "destination": "/maxy-ai/media/:match*"
     }
   ]
 }
