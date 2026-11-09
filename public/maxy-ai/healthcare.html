@@ -409,8 +409,41 @@ footer a:hover{color:var(--navy)}
 
 .alert-ico.ok{background:var(--navy)}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1254121909109146');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1254121909109146&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5J2WGGN3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16653050746"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16653050746');
+</script>
 </head>
 <body>
+
 
 <header class="sitebar">
   <div class="container">
@@ -683,7 +716,8 @@ footer a:hover{color:var(--navy)}
       <div class="fcard rv" id="konsultasi">
         <h2>Jadwalkan Discovery Call</h2>
         <p class="fnote-top">Kami merespons dalam 1 hari kerja.</p>
-        <form onsubmit="event.preventDefault();this.querySelector('.form-note').textContent='Terima kasih! Kami akan menghubungi Anda dalam 1 hari kerja.';">
+        <form onsubmit="return maxyLeadSubmit(event,this)">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
         <label>Nama lengkap<input required name="nama" autocomplete="name" placeholder="Nama Anda"></label>
         <label>Nama perusahaan<input required name="perusahaan" autocomplete="organization" placeholder="PT ..."></label>
         <div class="row2">
@@ -801,6 +835,51 @@ footer a:hover{color:var(--navy)}
   var sync = function(){ var max = tr.scrollWidth - tr.clientWidth - 2; arrows[0].disabled = tr.scrollLeft <= 8; arrows[1].disabled = tr.scrollLeft >= max - 6; };
   arrows.forEach(function(a){ a.addEventListener('click', function(){ tr.scrollBy({ left: step() * parseInt(a.getAttribute('data-dir'), 10), behavior: 'smooth' }); }); });
   tr.addEventListener('scroll', sync, { passive: true }); window.addEventListener('resize', sync); sync();
+})();
+</script>
+<script>
+/* Form: simpan ke Google Sheet, lalu buka WhatsApp. Isi sheetUrl dengan URL Web App Apps Script (lihat google-apps-script-leads.gs). Kosong = langsung ke WhatsApp saja. */
+window.MAXY_LEAD={sheetUrl:'https://script.google.com/macros/s/AKfycbzndl7pS5SpYlnAWNeTWcMLMtIoezsJJb6aNZZIDA-jn61VXbJWIGi50Lfa6WQbb402/exec',page:'healthcare',segment:'RS / klinik kami',wa:'628113555855'};
+(function(){
+  var C=window.MAXY_LEAD;
+  window.maxyLeadSubmit=function(e,form){
+    e.preventDefault();
+    if(form.dataset.busy)return false;
+    var fd=new FormData(form);
+    if(fd.get('website'))return false;
+    var v=function(k){return String(fd.get(k)||'').trim()};
+    var note=form.querySelector('.form-note'),btn=form.querySelector('button[type=submit]');
+    var msg='Halo MAXY, saya '+v('nama')+(v('jabatan')?' ('+v('jabatan')+')':'')+' dari '+v('perusahaan')+'. Saya tertarik dengan AI Transformation Assessment untuk '+C.segment+'.'+(v('proses')?' Proses yang ingin dipercepat: '+v('proses')+'.':'');
+    var url='https://wa.me/'+C.wa+'?text='+encodeURIComponent(msg);
+    form.dataset.busy='1';
+    if(window.fbq)fbq('track','Lead',{content_name:C.page,lead_type:'form'});
+    if(btn)btn.disabled=true;
+    if(note)note.textContent='Data tersimpan. Membuka WhatsApp...';
+    var done=false,go=function(){if(!done){done=true;window.location.href=url}};
+    if(!C.sheetUrl){go();return false}
+    var body=new URLSearchParams();
+    fd.forEach(function(val,k){if(k!=='website')body.append(k,val)});
+    body.append('halaman',C.page);
+    body.append('url',location.href);
+    body.append('referrer',document.referrer);
+    var q=new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){if(q.get(k))body.append(k,q.get(k))});
+    try{fetch(C.sheetUrl,{method:'POST',mode:'no-cors',body:body,keepalive:true}).then(go,go)}catch(x){go()}
+    setTimeout(go,2500);
+    return false;
+  };
+  document.addEventListener('click',function(ev){
+    var a=ev.target.closest&&ev.target.closest('a[href*="wa.me"]');
+    if(a&&window.fbq)fbq('track','Lead',{content_name:C.page,lead_type:'whatsapp'});
+  });
+  window.addEventListener('pageshow',function(ev){
+    if(!ev.persisted)return;
+    document.querySelectorAll('form[data-busy]').forEach(function(f){
+      delete f.dataset.busy;
+      var b=f.querySelector('button[type=submit]');if(b)b.disabled=false;
+      var n=f.querySelector('.form-note');if(n)n.textContent='Data Anda hanya dipakai untuk menghubungi Anda terkait layanan ini.';
+    });
+  });
 })();
 </script>
 </body>
