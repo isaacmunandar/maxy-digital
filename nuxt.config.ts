@@ -106,6 +106,8 @@ export default defineNuxtConfig({
   routeRules: {
     "/api/**": { robots: false, sitemap: false },
     "/admin/**": { robots: false, sitemap: false },
+    "/SMESG2027/**": { proxy: "https://maxy-jababeka-nine.vercel.app/SMESG2027/**" },
+    "/SMESG2027": { proxy: "https://maxy-jababeka-nine.vercel.app/SMESG2027" },
   },
   app: {
     head: {
