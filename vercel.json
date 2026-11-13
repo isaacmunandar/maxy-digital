@@ -68,6 +68,18 @@
     {
       "source": "/maxy-ai/:subpage/media/:match*",
       "destination": "/maxy-ai/media/:match*"
+    },
+    {
+      "source": "/SMESG2027",
+      "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027"
+    },
+    {
+      "source": "/SMESG2027/",
+      "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027"
+    },
+    {
+      "source": "/SMESG2027/:match*",
+      "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027/:match*"
     }
   ]
 }
