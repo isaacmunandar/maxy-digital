@@ -7,3 +7,4 @@ export default defineEventHandler((event) => {
   const cleanPath = rawUrl.startsWith("/") ? rawUrl : `/${rawUrl}`;
   return sendRedirect(event, `/SMESG2027${cleanPath}`, 307);
 });
+
