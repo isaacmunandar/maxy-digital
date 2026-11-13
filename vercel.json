@@ -78,6 +78,17 @@
       "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027"
     },
     {
+      "source": "/SMESG2027/_next/image",
+      "has": [
+        {
+          "type": "query",
+          "key": "url",
+          "value": "(?<imageUrl>.*)"
+        }
+      ],
+      "destination": "/SMESG2027:imageUrl"
+    },
+    {
       "source": "/SMESG2027/:match*",
       "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027/:match*"
     }
