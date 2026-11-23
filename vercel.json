@@ -91,6 +91,18 @@
     {
       "source": "/SMESG2027/:match*",
       "destination": "https://maxy-jababeka-nine.vercel.app/SMESG2027/:match*"
+    },
+    {
+      "source": "/customer-reach",
+      "destination": "https://maxy-customer-reach.vercel.app/customer-reach"
+    },
+    {
+      "source": "/customer-reach/",
+      "destination": "https://maxy-customer-reach.vercel.app/customer-reach"
+    },
+    {
+      "source": "/customer-reach/:match*",
+      "destination": "https://maxy-customer-reach.vercel.app/customer-reach/:match*"
     }
   ]
 }

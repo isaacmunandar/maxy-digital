@@ -108,6 +108,8 @@ export default defineNuxtConfig({
     "/admin/**": { robots: false, sitemap: false },
     "/SMESG2027/**": { proxy: "https://maxy-jababeka-nine.vercel.app/SMESG2027/**" },
     "/SMESG2027": { proxy: "https://maxy-jababeka-nine.vercel.app/SMESG2027" },
+    "/customer-reach/**": { proxy: "https://maxy-customer-reach.vercel.app/customer-reach/**" },
+    "/customer-reach": { proxy: "https://maxy-customer-reach.vercel.app/customer-reach" },
   },
   app: {
     head: {
